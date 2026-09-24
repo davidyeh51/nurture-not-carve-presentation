@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index < 0) index = 0;
     if (index >= slides.length) index = slides.length - 1;
     currentIndex = index;
+    if (slides[currentIndex]?.id) {
+      history.replaceState(null, '', '#' + slides[currentIndex].id);
+    }
     updateUI();
   }
 
@@ -152,6 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Handle Hash on Load
+  if (window.location.hash) {
+    const hashId = window.location.hash.substring(1);
+    const targetIdx = Array.from(slides).findIndex(s => s.id === hashId);
+    if (targetIdx !== -1) {
+      currentIndex = targetIdx;
+    }
+  }
 
   // Initial State
   document.body.classList.add('mode-slide');

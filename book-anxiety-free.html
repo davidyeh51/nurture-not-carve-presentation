@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《不焦慮媽媽養育手冊》全書章節解讀與 19 個月落地指南 | 互動簡報</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-coral: #E76F51;
+      --primary-coral-dark: #C85A3F;
+      --sage-green: #2A9D8F;
+      --sage-green-dark: #1E6F65;
+      --sun-yellow: #E9C46A;
+      --accent-blue: #264653;
+    }
+  </style>
+</head>
+<body class="mode-slide">
+
+  <!-- Header App Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon" style="background: linear-gradient(135deg, #2A9D8F, #E9C46A);">🌿</div>
+      <div class="brand-text">
+        <h1>《不焦慮媽媽養育手冊》全書解讀與 19 個月落地指南</h1>
+        <p>作者：陳敏瑩｜David & 太太 育兒實踐版（女兒 1 歲 7 個月）</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="btn-toggle-mode" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.06); color: var(--text-main); font-weight: 700;">🏠 返回首頁總覽</a>
+      <button class="btn-toggle-mode active" id="btnModeSlide">🎬 簡報模式</button>
+      <button class="btn-toggle-mode" id="btnModeScroll">📜 長圖閱讀</button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar" style="background: linear-gradient(90deg, #2A9D8F, #E76F51);"></div>
+  </div>
+
+  <!-- App Layout Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Sitemap Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-search">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋關鍵字或招式...">
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">全部</button>
+        <button class="tag-btn" data-filter="p1">🔥 19M 最高</button>
+        <button class="tag-btn" data-filter="p2">⭐ 19M 高</button>
+        <button class="tag-btn" data-filter="p3">💡 啟發儲備</button>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-group-title">導讀與五大招式骨架</div>
+        <a class="nav-item active" data-target="slide-m0" data-priority="p1">
+          <span>0. 全書總覽與核心定位</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-m-framework" data-priority="p2">
+          <span>架構：五招教出好孩子全景</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-m-intro" data-priority="p1">
+          <span>開篇：打破教條，先救媽媽</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+
+        <div class="nav-group-title">招式一：懂心理改善行為</div>
+        <a class="nav-item" data-target="slide-m1-1" data-priority="p1">
+          <span>1.1 選擇題建立規則與謊言真相</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-m1-2" data-priority="p2">
+          <span>1.2 改掉磨蹭與三歲看大抗挫力</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-m1-3" data-priority="p2">
+          <span>1.3 放手有度與孩子生病心理撫慰</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">招式二：審視教養塑造品格</div>
+        <a class="nav-item" data-target="slide-m2-1" data-priority="p2">
+          <span>2.1 金錢觀物權與套路式道歉反思</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-m2-2" data-priority="p1">
+          <span>2.2 受欺負自我保護與雙向接納</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+
+        <div class="nav-group-title">招式三：用心陪伴提升學習力</div>
+        <a class="nav-item" data-target="slide-m3-1" data-priority="p2">
+          <span>3.1 學霸養成與繪本重複講的價值</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-m3-2" data-priority="p1">
+          <span>3.2 語言陪練與生活數感啟蒙</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+
+        <div class="nav-group-title">招式四：了解社會建立社會性</div>
+        <a class="nav-item" data-target="slide-m4-1" data-priority="p2">
+          <span>4.1 理性看早教與入園分離焦慮準備</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-m4-2" data-priority="p3">
+          <span>4.2 物權與集體融入、家園共育</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+
+        <div class="nav-group-title">招式五：智慧父母自省與自我</div>
+        <a class="nav-item" data-target="slide-m5-1" data-priority="p1">
+          <span>5.1 應對七嘴八舌與拯救母親自我感</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-m5-2" data-priority="p2">
+          <span>5.2 盲目讚賞危害與不貪心心法</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">實踐指南與總結</div>
+        <a class="nav-item" data-target="slide-m-action19" data-priority="p1">
+          <span>19 個月大衛家庭實戰行動清單</span> <span class="priority-badge badge-p1">🔥 核心落地</span>
+        </a>
+        <a class="nav-item" data-target="slide-m-conclusion" data-priority="p1">
+          <span>結論：成為好家長的不焦慮宣告</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      <div class="slides-container">
+
+        <!-- Slide 0: Overview -->
+        <section class="slide-card active-slide" id="slide-m0">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Book Profile & Overview</div>
+              <h2 class="slide-title">全書總覽：打破育兒教條，做從容自在的好父母</h2>
+            </div>
+            <span class="priority-badge badge-p1">19M 核心精讀</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 240" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="240" rx="16" fill="#EBF4F0"/>
+                <circle cx="140" cy="120" r="60" fill="#2A9D8F" opacity="0.15"/>
+                <circle cx="140" cy="120" r="42" fill="#2A9D8F"/>
+                <text x="140" y="115" font-size="24" fill="#FFFFFF" font-weight="bold" text-anchor="middle">媽媽好</text>
+                <text x="140" y="140" font-size="14" fill="#E9C46A" text-anchor="middle">身心自在充電</text>
+                
+                <path d="M220 120 L280 120" stroke="#E76F51" stroke-width="4" stroke-dasharray="6 4"/>
+                <circle cx="300" cy="120" r="8" fill="#E76F51"/>
+                
+                <circle cx="460" cy="120" r="60" fill="#E76F51" opacity="0.15"/>
+                <circle cx="460" cy="120" r="42" fill="#E76F51"/>
+                <text x="460" y="115" font-size="24" fill="#FFFFFF" font-weight="bold" text-anchor="middle">孩子好</text>
+                <text x="460" y="140" font-size="14" fill="#FFF9EE" text-anchor="middle">自然綻放成長</text>
+                <text x="300" y="160" font-size="13" fill="#264653" font-weight="bold" text-anchor="middle">潤物細無聲的愛的序位</text>
+              </svg>
+              <figcaption>《不焦慮媽媽養育手冊》核心哲學：愛的序位裡，媽媽的精神狀態必須排在前面！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📚 圖書基本檔案</div>
+                <p><strong>作者</strong>：陳敏瑩（家庭教育學者、專欄作家）</p>
+                <p><strong>體量</strong>：259 頁、五大招式、128 問實戰精萃</p>
+                <p><strong>實戰對象</strong>：作者兒子森森與數百位媽媽真實社群驗證</p>
+                <p><strong>核心主張</strong>：教育是「雅俗共賞」，從順應孩子心理出發，不被育兒教條綁架。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🎯 給 David & 太太的定位</div>
+                <p>這本書是極度「接地氣」的實戰寶典！它解答了大量細膩日常：<strong>扔東西、爬樓梯、吃糖、磨蹭、反覆講同一繪本、入園分離焦慮、長輩干涉</strong>。文字溫柔而清醒，特別解救媽媽的疲憊與焦慮。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>💡 陳敏瑩核心金句：</strong><br>
+              「成為好家長的必要條件是花費時間與智慧去改變自己，守住自己的節奏。在愛的序位裡，我們常錯把孩子排在媽媽的前面。只有媽媽舒心，育兒才能真正輕鬆有趣！」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 1: Framework -->
+        <section class="slide-card" id="slide-m-framework">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Five Pillars</div>
+              <h2 class="slide-title">全書架構骨架：五招教出好孩子全景圖</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 架構導覽</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>招式篇章</th>
+                  <th>核心維度</th>
+                  <th>關鍵議題與對策</th>
+                  <th>19 個月相關度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>招式一：心理與行為</strong></td>
+                  <td>順應心理發展規律</td>
+                  <td>選擇題立規則、磨蹭轉換、保護探索、生病身心撫慰</td>
+                  <td><span class="priority-badge badge-p1">🔥 最高優先</span></td>
+                </tr>
+                <tr>
+                  <td><strong>招式二：品格與教養</strong></td>
+                  <td>深層教養與人格</td>
+                  <td>金錢觀延遲滿足、拒絕套路式道歉、被欺負自衛、雙向接納</td>
+                  <td><span class="priority-badge badge-p2">⭐ 高優先</span></td>
+                </tr>
+                <tr>
+                  <td><strong>招式三：陪伴與學習力</strong></td>
+                  <td>主動用腦與思維</td>
+                  <td>好奇心心流、重複閱讀同一本、語言陪練、生活數感</td>
+                  <td><span class="priority-badge badge-p1">🔥 語言/繪本最高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>招式四：社會性與幼兒園</strong></td>
+                  <td>走向集體與社會化</td>
+                  <td>早教迷思破解、幼兒園選校、入園分離焦慮三步預防、家園同盟</td>
+                  <td><span class="priority-badge badge-p2">⭐ 提前佈局</span></td>
+                </tr>
+                <tr>
+                  <td><strong>招式五：智慧父母自省</strong></td>
+                  <td>心態修煉與自我重構</td>
+                  <td>打破長輩七嘴八舌焦慮、盲目誇獎陷阱、拯救母親自我感、不貪心</td>
+                  <td><span class="priority-badge badge-p1">🔥 夫妻共修最高</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>🌟 邏輯遞進鏈條：</strong><br>
+              先懂心理（懂孩子） ➔ 審視教養（立品格） ➔ 用心陪伴（育能力） ➔ 理解社會（拓邊界） ➔ <strong>終點回歸父母自省與自我安頓</strong>。整本書以「隨俗雅化」為軸，絕非高高在上的說教。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: Intro 开篇 -->
+        <section class="slide-card" id="slide-m-intro">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Opening Chapter</div>
+              <h2 class="slide-title">開篇：打破育兒教條，拯救母親的身心健康</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 父母解壓</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 220" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="220" rx="16" fill="#FFF9EE"/>
+                <rect x="30" y="35" width="250" height="150" rx="12" fill="#FFFFFF" stroke="#E76F51" stroke-width="2"/>
+                <text x="155" y="65" font-size="16" font-weight="bold" fill="#E76F51" text-anchor="middle">❌ 教條式完美養育</text>
+                <text x="50" y="95" font-size="13" fill="#6C757D">• 盲目執著全母乳/看鐘餵奶</text>
+                <text x="50" y="120" font-size="13" fill="#6C757D">• 照書養娃，稍有差錯便自責</text>
+                <text x="50" y="145" font-size="13" fill="#6C757D">• 媽媽疲憊崩潰、家庭衝突起</text>
+                <text x="155" y="172" font-size="12" fill="#E76F51" font-weight="bold" text-anchor="middle">結局：空杯耗竭，孩子更難帶</text>
+
+                <text x="300" y="115" font-size="22" fill="#2A9D8F" font-weight="bold" text-anchor="middle">➔</text>
+
+                <rect x="320" y="35" width="250" height="150" rx="12" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
+                <text x="445" y="65" font-size="16" font-weight="bold" fill="#2A9D8F" text-anchor="middle">🟢 不焦慮自然養育</text>
+                <text x="340" y="95" font-size="13" fill="#2D3142">• 「看孩子，別看鐘」</text>
+                <text x="340" y="120" font-size="13" fill="#2D3142">• 媽媽好心情比教條更重要</text>
+                <text x="340" y="145" font-size="13" fill="#2D3142">• 允許不完美，守住自己的節奏</text>
+                <text x="445" y="172" font-size="12" fill="#2A9D8F" font-weight="bold" text-anchor="middle">結局：家庭溫暖，孩子自信安穩</text>
+              </svg>
+              <figcaption>育兒最大的陷阱不是「愛不夠」，而是被教條裹挾導致的身心耗竭！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">⚠️ 作者血淚自述：全母乳的執念</div>
+                <p>作者堅持全母乳到 1 歲 3 個月，逼自己每天喝不喜歡的湯、沒日沒夜餵奶兼顧工作，結果<strong>平均每月小病一次</strong>，甚至大病一場才被迫斷奶。她的朋友堅持全母乳到 2 歲半，結果家庭矛盾爆發、精神崩潰走不出陰影。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">✨ 「看孩子，別看鐘」的智慧</div>
+                <p>書本上言之鑿鑿的教條，只有化為讓媽媽舒心暢快的心境時才具有滋養力。<strong>如果某個育兒標準讓媽媽感到神經緊繃、疲憊不堪，請果斷放下！</strong> 媽媽的好狀態，才是孩子最好的成長土壤。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛與太太本週自檢：</strong><br>
+              檢查家裡是否有「某個讓太太或彼此感到無比壓力的標準」？允許自己不用當 100 分完美父母。只要整體是有愛的、規律的，<strong>「好媽媽是 60-80 分且笑口常開的媽媽」</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: 招式一 (1-2) -->
+        <section class="slide-card" id="slide-m1-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 1.1 ~ 1.2</div>
+              <h2 class="slide-title">招式一：選擇題建立規則 & 謊言背後的心理</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🌟 1.1 選擇題的魔力：</strong><br>
+              直接給指令會激發幼兒的「逆反本能」；但給孩子 <strong>2-3 個你預設好的有限選擇</strong>，孩子體驗到的是「我擁有控制權」，從而欣然履行約定！
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🥫 案例：森森丟襪子與玩水</div>
+                <p>森森 1 歲多愛扔東西、享受把手放在樓梯扶手滑上滑下。作者沒有制止，而是<strong>「把能扔的都給他盡情扔」</strong>（襪子、軟積木、海綿盒），不能扔的堅決收好。<strong>尊重孩子探索空間的慾望，孩子感受到充分理解，未來就會把理解奉還給父母。</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🤥 1.2 孩子「說謊」的真相</div>
+                <p>幼兒（尤其 2-4 歲）的謊言通常源自：<strong>① 想像與現實混淆；② 趨利避害逃避責罰；③ 渴望被認同</strong>。強迫孩子「實話實說」只會逼出更狡猾的偽裝。父母應先同理：「我知道你希望杯子沒打破，對嗎？我們一起擦乾淨。」</p>
+              </div>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>場景</th>
+                  <th>❌ 傳統命令式 (引發對抗)</th>
+                  <th>🟢 陳敏瑩選擇題招式 (順利合作)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>出門穿鞋</strong></td>
+                  <td>「快點穿鞋子！別磨蹭！」</td>
+                  <td>「今天想穿紅色小皮鞋，還是這雙小白布鞋？你來挑！」</td>
+                </tr>
+                <tr>
+                  <td><strong>吃水果</strong></td>
+                  <td>「必須把蘋果吃完！」</td>
+                  <td>「你是想先吃一小塊蘋果，還是先吃一顆小藍莓？」</td>
+                </tr>
+                <tr>
+                  <td><strong>睡前收玩具</strong></td>
+                  <td>「不要玩了，馬上收起來！」</td>
+                  <td>「我們是一起把小熊放回籃子，還是先把小積木送回家？」</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              女兒現在 1 歲 7 個月，自我意識強烈。<strong>每天至少創造 3 次「實物二選一」的選擇題！</strong>（手裡拿著兩件衣服、兩雙鞋、兩個杯子）。讓她親手拿，尊重她的小決定。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: 招式一 (3-5) -->
+        <section class="slide-card" id="slide-m1-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 1.3 ~ 1.5</div>
+              <h2 class="slide-title">改掉磨蹭的轉換術 & 三歲看大與抗挫力</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 行為解碼</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#EBF1F7"/>
+                <circle cx="100" cy="100" r="50" fill="#3D5A80"/>
+                <text x="100" y="95" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">催促吼叫</text>
+                <text x="100" y="118" font-size="12" fill="#E9C46A" text-anchor="middle">「快點！快點！」</text>
+
+                <path d="M170 100 L240 100" stroke="#E76F51" stroke-width="3" stroke-dasharray="4 4"/>
+                <text x="205" y="90" font-size="12" fill="#E76F51" text-anchor="middle">無效反抗</text>
+
+                <circle cx="300" cy="100" r="50" fill="#E76F51"/>
+                <text x="300" y="95" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">大腦宕機</text>
+                <text x="300" y="118" font-size="12" fill="#fff" text-anchor="middle">動作更僵慢</text>
+
+                <path d="M370 100 L440 100" stroke="#2A9D8F" stroke-width="4"/>
+                <text x="405" y="90" font-size="12" fill="#2A9D8F" text-anchor="middle">轉換為</text>
+
+                <circle cx="500" cy="100" r="50" fill="#2A9D8F"/>
+                <text x="500" y="95" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">趣味遊戲化</text>
+                <text x="500" y="118" font-size="12" fill="#FFF9EE" text-anchor="middle">啟動內在馬達</text>
+              </svg>
+              <figcaption>幼兒沒有成人的抽象時間觀念。催促只會激發對抗，遊戲化才能啟動主動性！</figcaption>
+            </figure>
+
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">⏳ 改掉磨蹭只需「趣味」</div>
+                <p>孩子慢是因為「大人急，孩子不懂時間」。把催促換成遊戲：「我們來比比誰像小火車開得快？」「牙刷小精靈要出發啦！」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🌱 「三歲看大」絕非「定大」</div>
+                <p>3 歲奠定的是<strong>安全感、信任感和大腦神經突觸基礎</strong>，但絕非性格不可變！不要在幼年給孩子貼「膽小」、「笨拙」的終身標籤。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🛡️ 從脆弱到勇敢的墊腳石</div>
+                <p>孩子哭泣受挫時，父母要做「情緒安全墊」，先擁抱接納脆弱，等情緒平復後，再陪他邁出微小的一步（最近發展區拆解）。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              女兒摔倒或玩具被拿走時，不要說「這有什麼好哭的/勇敢點」，而是蹲下說：「摔痛了對嗎？爸爸抱抱。」當她被撫慰後，她會比你想像中更快笑著站起來！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: 招式一 (6-7) -->
+        <section class="slide-card" id="slide-m1-3">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 1.6 ~ 1.7</div>
+              <h2 class="slide-title">放手有度 & 孩子生病時的身心連接</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 邊界與健康</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🪁 1.6 放手有度的黃金法則</div>
+                <p><strong>「在安全邊界內極致放手，在危險紅線上溫和堅定。」</strong><br>
+                孩子能自己拿勺子、端小杯子、爬低矮斜坡，就堅決不插手；但涉及電源插座、馬路邊、燙水，必須第一時間物理隔離並設紅線。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">💊 1.7 孩子生病：身心連接撫慰</div>
+                <p>孩子生病發燒時，除了科學求醫、對症下藥，最需要的是<strong>「心理確定感」</strong>。生病會讓幼兒產生退行（黏人、哭鬧），這是天性呼喚安全感。此時給予充分肌膚接觸與陪伴，能極大促進免疫恢復。</p>
+              </div>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>維度</th>
+                  <th>過度保護 (剝奪成長)</th>
+                  <th>放手有度 (適度腳手架)</th>
+                  <th>粗暴放任 (缺乏邊界)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>自主進食</strong></td>
+                  <td>怕弄髒衣服，全程餵飯</td>
+                  <td>鋪好防髒墊，給短柄勺讓她抓握自吃</td>
+                  <td>不管食物掉地上髒了繼續吃</td>
+                </tr>
+                <tr>
+                  <td><strong>大動作探索</strong></td>
+                  <td>不准走樓梯、不准碰泥巴</td>
+                  <td>扶著小手走樓梯，在安全公園盡情踩葉子</td>
+                  <td>任由在危險高處攀爬無人看管</td>
+                </tr>
+                <tr>
+                  <td><strong>生病照顧</strong></td>
+                  <td>焦慮自責、慌亂抱怨</td>
+                  <td>科學降溫給藥 + 溫柔擁抱肌膚相親</td>
+                  <td>忽視情緒，粗暴灌藥批評哭鬧</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              家裡設置「防髒探索區」。吃飯時允許她手抓、湯匙戳，只要食物在餐盤範圍內就絕不制止。擦桌子時遞給她一塊小抹布一起擦！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: 招式二 (1-3) -->
+        <section class="slide-card" id="slide-m2-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 2.1 ~ 2.3</div>
+              <h2 class="slide-title">招式二：金錢觀物權 & 拒絕套路式道歉 & 感恩教育反思</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 品格塑造</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">💰 2.1 金錢觀談的不是錢</div>
+                <p>是<strong>「延遲滿足」與「價值取捨」</strong>。在超市指著標價讀給孩子聽，讓孩子親手遞錢找零，明白「錢花完了就沒有了，需要等待與計劃」。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🙅 2.2 套路式道歉無用</div>
+                <p>逼孩子說「對不起」只是教他用話術逃避懲罰。真正的教養是引導修復動作：「你看弟弟哭了，我們一起去拿紙巾幫他擦擦。」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">❤️ 2.3 感恩無需刻意說教</div>
+                <p>苦難式「媽媽為了你多辛苦」會壓垮孩子產生內疚感。<strong>愛是自然流淌的，父母先熱愛生活、彼此感恩，孩子耳濡目染自然懂愛。</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>🌟 陳敏瑩犀利觀點：</strong><br>
+              「我們不需要功利性的感恩教育。許多家長一邊對孩子宣稱無私奉獻，一邊用『我為你付出這麼多你還不聽話』來道德綁架。健康的愛是：我愛你，因為你是我的孩子；我給予你，因為這帶給我幸福。」
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              當女兒不小心推到別人或碰掉東西時，<strong>絕不強逼她低頭說「對不起」</strong>。爸爸媽媽走上前示範：「啊，小熊摔倒了，我們輕輕幫它扶起來，揉一揉。」女兒會跟著學修復動作。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: 招式二 (4-5) -->
+        <section class="slide-card" id="slide-m2-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 2.4 ~ 2.5</div>
+              <h2 class="slide-title">被打的「鎧甲加身」& 雙向接納：讓孩子接納我們</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 關係核心</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#FFFDF8" stroke="#EFE6D5"/>
+                <circle cx="160" cy="100" r="55" fill="#E07A5F" opacity="0.15"/>
+                <text x="160" y="90" font-size="16" font-weight="bold" fill="#E07A5F" text-anchor="middle">父母接納孩子</text>
+                <text x="160" y="115" font-size="12" fill="#6C757D" text-anchor="middle">接納情緒、氣質與節奏</text>
+
+                <path d="M240 85 L360 85" stroke="#81B29A" stroke-width="3"/>
+                <text x="300" y="75" font-size="12" fill="#81B29A" font-weight="bold" text-anchor="middle">滋養信任與安全感</text>
+
+                <path d="M360 115 L240 115" stroke="#F2CC8F" stroke-width="3"/>
+                <text x="300" y="135" font-size="12" fill="#D4A24E" font-weight="bold" text-anchor="middle">示範真實、接納父母脆弱</text>
+
+                <circle cx="440" cy="100" r="55" fill="#81B29A" opacity="0.15"/>
+                <text x="440" y="90" font-size="16" font-weight="bold" fill="#4F7965" text-anchor="middle">孩子接納父母</text>
+                <text x="440" y="115" font-size="12" fill="#6C757D" text-anchor="middle">體諒疲憊、彼此陪伴成長</text>
+              </svg>
+              <figcaption>真正的親子關係是「雙向接納」：父母敢於展現真實，孩子才能學會真正的體諒！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🛡️ 2.4 被打受欺負：如何「鎧甲加身」？</div>
+                <p>1. <strong>堅定大聲喊「不行！不可以打我！」</strong>（身體邊界的第一道防線）<br>
+                2. <strong>迅速撤離到安全大人身旁</strong>（尋求支持不是軟弱）<br>
+                3. <strong>父母做最堅實後盾</strong>，絕不批評「你怎麼那麼沒用」，給予滿滿的安全感。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🤝 2.5 雙向接納：接納父母的不完美</div>
+                <p>作者累的時候會跟森森說：「媽媽今天工作很累，頭有點痛，你能輕輕抱抱我嗎？」孩子會溫柔地捶背、拿毯子。<strong>父母不要偽裝成無所不能的神，誠實表達感受，孩子才能發展出真同理心！</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              下班回家很累時，真誠地跟女兒說：「爸爸/媽媽今天好想妳，但現在有點累，我們一起在沙發上抱著休息 5 分鐘好嗎？」女兒聽得懂溫柔的語氣，她會很安靜地靠著你。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: 招式三 (1-2) -->
+        <section class="slide-card" id="slide-m3-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 3.1 ~ 3.2</div>
+              <h2 class="slide-title">招式三：學霸養成記 & 繪本「重複講同一個故事」</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 學習力基石</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>📖 為什麼 6 歲前孩子總要求「重複講同一個故事」？</strong><br>
+              家長常覺得枯燥或以為孩子在挑釁。其實：孩子透過重複講授不斷吸取養分，在每一次重複中驗證自己的預期，<strong>從「已知」中獲得極大的安全感與控制感</strong>，這是大腦建立深層記憶與思維迴路的關鍵期！
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🧠 3.1 學霸養成：主動用腦 vs 被動用腦</div>
+                <p>早期視野越寬廣，未來學新知識越自信。但<strong>前提必須是「主動體驗」</strong>！不是灌輸死知識，而是帶孩子看真植物蒸騰、水流漩渦，用生動形象的語言啟發觀察，保護內在求知慾。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">📚 3.2 親子閱讀：激發興趣而非識字</div>
+                <p>閱讀是一切學習的發動機。早期閱讀的目標只有一個：<strong>讓孩子覺得書裡的世界太好玩了！</strong> 絕不要指著字逼孩子認讀或考試般提問，順著孩子的眼神走。</p>
+              </div>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>閱讀態度</th>
+                  <th>❌ 功利型家長做法</th>
+                  <th>🟢 不焦慮陪伴型做法 (陳敏瑩)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>面對重複</strong></td>
+                  <td>「這本讀了幾十遍了，換一本新的！」</td>
+                  <td>欣然滿足，在重複中微調語調、發現新細節</td>
+                </tr>
+                <tr>
+                  <td><strong>互動方式</strong></td>
+                  <td>「這隻小鴨是什麼顏色？快回答！」</td>
+                  <td>「哇！小鴨撲通跳進水裡了，你看濺起好多水花！」</td>
+                </tr>
+                <tr>
+                  <td><strong>閱讀節奏</strong></td>
+                  <td>必須從第一頁規規矩矩念到最後一頁</td>
+                  <td>允許跳頁、倒著看、甚至只停留在最喜歡的那一頁</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              女兒如果有特別迷戀的一兩本繪本（每天要翻 10 次），請<strong>無條件滿足她</strong>！指著圖案裡的動物、物品叫名字，配合豐富的擬聲詞（「汪汪」、「轟隆隆」），這正是她大腦突觸瘋狂連結的黃金時刻。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: 招式三 (3-4) -->
+        <section class="slide-card" id="slide-m3-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 3.3 ~ 3.4</div>
+              <h2 class="slide-title">語言是陪練出來的 & 生活中的數學思維啟蒙</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 語言爆發</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🗣️ 3.3 語言陪練的四大法寶</div>
+                <p>1. <strong>跟隨注意力解說</strong>：說她正看著的東西，不做考官做解說員。<br>
+                2. <strong>句子擴展法</strong>：孩子說「狗狗」，大人回「對，是一隻毛茸茸的小白狗在搖尾巴」。<br>
+                3. <strong>豐富擬聲詞與動態詞</strong>：咕嚕嚕、撲通、滑下來。<br>
+                4. <strong>耐心等待 3-5 秒</strong>：幼兒大腦需要時間組織輸出，不要搶答！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🔢 3.4 數學玩的是數感與生活邏輯</div>
+                <p>幼兒數學不是背加減法！<br>
+                - <strong>生活量詞與比較</strong>：大蘋果 vs 小葡萄、多與少<br>
+                - <strong>空間方位感</strong>：在沙發上面、在盒子裡面<br>
+                - <strong>爬樓梯數階梯</strong>：1, 2, 3... 建立自然節奏<br>
+                - <strong>分食物對應</strong>：爸爸一個，媽媽一個，寶寶一個（一一對應）</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>🌟 陳敏瑩生活數感案例：</strong><br>
+              森森小時候走樓梯，作者每次都和他一起數樓層：「701、702、703...」在生活中融入數感。分點心時一人一個，去超市拿 3 個蘋果。孩子從來沒覺得數學是枯燥的負擔，而是生活中的有趣遊戲。
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰（每天 3 件事）：</strong><br>
+              1. 走樓梯或抱著爬樓時，嘴裡念「1、2、3、4、5」；<br>
+              2. 吃藍莓或餅乾時：「這是爸爸的，這是媽媽的，這是寶貝的」；<br>
+              3. 用「句子擴展術」回應她所有的單詞發音！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: 招式四 (1-3) -->
+        <section class="slide-card" id="slide-m4-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 4.1 ~ 4.3</div>
+              <h2 class="slide-title">招式四：理性看早教、選園 & 入園分離焦慮準備</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 入學與分離</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">🎯 4.1 早教本質是教父母</div>
+                <p>早教的主角是家長，家庭才是最好的早教場！生活裡的落葉、小石子、日常對話，比昂貴早教機構昂貴教具有效十倍。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏫 4.2 如何挑選幼兒園？</div>
+                <p>不迷信豪華硬體，重在<strong>「老師的眼裡有沒有光與愛」</strong>、戶外活動時間長短、生活常規是否尊重幼兒節奏、離家距離近。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🎒 4.3 分離焦慮超前準備</div>
+                <p>入園前半年開始做：生活作息調整同步、自理能力小訓練（脫鞋/洗手）、提前熟悉幼兒園路線、固定告別儀式。</p>
+              </div>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>分離焦慮階段</th>
+                  <th>常見錯誤行為</th>
+                  <th>陳敏瑩科學應對招式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>入園前準備期</strong></td>
+                  <td>嚇唬孩子：「你再不聽話送幼兒園讓老師收拾你！」</td>
+                  <td>共讀入園繪本，傳遞幼兒園有好玩的滑梯與新朋友</td>
+                </tr>
+                <tr>
+                  <td><strong>告別當下</strong></td>
+                  <td>趁孩子不注意偷偷溜走、或在門口依依不捨痛哭</td>
+                  <td>微笑堅定抱抱，說出精確時間：「下午吃完點心媽媽就來接你！」</td>
+                </tr>
+                <tr>
+                  <td><strong>放學接回時</strong></td>
+                  <td>盤問：「今天有沒有人欺負你？吃飽了沒有？」</td>
+                  <td>張開雙臂熱情擁抱：「媽媽好高興見到你，今天有什麼好玩的事？」</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              雖然離 3 歲幼兒園還早，但現在就要把「絕不偷溜」刻入骨髓！爸爸媽媽出門倒垃圾、上班，每次都走到她面前揮手說再見，準時回來後第一時間大聲說：「爸爸說會回來，爸爸回來囉！」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: 招式四 (4-7) -->
+        <section class="slide-card" id="slide-m4-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 4.4 ~ 4.7</div>
+              <h2 class="slide-title">融入集體物權尊重、家園共育 & 未來能力投資</h2>
+            </div>
+            <span class="priority-badge badge-p3">P3 社會性儲備</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🧸 4.4 孩子「自私不肯分」？</div>
+                <p>幼兒必須先建立清晰的<strong>「物權邊界」</strong>，確信「這是我的，不會被強行奪走」，未來才有心理能量主動分享。強迫分享只會造成深層匱乏感。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🤝 4.5 與老師溝通的同盟藝術</div>
+                <p>不做居高臨下的挑剔者，也不做盲目退縮的旁觀者。帶著尊重、感激與具體觀察跟老師對話，<strong>把老師變成最懂孩子的育兒合夥人</strong>。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>🚀 4.7 在孩子身上最需要投資什麼來迎合未來社會？</strong><br>
+              不是刷題與死記硬背，而是：<strong>① 毫不猶豫的行動力（源自從小做對事情被肯定帶來的自信）</strong>；② 自我探索與堅持的熱情；③ 解決真實問題的堅毅品質。
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              帶她去公園玩，遇到其他小朋友時，保持「平行遊戲」即可。如果其他孩子要拿她的球，女兒護著，<strong>請大方幫她代言</strong>：「這是小妹妹正玩的球，她還想玩一會兒，我們看看那邊的溜滑梯吧！」給予她滿滿的安全感。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 12: 招式五 (1-3) -->
+        <section class="slide-card" id="slide-m5-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 5.1 ~ 5.3</div>
+              <h2 class="slide-title">招式五：應對七嘴八舌、盲目讚賞陷阱 & 原生家庭</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 父母定力</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🌟 5.1 面對七嘴八舌的自我救贖：</strong><br>
+              很多媽媽產後抑鬱，不是因為孩子難帶，而是<strong>「郁於身邊人千言萬語的碎碎念」</strong>！長輩說穿少了、親戚說講話慢、鄰居說太瘦……請記住：<strong>「除了作為父母的我們，沒有任何一個人有義務真正理解我們的孩子。」</strong> 守住父母的專業與定力！
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">⚠️ 5.2 父母盲目讚賞的危害</div>
+                <p>空洞的「你好棒/你真聰明」是危險的糖衣。它讓孩子害怕失敗、不敢嘗試。改為<strong>「具體描述過程」</strong>：「你看，你試了三次終於把積木放上去了，手真穩！」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🌱 5.3 原生家庭的痛點解碼</div>
+                <p>我們對孩子的焦慮或憤怒，往往投射著自己童年未被滿足的渴望。看清這一點，不再把童年的委屈轉嫁給孩子，<strong>在我們這一代終止創傷的傳遞</strong>。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛與太太同盟話術（應對外人碎念）：</strong><br>
+              當長輩或外人說「這孩子怎麼還不會自己吃飯/怎麼那麼黏人」時，大衛或太太統一口徑微笑回應：「醫生說每個孩子有自己的節奏，我們在按科學方法引導，她現在發展得非常好，謝謝關心！」<strong>夫妻彼此做對方的防護盾。</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 13: 招式五 (4-6) -->
+        <section class="slide-card" id="slide-m5-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Move 5.4 ~ 5.6</div>
+              <h2 class="slide-title">拯救母親自我感、不貪心心法 & 拒絕極端教育</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 幸福心態</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#FFF9EE"/>
+                <circle cx="140" cy="100" r="50" fill="#E76F51" opacity="0.2"/>
+                <text x="140" y="95" font-size="16" font-weight="bold" fill="#C85A3F" text-anchor="middle">自我湮滅的媽媽</text>
+                <text x="140" y="118" font-size="12" fill="#6C757D" text-anchor="middle">「一切為了孩子」</text>
+
+                <path d="M210 100 L390 100" stroke="#2A9D8F" stroke-width="4" stroke-dasharray="6 4"/>
+                <text x="300" y="85" font-size="13" fill="#2A9D8F" font-weight="bold" text-anchor="middle">拯救自我感</text>
+
+                <circle cx="460" cy="100" r="50" fill="#2A9D8F" opacity="0.2"/>
+                <text x="460" y="95" font-size="16" font-weight="bold" fill="#1E6F65" text-anchor="middle">有自我的幸福父母</text>
+                <text x="460" y="118" font-size="12" fill="#6C757D" text-anchor="middle">愛自己才有能量愛人</text>
+              </svg>
+              <figcaption>做個「自私」一點的快樂媽媽，比做個「委曲求全」的苦情媽媽對孩子好一萬倍！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💖 5.4 母親的自我感需要拯救</div>
+                <p>媽媽大可以繼續保留自己的興趣、熱愛和獨處時間。<strong>一個眼裡有光、熱愛自己事業與愛好的母親，本身就是對孩子最好的人格示範！</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">⚖️ 5.5-5.6 不貪心，拒絕極端教育</div>
+                <p>所有好孩子的「好」，只要是<strong>大致上的、概括性的「好」就足夠好</strong>了！允許缺陷存在，不被功利慾望吞噬，守住悠然的育兒步調。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 給大衛的具體行動：</strong><br>
+              主動為太太安排「每週至少半天的自由充電假」（大衛單獨帶女兒或請家人幫忙），讓太太去喝咖啡、做指甲、逛街或好好睡個長覺。<strong>太太的笑容是家裡最大的陽光！</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 14: 19 個月專屬落地清單 -->
+        <section class="slide-card" id="slide-m-action19">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">19-Month Blueprint</div>
+              <h2 class="slide-title">19 個月女兒專屬：陳敏瑩招式家庭實戰清單</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 落地清單</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🎯 核心目標：守護探索慾望、化解日常對抗、充實語言數感、守護媽媽能量！</strong>
+            </div>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #C85A3F;">🔥 第一優先：本週即可執行的 5 大動作</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>行動項目</th>
+                  <th>招式出處</th>
+                  <th>具體做法</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>實物二選一選擇題</strong></td>
+                  <td>招式 1.1</td>
+                  <td>穿衣、拿水杯、選水果時，手拿兩樣讓她挑，絕不直接命令。</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>「把能扔的讓她扔個夠」</strong></td>
+                  <td>招式 1.1</td>
+                  <td>準備專屬「拋扔籃」（襪子、軟球、海綿），滿足空間因果探索。</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>繪本「重複讀」無條件接納</strong></td>
+                  <td>招式 3.2</td>
+                  <td>女兒要求讀同一本第十遍時，欣然答應，模仿動物叫聲和動作。</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>生活數感三日常</strong></td>
+                  <td>招式 3.4</td>
+                  <td>走樓梯數「1,2,3」、分水果「一人一個」、比「大蘋果小橘子」。</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><strong>拯救太太自我假</strong></td>
+                  <td>招式 5.4</td>
+                  <td>大衛每週包辦半天育兒，讓太太無負擔出門充電，徹底放鬆。</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #2A9D8F; margin-top: 18px;">⭐ 第二優先：本月內建立的日常常規 (4 項)</h3>
+            <p style="font-size: 0.95rem; line-height: 1.8;">
+              6. <strong>出門儀式絕對不偷溜</strong>（招式 4.3）：揮手告別，回來時大聲宣告「爸爸/媽媽說到做到」；<br>
+              7. <strong>遊戲化化解磨蹭</strong>（招式 1.3）：刷牙是「小火車鑽山洞」，收玩具是「小熊要回家睡覺」；<br>
+              8. <strong>拒絕逼迫道歉</strong>（招式 2.2）：撞倒人時父母引導「幫忙揉一揉、扶起來」，教修復不教套路；<br>
+              9. <strong>夫妻同盟擋箭牌</strong>（招式 5.1）：面對外人碎念，夫妻互為掩護，堅定按科學節奏走。
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 15: Conclusion -->
+        <section class="slide-card" id="slide-m-conclusion">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Conclusion</div>
+              <h2 class="slide-title">結論：也無風雨也無晴，做不焦慮的智慧父母</h2>
+            </div>
+            <span class="priority-badge badge-p1">P1 終章</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core" style="font-size: 1.1rem; text-align: center; padding: 26px;">
+              <strong>🌿 「教育是個『潤物細無聲』的漫長久遠的過程。<br>
+              我們不必成為多麼厲害的王者家長，也不必逼孩子成龍成鳳。<br>
+              只要我們從容輕鬆、享受育兒，愛自己、懂孩子，<br>
+              幸福就會在我們與女兒之間自然流淌！」</strong>
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💡 陳敏瑩三大定海神針</div>
+                <p>- <strong>看孩子，別看鐘</strong>：拋開教條束縛，以孩子的身心反饋為準。<br>
+                - <strong>懂心理，再動手</strong>：用選擇題立規則，用遊戲化換動機。<br>
+                - <strong>先自省，不貪心</strong>：允許孩子和自己存在不完美，守住節奏。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">👨‍👩‍👧 大衛家庭核心宣告</div>
+                <p>- <strong>愛的序位</strong>：媽媽第一，爸爸同盟，女兒幸福滋養。<br>
+                - <strong>19 個月的守護</strong>：尊重她的「不」、陪伴她的「扔」、跟隨她的「言」。<br>
+                - 陪伴 1 歲 7 個月的寶貝女兒，溫暖堅定地走好每一天！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action" style="text-align: center; margin-top: 24px;">
+              🎉 <strong>恭喜完成《不焦慮媽媽養育手冊》全書簡報學習！祝大衛與太太的育兒時光從容自在、充實甜蜜！</strong>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Footer Navigation Bar -->
+  <div class="slide-footer-nav">
+    <button class="nav-btn" id="btnPrev">←</button>
+    <div class="slide-counter" id="slideCounter">1 / 16</div>
+    <button class="nav-btn" id="btnNext">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《滋養，而非雕刻》章節解讀與 19 個月落地指南 | 互動簡報</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="mode-slide">
+
+  <!-- Header App Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon">🌱</div>
+      <div class="brand-text">
+        <h1>《滋養，而非雕刻》全書解讀與 19 個月落地指南</h1>
+        <p>作者：姜天依｜David & 太太 育兒實踐版（女兒 1 歲 7 個月）</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="btn-toggle-mode" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.15); color: #fff;">🏠 返回首頁總覽</a>
+      <button class="btn-toggle-mode active" id="btnModeSlide">🎬 簡報模式</button>
+      <button class="btn-toggle-mode" id="btnModeScroll">📜 長圖閱讀</button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- App Layout Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Sitemap Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-search">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋關鍵字或話術...">
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">全部</button>
+        <button class="tag-btn" data-filter="p1">🔥 19M 最高</button>
+        <button class="tag-btn" data-filter="p2">⭐ 19M 高</button>
+        <button class="tag-btn" data-filter="p3">💡 19M 中</button>
+        <button class="tag-btn" data-filter="def">⏳ 延後啟用</button>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-group-title">全書總覽 & 開篇</div>
+        <a class="nav-item active" data-target="slide-overview" data-priority="p1">
+          <span>0. 總覽與書籍介紹</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch0" data-priority="p2">
+          <span>序言：懂比愛更重要</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">根基篇 (Ch 1 ~ 3)</div>
+        <a class="nav-item" data-target="slide-ch1-1" data-priority="p2">
+          <span>1.1 童年三大心理資本</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch1-2" data-priority="p3">
+          <span>1.2 0-6歲大腦黃金窗口</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch1-3" data-priority="p2">
+          <span>1.3 父母角色：園丁 vs 木匠</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch2-1" data-priority="def">
+          <span>2.1 0-1歲建立信任</span> <span class="priority-badge badge-def">已過</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch2-2" data-priority="p1">
+          <span>2.2 1-3歲呵護自主感</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch2-3" data-priority="p3">
+          <span>2.3 3-6歲激發主動感</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch3-1" data-priority="p2">
+          <span>3.1 告別養育焦慮</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch3-2" data-priority="p2">
+          <span>3.2 夫妻關係定海神針</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch3-3" data-priority="p3">
+          <span>3.3 夫妻和諧與規則一致</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch3-4" data-priority="p1">
+          <span>3.4 創建家庭情緒儀式</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+
+        <div class="nav-group-title">實踐篇 (Ch 4 ~ 8)</div>
+        <a class="nav-item" data-target="slide-ch4-1" data-priority="p1">
+          <span>4.1 積極回應 vs 寵溺</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch4-2" data-priority="p1">
+          <span>4.2 分離焦慮積極應對</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch4-3" data-priority="p2">
+          <span>4.3 營造可預測家庭環境</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch5-1" data-priority="p1">
+          <span>5.1 保護專注力不打擾</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch5-2" data-priority="p3">
+          <span>5.2 成長型思維誇孩子</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch5-3" data-priority="p3">
+          <span>5.3 藝術遊戲培養創造力</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch6-1" data-priority="p1">
+          <span>6.1 幫孩子為情緒命名</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch6-2" data-priority="p1">
+          <span>6.2 先接納後引導</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch6-3" data-priority="p3">
+          <span>6.3 應對發脾氣暫停角</span> <span class="priority-badge badge-p3">P3</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch7-1" data-priority="p2">
+          <span>7.1 物權意識與分享</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch7-2" data-priority="def">
+          <span>7.2-7.4 衝突與同理心</span> <span class="priority-badge badge-def">延後</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch8-1" data-priority="p2">
+          <span>8.1-8.3 允許犯錯與堅毅</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">進階篇 (Ch 9 ~ 11)</div>
+        <a class="nav-item" data-target="slide-ch9-1" data-priority="p1">
+          <span>9.1 10分鐘特殊時光</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch9-2" data-priority="p2">
+          <span>9.2-9.3 C2Q與親子閱讀</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch10-1" data-priority="p2">
+          <span>10.1 清晰一致的家庭規則</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch10-2" data-priority="def">
+          <span>10.2 自然邏輯結果 4R</span> <span class="priority-badge badge-def">⚠️ 警示</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch10-3" data-priority="p2">
+          <span>10.3 鼓勵式溝通話術</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-ch11-1" data-priority="p2">
+          <span>11.1-11.3 VIA 24項優勢</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">總結模型 & 實踐工具</div>
+        <a class="nav-item" data-target="slide-models" data-priority="p1">
+          <span>三大模型總結</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-games" data-priority="p2">
+          <span>附錄 1：10例情緒小遊戲</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-scripts" data-priority="p1">
+          <span>附錄 2：8大急救話術對照</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-critique" data-priority="p2">
+          <span>學術檢視與全書存疑</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-action18" data-priority="p1">
+          <span>19 個月專屬落地清單</span> <span class="priority-badge badge-p1">🔥 最高</span>
+        </a>
+        <a class="nav-item" data-target="slide-conclusion" data-priority="p1">
+          <span>結論：大衛的育兒心法</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      <div class="slides-container">
+
+        <!-- Slide 0: Overview -->
+        <section class="slide-card active-slide" id="slide-overview">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Overview & Book Profile</div>
+              <h2 class="slide-title">全書總覽與 19 個月教養核心定位</h2>
+            </div>
+            <span class="priority-badge badge-p1">19M 核心閱讀</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <img src="images/cover_gardener.jpg" alt="園丁式教養">
+              <figcaption>「滋養，而非雕刻：0—6歲孩子的優勢教養」——愛是本能，懂是本領。</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📚 圖書基本資訊</div>
+                <p><strong>作者</strong>：姜天依｜武漢大學出版社（2026年1月）</p>
+                <p><strong>體量</strong>：198頁、約 10.4 萬字</p>
+                <p><strong>解讀對象</strong>：David & 太太，女兒 19 個月（1 歲 7 個月）</p>
+                <p><strong>核心立場</strong>：不補短板，而是揚長處；不塑造，而是滋養。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🎯 19 個月大衛專屬定位</div>
+                <p>女兒正處於<strong>1—3歲學步期（自主 vs 羞怯）</strong>，自我意識萌芽、秩序敏感期高峰與分離焦慮期。全書 32 節中，有 <strong>11 節為 19 個月最高優先（P1）</strong>，請優先執行！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>💡 全書核心一頁式定調：</strong><br>
+              <strong>園丁養育模型</strong> ➔ 我們不是雕刻者，而是<strong>滋養者</strong>；<br>
+              <strong>情緒教練模型</strong> ➔ 我們不是滅火員，而是<strong>陪伴者</strong>；<br>
+              <strong>優勢發現模型</strong> ➔ 我們不是評判官，而是<strong>發現者</strong>。
+            </div>
+
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 12px;">📑 全書結構與 19 個月相關度總覽表</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>篇章</th>
+                  <th>章節主題</th>
+                  <th>19 個月優先度</th>
+                  <th>關鍵落地動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>根基篇</strong></td>
+                  <td>Ch 1-3 大腦窗口、園丁角色、情緒儀式</td>
+                  <td><span class="priority-badge badge-p1">最高 (2.2/3.4)</span></td>
+                  <td>有限選擇、睡前儀式、 Serve & Return 發球回球</td>
+                </tr>
+                <tr>
+                  <td><strong>實踐篇</strong></td>
+                  <td>Ch 4-8 積極回應、分離焦慮、情緒命名</td>
+                  <td><span class="priority-badge badge-p1">最高 (4.1/4.2/5.1/6.1/6.2)</span></td>
+                  <td>絕不偷溜、觀察五秒不打擾、先接納後引導</td>
+                </tr>
+                <tr>
+                  <td><strong>進階篇</strong></td>
+                  <td>Ch 9-11 特殊時光、家庭規則、優勢記錄</td>
+                  <td><span class="priority-badge badge-p1">最高 (9.1)</span></td>
+                  <td>10分鐘沙漏特殊時光、正面家規、手機相簿法記錄優勢</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Slide 1: Ch 0 序言 -->
+        <section class="slide-card" id="slide-ch0">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 0</div>
+              <h2 class="slide-title">序言與前言：懂比愛更重要</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 基礎心態</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-tip">
+              <strong>🌟 核心主張：</strong> 愛是本能，懂是本領。傳統教養常以愛為名進行「標準化修剪」（讓安靜的孩子活潑、好動的孩子安靜）。本書立場：不補短板，而是揚長處。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🎨 「航航混顏料」經典模式</div>
+                <p>孩子把顏料塗滿整張桌子，老師沒有只說「隨你玩」，而是給了一個<strong>新身分（「色彩探索家」）</strong> + <strong>新結構（限定兩種顏色、指定區域、水洗顏料）</strong>。</p>
+                <p style="color: var(--primary-coral-dark); font-weight: 700; margin-top: 6px;">👉 關鍵公式：接納 + 結構 = 完整動作（只接納會變成放任）</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🔍 推薦序內容缺口提醒</div>
+                <p>推薦序點名的兩個賣點：「24項優勢信心建立法」與「加總分」理念，在正文中<strong>沒有獨立方法或完全未出現</strong>。閱讀時宜保持批判性。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週可做：</strong><br>
+              處理一個你覺得是「破壞」的行為（扔食物、掏抽屜）。先做<strong>觀察</strong>：她在觀察什麼？重複哪個動作？換個名字記錄（「測試重力」），並給予一個安全的替代結構（專屬低櫃/倒東西箱）。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: Ch 1.1 - 1.3 根基篇 -->
+        <section class="slide-card" id="slide-ch1-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 1.1 ~ 1.3</div>
+              <h2 class="slide-title">心理資本、大腦黃金窗口與園丁隱喻</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 心理學地基</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <img src="images/serve_and_return.jpg" alt="發球與回球互動">
+              <figcaption>哈佛兒童發展中心「 Serve & Return 發球—回球」互動：孩子發球，父母在2秒內回球。</figcaption>
+            </figure>
+
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">🌱 三大心理資本 (Ch 1.1)</div>
+                <p><strong>內在安全感</strong> (土壤)<br><strong>樂觀解釋風格</strong> (陽光)<br><strong>成長型思維</strong> (雨露)</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">壞事發生時往「暫時、特定、外在」歸因。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🧠 大腦發展窗口 (Ch 1.2)</div>
+                <p>0-3 歲突觸爆發，3 歲起「用進廢退」修剪。<strong> Serve & Return 發球-回球</strong>是核心互動。毒性壓力指長期忽視/暴力的壓力，日常哭鬧非毒性壓力。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏡 園丁 vs 木匠 (Ch 1.3)</div>
+                <p>木匠有藍圖，偏離即缺陷；園丁只負責土壤陽光水分。父母應從「塑造者」轉為「發現者」與「支持者」。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週可做：</strong><br>
+              挑三個時段（換尿布、吃飯、洗澡），刻意做「發球-回球」：只要她發出聲音或指向物品，在 2 秒內回應（重複聲音、命名物品、模仿表情）。跟隨她的注意力！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: Ch 2.2 1-3歲學步期 (19M 最高) -->
+        <section class="slide-card" id="slide-ch2-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 2.2</div>
+              <h2 class="slide-title">1—3歲學步期：呵護自主感，巧妙設立邊界</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 200" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <path d="M 250 160 L 230 190 L 270 190 Z" fill="#264653" />
+                    <line x1="100" y1="160" x2="400" y2="160" stroke="#2D6A4F" stroke-width="8" stroke-linecap="round" />
+                    <circle cx="150" cy="130" r="30" fill="#E76F51" />
+                    <text x="150" y="135" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">自主感</text>
+                    <rect x="320" y="100" width="60" height="60" fill="#E9C46A" rx="5" />
+                    <text x="350" y="135" fill="#264653" text-anchor="middle" font-size="14" font-weight="bold">邊界</text>
+                </svg>
+            </figure>
+
+            <div class="callout callout-core">
+              <strong>🌟 Erikson 第二階段核心：自主 vs 羞怯懷疑</strong><br>
+              孩子的「不！」不是變壞，而是自我意識的宣言。父母的角色從「守護神」轉為「引導者」，任務是在呵護自主感與設立安全邊界間找平衡。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🎁 最高投報率技術：有限選擇</div>
+                <p>不問「你要不要穿衣服」，問「你要穿紅色還是藍色」。選項由你設計，選擇權在她。<strong>19 個月選項必須是拿在手中的實物！</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🍪 秩序敏感期與邊界</div>
+                <p>餅乾碎了就崩潰不是無理取鬧，是認定的完整被破壞。處理方式不是講理，是維持規律。心法：<strong>允許情緒，限制行為；共情先行，堅定隨後。</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週必執行（6 大動作）：</strong>
+              <ol style="margin-left: 20px; font-size: 0.9rem; line-height: 1.7;">
+                <li><strong>有限選擇每天三次</strong>：穿衣、吃飯碗、出門鞋（拿兩個實物供選）。</li>
+                <li><strong>建立「替代清單」</strong>：對常說不可以的場景準備「但你可以...」（打人 ➔ 摸摸 / 拍枕頭）。</li>
+                <li><strong>小幫手任務</strong>：髒衣服丟洗衣籃、放鞋子，做完真誠道謝。</li>
+                <li><strong>三段式共情句型</strong>：「你很想要 ___，拿不到很生氣。爸爸知道。但是 ___ 不可以。我們可以 ___。」</li>
+                <li><strong>固定三樣物品位置</strong>：她的杯子、鞋子、睡前玩偶。</li>
+                <li><strong>戒除言語羞辱</strong>：絕不說「笨手笨腳」「再哭就不要你了」。</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Ch 3.1 - 3.4 父母情緒與家庭儀式 -->
+        <section class="slide-card" id="slide-ch3-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 3.1 ~ 3.4</div>
+              <h2 class="slide-title">父母情緒管理、夫妻關係與家庭儀式</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 3.4 19M 最高</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">☕ 先給自己澆水 (Ch 3.1)</div>
+                <p>空杯子倒不出水。睡眠不足會使前額葉失控。練習 <strong>4-7-8 呼吸法</strong>：吸氣 4 秒、屏息 7 秒、呼氣 8 秒。認知重評：「她不是搞破壞，是在探索。」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">☀️ 夫妻關係是太陽 (Ch 3.2-3.3)</div>
+                <p>對孩子最好的教育是父母相愛。避免「孩子中心主義」。目睹爭吵後必須<strong>在孩子面前和好（災後重建）</strong>。約定「減壓閥暗號」適時換手。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>🎉 3.4 家庭積極情緒儀式（頻率 > 規模）：</strong><br>
+              每週大餐不如每天高品質擁抱。設計睡前固定儀式、出門「魔法親吻」、每年 recorded 的「生日訪談」。
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週可做：</strong><br>
+              - <strong>今晚開始睡前儀式</strong>：洗澡 ➔ 按摩 ➔ 繪本 ➔ 關燈 ➔ 愛的暗號。<br>
+              - <strong>夫妻黃金 15 分鐘</strong>：孩子睡後不滑手機、不談孩子，只聊彼此。<br>
+              - <strong>確立 3 條家規</strong>：與太太及照顧者（長輩/保母）一致。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Ch 4.1 積極回應 vs 寵溺 -->
+        <section class="slide-card" id="slide-ch4-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 4.1</div>
+              <h2 class="slide-title">積極回應 vs 寵溺：無條件接納情緒，有條件滿足訴求</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🌟 核心定型金句：</strong><br>
+              「孩子不是被愛壞的，而是被混亂的規則和無效的管教慣壞的。」<br>
+              <strong>回應的是「情緒與需求」，寵溺是滿足「所有行為訴求」。</strong>
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">⚙️ 外部調節器概念</div>
+                <p>幼兒前額葉未成熟，無法自我調節。父母的及時回應是外部調節器。無數次「被成功調節」的經驗會內化為自我調節能力。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🕳️ 坑的比喻</div>
+                <p><strong>積極回應</strong> ➔ 跑到坑邊說「我看到你了，我在這裡，我會幫你出來」；<br>
+                <strong>寵溺</strong> ➔ 孩子哼一聲你就跳下去墊底甚至罵地面（取代了她的經驗）。</p>
+              </div>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>步驟</th>
+                  <th>階段任務</th>
+                  <th>19 個月具體動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>步驟 1</strong></td>
+                  <td>處理情緒 (下層大腦)</td>
+                  <td>蹲下平視 ➔ 命名情緒 ➔ 允許哭泣 (語言簡短，肢體為主)</td>
+                </tr>
+                <tr>
+                  <td><strong>步驟 2</strong></td>
+                  <td>處理行為 (上層大腦)</td>
+                  <td>溫和堅定重申規則 ➔ 提供有限選擇 / 轉移注意力</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週做法：</strong><br>
+              抓一個常因哭吵而讓步的場景（如索要零食）。這次不改變規則，只改變回應方式：情緒全接住，規則不動！重複 50 次是正常成本，不是失敗。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: Ch 4.2 分離焦慮與安全基地 -->
+        <section class="slide-card" id="slide-ch4-2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 4.2 ~ 4.3</div>
+              <h2 class="slide-title">分離焦慮的積極應對與可預測家庭環境</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 4.2 19M 高峰</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 250" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <path d="M 50 80 L 250 20 L 450 80 Z" fill="#E76F51" />
+                    <text x="250" y="60" fill="#FFFFFF" text-anchor="middle" font-size="18" font-weight="bold">安全基地</text>
+                    <rect x="80" y="80" width="50" height="150" fill="#2D6A4F" />
+                    <text x="105" y="160" fill="#FFFFFF" text-anchor="middle" font-size="12" font-weight="bold" writing-mode="vertical-rl">接納</text>
+                    <rect x="180" y="80" width="50" height="150" fill="#264653" />
+                    <text x="205" y="160" fill="#FFFFFF" text-anchor="middle" font-size="12" font-weight="bold" writing-mode="vertical-rl">回應</text>
+                    <rect x="280" y="80" width="50" height="150" fill="#E9C46A" />
+                    <text x="305" y="160" fill="#264653" text-anchor="middle" font-size="12" font-weight="bold" writing-mode="vertical-rl">支持</text>
+                    <rect x="380" y="80" width="50" height="150" fill="#F4A261" />
+                    <text x="405" y="160" fill="#FFFFFF" text-anchor="middle" font-size="12" font-weight="bold" writing-mode="vertical-rl">放手</text>
+                </svg>
+            </figure>
+
+            <div class="callout callout-warning">
+              <strong>⚠️ 最高警告：絕不偷偷溜走！</strong><br>
+              偷溜會造成嚴重的信任危機，導致孩子第二天更黏。寧可面對哭泣的告別，也不要無聲消失。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💋 4.2 核心工具：再見儀式</div>
+                <p>固定短小的再見儀式（如<strong>魔法親吻</strong>：在手心親一下印在孩子手心）。告別語言指向「未來的重聚」（「下午4點我會第一個接你」），而非當下的不捨。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏰 4.3 安全基地四大支柱</div>
+                <p>1. <strong>時間節奏</strong>（日常程序）<br>
+                2. <strong>物理環境</strong>（各歸其位、低矮收納）<br>
+                3. <strong>行為結果</strong>（清晰規則）<br>
+                4. <strong>情緒反應可預測</strong>（最重要！）</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週執行：</strong><br>
+              - 固定「魔法親吻」再見儀式，每次都用同一個。<br>
+              - 準時回來時明確標記：「爸爸說會回來，爸爸回來了！」<br>
+              - 外出帶上她的「安慰物」（行動安全基地）。<br>
+              - 設定低矮玩具架，玩完帶她一起「送玩具回家」。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Ch 5.1 保護專注力 (19M 最高) -->
+        <section class="slide-card" id="slide-ch5-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 5.1</div>
+              <h2 class="slide-title">保護專注力：不打擾的藝術</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 250" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <path d="M 150 70 A 80 80 0 0 1 350 70" fill="none" stroke="#2D6A4F" stroke-width="4" marker-end="url(#arrow)" />
+                    <path d="M 350 180 A 80 80 0 0 1 150 180" fill="none" stroke="#E9C46A" stroke-width="4" marker-end="url(#arrow)" />
+                    <circle cx="120" cy="125" r="40" fill="#E76F51" />
+                    <text x="120" y="130" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">選擇</text>
+                    <circle cx="250" cy="50" r="40" fill="#264653" />
+                    <text x="250" y="55" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">專注</text>
+                    <circle cx="380" cy="125" r="40" fill="#F4A261" />
+                    <text x="380" y="130" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">重複</text>
+                    <circle cx="250" cy="200" r="40" fill="#2D6A4F" />
+                    <text x="250" y="205" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">滿足</text>
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#2D6A4F" />
+                        </marker>
+                    </defs>
+                </svg>
+            </figure>
+
+            <div class="callout callout-core">
+              <strong>🌟 核心主張：</strong><br>
+              專注力主要不是訓練出來的，是<strong>保護</strong>出來的。除非孩子主動邀請（抬頭看你、眼神邀請），否則任何介入都是打斷。
+            </div>
+
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">🚫 服務型打擾</div>
+                <p>「渴不渴？喝口水」「熱不熱？」（在她正專注探索時中斷她）</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🚫 指導型打擾</div>
+                <p>「天空應該是藍色的」「這個積木應該放這裡」「快看那邊」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🚫 關心型打擾</div>
+                <p>在旁邊充滿愛意地凝視、時不時摸頭——無形的「關注壓力」也是干擾。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>💡 蒙特梭利工作循環：</strong><br>
+              選擇 ➔ 專注操作 ➔ <strong>重複練習（同一個動作倒進倒出 20 次）</strong> ➔ 滿足收尾。<br>
+              重複練習是工作，不是無聊！不要換掉它，不要「升級」它！
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週執行：</strong><br>
+              - <strong>「觀察五秒原則」</strong>：想開口打擾前，先默數五秒！<br>
+              - <strong>全家統一共識</strong>：跟長輩溝通「她在工作」。<br>
+              - <strong>喝水/擦嘴/加外套</strong>集中在她自然收尾的空檔。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: Ch 6.1 情緒命名與兩層樓房神經學 -->
+        <section class="slide-card" id="slide-ch6-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 6.1 ~ 6.2</div>
+              <h2 class="slide-title">情緒命名與先接納後引導</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <img src="images/emotional_coregulation.jpg" alt="情緒共調與安撫">
+              <figcaption>Siegel 兩層樓房神經學：情緒崩潰時下層大腦劫持全身，父母蹲下命名情緒是搭建連通上下層大腦的階梯。</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🏛️ 6.1 Siegel 兩層樓房</div>
+                <p><strong>下層大腦</strong> (腦幹/邊緣系統) 負責原始情緒；<strong>上層大腦</strong> (前額葉) 負責思考與調節。說出「你很生氣」，是在幫她吸引上層大腦工作！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🚥 6.2 順序不可顛倒</div>
+                <p>杏仁核警報時，前額葉「掉線」，講理就像對著關機的電腦輸入指令。<strong>第一步針對下層大腦 (接納)；第二步針對上層大腦 (引導)。</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>👀 觀察切換上層大腦的三個指標：</strong><br>
+              當你觀察到孩子的 <strong>1. 哭聲逐漸減弱、2. 身體不再緊繃、3. 呼吸變得平穩</strong> 時，才是進入第二步引導的最佳時機！
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月情緒命名句型：</strong><br>
+              「你看起來好像很 <u>失望/著急/生氣</u>，是因為 <u>拿不到玩具</u>，對嗎？」<br>
+              語尾保持探詢上揚。19 個月重點詞彙：<strong>失望、挫折、著急、害怕、不舒服</strong>。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: Ch 6.3 積極暫停角 -->
+        <section class="slide-card" id="slide-ch6-3">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 6.3</div>
+              <h2 class="slide-title">應對發脾氣的「積極暫停角」</h2>
+            </div>
+            <span class="priority-badge badge-p3">P3 父母先做</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <img src="images/positive_pause.jpg" alt="積極暫停角">
+              <figcaption>積極暫停角不是懲罰隔離，而是「我們情緒激動，需要安靜的地方平復」的心情加油站。</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🛋️ 90% 取決於事前準備</div>
+                <p>必須在風平浪靜時共同搭建。切忌稱「冷靜角/反思椅」（負面暗示）；推薦「彩虹島」「太空艙」「心情加油站」。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🧸 暫停角 4 類物品</div>
+                <p>1. <strong>舒緩感官</strong> (軟墊/亮片瓶)<br>
+                2. <strong>宣洩情緒</strong> (捏捏樂/打枕頭)<br>
+                3. <strong>注意力轉移</strong> (繪本/拼圖)<br>
+                4. <strong>安全感媒介</strong> (全家福/抱抱熊)</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月適用調整：</strong><br>
+              19 個月還無法獨立去暫停角。<strong>現在主要作為「父母自己的暫停角」</strong>！當你快生氣時，說「爸爸需要去冷靜一下」，示範吹亮片瓶/深呼吸，這是最好的身教。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: Ch 7 & 8 社交物權與允許犯錯 -->
+        <section class="slide-card" id="slide-ch7-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 7.1 & 8.1~8.3</div>
+              <h2 class="slide-title">物權意識、允許犯錯與「暫未」的力量</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 行為引導</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 200" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <rect x="50" y="50" width="150" height="100" fill="#E76F51" rx="8" />
+                    <text x="125" y="80" fill="#FFFFFF" text-anchor="middle" font-size="16" font-weight="bold">問題行為</text>
+                    <text x="125" y="110" fill="#FFFFFF" text-anchor="middle" font-size="14">固執 / 破壞</text>
+                    
+                    <path d="M 220 100 L 280 100" stroke="#264653" stroke-width="6" marker-end="url(#arrow2)" />
+                    
+                    <rect x="300" y="50" width="150" height="100" fill="#2D6A4F" rx="8" />
+                    <text x="375" y="80" fill="#FFFFFF" text-anchor="middle" font-size="16" font-weight="bold">優勢行為</text>
+                    <text x="375" y="110" fill="#FFFFFF" text-anchor="middle" font-size="14">毅力 / 好奇心</text>
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#264653" />
+                        </marker>
+                    </defs>
+                </svg>
+            </figure>
+
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">🧸 物權與分享 (Ch 7.1)</div>
+                <p>「我的」是自我邊界的確立。強迫分享是在破壞邊界。<strong>輪流比分享容易，沙漏/計時器比說理有效。</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🧹 允許犯錯 (Ch 8.1)</div>
+                <p>打翻牛奶不是道德問題。<strong>遞給她抹布，一起擦乾淨！</strong> 讓她體驗到「事情弄糟了可以修復」，而非恐懼被罵。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🧱 腳手架與暫未 (Ch 8.2-8.3)</div>
+                <p>把目標拆成小步驟。把「我不會」改成「我暫時還不會」。19 個月降難度：用短柄粗湯匙、魔鬼氈鞋。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月落地做法：</strong><br>
+              - 開始明確宣示界線：「這是女兒的杯子」「這是爸爸的手機」。<br>
+              - 打翻東西時不吼叫，平靜說「牛奶灑了，我們拿抹布擦擦」，遞給她抹布共同清理。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: Ch 9.1 特殊時光 (19M 最高) -->
+        <section class="slide-card" id="slide-ch9-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 9.1</div>
+              <h2 class="slide-title">放下手機：全身心投入的「特殊時光」</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 200" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <circle cx="100" cy="100" r="50" fill="none" stroke="#264653" stroke-width="8" />
+                    <path d="M 100 50 L 100 100 L 130 120" stroke="#E76F51" stroke-width="6" stroke-linecap="round" />
+                    <text x="100" y="175" fill="#264653" text-anchor="middle" font-size="16" font-weight="bold">10分鐘特殊時光</text>
+                    
+                    <rect x="200" y="30" width="120" height="60" fill="#2D6A4F" rx="5" />
+                    <text x="260" y="65" fill="#FFFFFF" text-anchor="middle" font-size="14">命名預告</text>
+                    
+                    <rect x="340" y="30" width="120" height="60" fill="#E9C46A" rx="5" />
+                    <text x="400" y="65" fill="#264653" text-anchor="middle" font-size="14">孩子主導</text>
+                    
+                    <rect x="200" y="110" width="120" height="60" fill="#F4A261" rx="5" />
+                    <text x="260" y="145" fill="#FFFFFF" text-anchor="middle" font-size="14">零干擾</text>
+                    
+                    <rect x="340" y="110" width="120" height="60" fill="#264653" rx="5" />
+                    <text x="400" y="145" fill="#FFFFFF" text-anchor="middle" font-size="14">解說員不考驗</text>
+                </svg>
+            </figure>
+
+            <div class="callout callout-core">
+              <strong>🌟 核心公式：每天 10—15 分鐘不被打擾的獨享時間</strong><br>
+              質量遠重於數量。這段時間是孩子的「心理安全感加油站」。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">⏳ 特殊時光的 4 個原則</div>
+                <p>1. <strong>命名與預告</strong>：「這是我們的特殊時光！」<br>
+                2. <strong>孩子主導</strong>：她選玩什麼、怎麼玩<br>
+                3. <strong>零干擾</strong>：手機放別房、關掉電視<br>
+                4. <strong>不做考官，當解說員</strong>：「你正在把紅積木放最上面」＞「這是什麼顏色？」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">📖 親子閱讀 (Ch 9.3)</div>
+                <p>共建者而非朗讀者。19 個月接受「不照順序翻」「讀半本就跑」。重點是互動與表情指認（「你看小熊在哭」）。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週執行：</strong><br>
+              準備一個 10 分鐘沙漏。每天固定時間（如晚飯後），手機放遠，告訴她「現在是我們的特殊時光」，完全跟隨她的指令玩！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 12: Ch 10.1 - 10.3 積極紀律與話術 -->
+        <section class="slide-card" id="slide-ch10-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 10.1 ~ 10.3</div>
+              <h2 class="slide-title">積極家庭規則、4R 結果與代替吼叫話術</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 規則建立</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 200" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <rect x="50" y="60" width="160" height="80" fill="#E76F51" rx="5" />
+                    <text x="130" y="105" fill="#FFFFFF" text-anchor="middle" font-size="16" font-weight="bold">❌ 負面限制</text>
+                    
+                    <path d="M 230 100 L 270 100" stroke="#264653" stroke-width="6" marker-end="url(#arrow2)" />
+                    
+                    <rect x="290" y="60" width="160" height="80" fill="#2D6A4F" rx="5" />
+                    <text x="370" y="105" fill="#FFFFFF" text-anchor="middle" font-size="16" font-weight="bold">✅ 積極引導</text>
+                </svg>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📜 正面語言規則 (Ch 10.1)</div>
+                <p>大腦難以處理「不」。重寫規則：<br>
+                ❌ 不許打人 ➔ 🟢 <strong>我們用溫柔的手</strong><br>
+                ❌ 不許爬茶几 ➔ 🟢 <strong>我們的腳走在地上</strong><br>
+                ❌ 吃飯別亂跑 ➔ 🟢 <strong>吃飯坐在餐椅上</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">⚠️ 10.2 邏輯結果 4R 警示</div>
+                <p>邏輯結果需滿足 4R (Related, Respectful, Reasonable, Revealed in advance)。<br>
+                <strong style="color: #E53E3E;">⚠️ 19 個月警告：邏輯結果在此年齡基本無效！此階段靠環境設計、預告轉移與物理帶離。</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>📢 10.3 鼓勵式話術與吼叫修復三步：</strong><br>
+              若不小心吼了，請在 3 分鐘內做<strong>關係修復三步</strong>：<br>
+              1. 為自己情緒負責（「媽媽剛才大吼是我的問題，對不起」）<br>
+              2. 重新連接（「我生氣的是行為，但我永遠愛你」）<br>
+              3. 共同復盤。
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週執行：</strong><br>
+              用正面語言寫下 3 條家規，印出圖片貼在牆上（18個月看得懂圖片）。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 13: Ch 11.1 - 11.3 VIA 性格優勢 -->
+        <section class="slide-card" id="slide-ch11-1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 11.1 ~ 11.3</div>
+              <h2 class="slide-title">發現孩子的天賦：VIA 24 項性格優勢</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 淘金者視角</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <img src="images/character_strengths.jpg" alt="性格優勢發現">
+              <figcaption>從「消防員」(到處滅火) 轉為「淘金者」(在生活中篩選優勢金粒)。</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🔍 重新視角對照 (Ch 11.1)</div>
+                <p>把問題行為轉化為優勢：<br>
+                - 「固執」背後是 ➔ <strong>毅力</strong><br>
+                - 「拆玩具破壞」背後是 ➔ <strong>好奇心</strong><br>
+                - 「沒大沒小」背後是 ➔ <strong>誠實</strong><br>
+                - 「挑食聞食物」背後是 ➔ <strong>審慎</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">📱 手機相簿記錄法 (Ch 11.2)</div>
+                <p>建立「優勢瞬間」相簿，每張加一句備註（時間+行為+優勢名稱）。<strong>80% 的讚美與精力投資在優勢上 (Ch 11.3)。</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月本週執行：</strong><br>
+              建立手機「優勢瞬間」相簿。觀察她進入新環境的第一個動作（「她如何開始」：衝進去 / 先看 / 找你），這是氣質的原始資料！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 14: 三大模型總結 -->
+        <section class="slide-card" id="slide-models">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Summary Models</div>
+              <h2 class="slide-title">全書三大總結模型 (一頁式心法)</h2>
+            </div>
+            <span class="priority-badge badge-p1">P1 全書精髓</span>
+          </div>
+          <div class="slide-body">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-coral-dark);">🌳 模型一：「園丁養育」生態系統模型</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>層次</th>
+                  <th>核心內容</th>
+                  <th>對應章節</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>肥沃的土壤</strong></td>
+                  <td>安全與連接 (內在安全感、積極回應、夫妻關係)</td>
+                  <td>Ch 4 安全感 / Ch 3 夫妻關係</td>
+                </tr>
+                <tr>
+                  <td><strong>穩固的根系</strong></td>
+                  <td>內在力量 (情緒管理、抗挫力、優勢發現)</td>
+                  <td>Ch 6 情緒 / Ch 8 堅毅 / Ch 11 優勢</td>
+                </tr>
+                <tr>
+                  <td><strong>綻放的花朵</strong></td>
+                  <td>外顯行為 (好奇心、社交力、熱愛學習)</td>
+                  <td>Ch 5 好奇心 / Ch 7 社交力</td>
+                </tr>
+                <tr>
+                  <td><strong>氣候與園丁</strong></td>
+                  <td>家庭環境與父母角色 (情緒管理、溝通、儀式)</td>
+                  <td>Ch 3 父母自我關懷與儀式</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-coral-dark); margin-top: 16px;">🚦 模型二：情緒管理「三步走」教練模型</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>步驟</th>
+                  <th>行動內容</th>
+                  <th>標準話術</th>
+                  <th>19 個月適用度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>① 降溫</strong></td>
+                  <td>蹲下、擁抱、共情命名情緒</td>
+                  <td>「你非常生氣，因為……對嗎？」</td>
+                  <td><span class="priority-badge badge-p1">完全適用 (極致做)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>② 復盤</strong></td>
+                  <td>平復後共同回顧事件</td>
+                  <td>「剛才發生了什麼？」</td>
+                  <td><span class="priority-badge badge-def">延後 (約 3 歲)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>③ 解決</strong></td>
+                  <td>共同探討方案或規則</td>
+                  <td>「下次可以怎麼做？」</td>
+                  <td><span class="priority-badge badge-def">延後 (約 3 歲)</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-coral-dark); margin-top: 16px;">🔄 模型三：優勢發現與滋養循環模型</h3>
+            <div class="callout callout-tip">
+              <strong>① 正念觀察</strong> (優勢偵探視角) ➔ <strong>② 精準識別</strong> (連結 24 項優勢詞彙) ➔ <strong>③ 優勢性反饋</strong> (描述行為 + 命名優勢) ➔ <strong>④ 設計「優勢時刻」</strong> (創造應用場景) ➔ 正向迴路！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 15: 附錄 1: 10 例小遊戲 -->
+        <section class="slide-card" id="slide-games">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Appendix 1</div>
+              <h2 class="slide-title">附錄 1：家庭積極情緒小遊戲 10 例</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 遊戲力實踐</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>遊戲名稱</th>
+                  <th>訓練目標</th>
+                  <th>19 個月適用度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>情緒面具變變變</strong></td>
+                  <td>識別與表達基本情緒</td>
+                  <td><span class="priority-badge badge-p1">✅ 現在就能玩 (互猜表情)</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>最愛時刻「玫瑰」分享</strong></td>
+                  <td>感恩與樂觀思維</td>
+                  <td>△ 父母代述（「今天最開心是溜滑梯嗎？」）</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>愛的轟炸</strong></td>
+                  <td>自尊與被愛感</td>
+                  <td><span class="priority-badge badge-p1">✅ 聽得懂語氣與擁抱</span></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>勇氣歌</strong></td>
+                  <td>克服小恐懼</td>
+                  <td><span class="priority-badge badge-p1">✅ 打針、看醫生前特別有效！</span></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><strong>發現美的「尋寶」之旅</strong></td>
+                  <td>培養欣賞美</td>
+                  <td>✅ 簡化成「找一個紅色的」</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><strong>哈哈鏡模仿秀</strong></td>
+                  <td>釋放情緒、體驗快樂</td>
+                  <td><span class="priority-badge badge-p1">✅ 這個年齡最愛！</span></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><strong>感恩石</strong></td>
+                  <td>練習感恩</td>
+                  <td>△ 父母先示範</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><strong>「吹走」壞情緒</strong></td>
+                  <td>深呼吸遊戲化</td>
+                  <td><span class="priority-badge badge-p1">✅ 用力吹手心壞情緒</span></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><strong>優勢超人之帽</strong></td>
+                  <td>自我認同</td>
+                  <td>△ 約 2.5 歲</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><strong>家庭擁抱隧道</strong></td>
+                  <td>催產素速效藥</td>
+                  <td><span class="priority-badge badge-p1">✅ 搭手成隧道鑽過拿擁抱</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Slide 16: 附錄 2: 8 大急救話術 -->
+        <section class="slide-card" id="slide-scripts">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Appendix 2</div>
+              <h2 class="slide-title">附錄 2：8 大高頻衝突場景急救話術對照</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 最高實用</span>
+          </div>
+          <div class="slide-body">
+
+            <div class="script-card">
+              <div class="script-header">🍚 場景一：不肯吃飯 / 挑食</div>
+              <div class="script-bad">❌ 傳統吼叫：「必須吃完！不然不許下桌！」</div>
+              <div class="script-good">✅ 積極話術：「你是想先吃三口米飯，還是先吃一塊你愛吃的蛋？你的小肚子是你自己的『飽飽管理員』，它說飽了你就聽它的。」</div>
+            </div>
+
+            <div class="script-card">
+              <div class="script-header">🌙 場景二：不睡覺 / 拖延上床</div>
+              <div class="script-bad">❌ 傳統吼叫：「都幾點了！馬上給我去睡！再不睡大灰狼來了！」</div>
+              <div class="script-good">✅ 積極話術：「我們再玩最後五分鐘。看，長針指到 6 就是魔法睡覺時間！我們來比賽看誰先像小烏龜一樣『爬』到床上？」</div>
+            </div>
+
+            <div class="script-card">
+              <div class="script-header">💥 場景三：發脾氣、哭鬧不止 (19M 最高頻)</div>
+              <div class="script-bad">❌ 傳統吼叫：「不許哭！再哭我就揍你了！」</div>
+              <div class="script-good">✅ 積極話術：「你非常非常生氣/難過，對嗎？想哭的話爸爸陪你。你可以生氣，但不能打人。你可以去打枕頭或用力跺三下腳。」</div>
+            </div>
+
+            <div class="script-card">
+              <div class="script-header">🛒 場景五：公共場合哭鬧索要東西</div>
+              <div class="script-bad">❌ 傳統吼叫：「家裡那麼多！不許買！你再鬧我現在就走！」</div>
+              <div class="script-good">✅ 積極話術（幻想滿足）：「我知道你非常想要這個小汽車！如果買回家你會給它起什麼名字？我們來給它拍張照片加入生日願望清單。」</div>
+            </div>
+
+            <div class="script-card">
+              <div class="script-header">🐢 場景六：磨蹭、拖拉 (19M 適用)</div>
+              <div class="script-bad">❌ 傳統吼叫：「快點！磨蹭什麼！我數到三！」</div>
+              <div class="script-good">✅ 積極話術：「我們來玩『機器人快走』遊戲！啟動馬達，嗡嗡嗡———出發！你是想像小兔一樣蹦著去洗手，還是像大象一樣跺腳去？」</div>
+            </div>
+
+            <div class="script-card">
+              <div class="script-header">🪥 場景七：拒絕刷牙 / 洗澡</div>
+              <div class="script-bad">❌ 傳統吼叫：「不刷牙蟲子咬死你！」</div>
+              <div class="script-good">✅ 積極話術：「牙刷小火車要開進山洞啦！嗚———給牙齒上的『細菌小怪獸』洗洗澡！你是刷牙總監，指揮我先刷上面還是下面？」</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Slide 17: 學術檢視與全書存疑 -->
+        <section class="slide-card" id="slide-critique">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Critical Audit</div>
+              <h2 class="slide-title">全書存疑清單與學術文獻檢視 (Fact-Check)</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 批判性思考</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-critique">
+              <strong>🔍 事實與推論分開：本檔特別補充之外部文獻核實</strong><br>
+              全書參考文獻僅 6 筆暢銷書中譯本，<strong>無任何一篇學術論文</strong>。書中通篇出現「哈佛/耶魯/劍橋/斯坦福研究顯示+精確百分比」，在參考文獻中無對應來源。<strong>建議把帶百分比的研究結論當作方向性提示，不引用數字！</strong>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>書中主張與數據</th>
+                  <th>真實學術視角與問題</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>哈佛：1-3歲探索前額葉神經連接密度提升 20%</td>
+                  <td><strong style="color:#C53030;">神經連接密度無法在活體兒童身上這樣測量。數據高度可疑。</strong></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>斯坦福 Dweck 團隊 5 年追蹤，成長型思維數學提升 15%</td>
+                  <td>最接近研究為 2 年縱向介入 (Blackwell 2007)。Sisk et al. (2018) 統合分析顯示成長型思維介入效果極小。勿當決定性變數自責。</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>3000 萬詞彙差距 (Hart & Risley)</td>
+                  <td>Sperry et al. (2018) 指出原研究樣本僅 42 戶，且低估低收入家庭語言多樣性。方向站得住，數字勿引用。</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td> AAP 0-12個月每秒 700-1000個連接</td>
+                  <td>與第 1.2 節「每秒上百萬個」相差三個數量級，書中內部矛盾。</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>溫尼科特「60分媽媽」</td>
+                  <td>原概念為 "Good enough mother" (足夠好的母親)，非60分。原意為「恰到好處的不完美」提供獨立契機。</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>正面管教 4R 與暫停角來源缺失</td>
+                  <td>源自 Jane Nelsen《正面管教》(Adler-Dreikurs學派)。書中未標註出處。方法有效，但需了解來源。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Slide 18: 19 個月專屬行動清單 -->
+        <section class="slide-card" id="slide-action18">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">18-Month Action Plan</div>
+              <h2 class="slide-title">19 個月女兒專屬落地行動清單</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 執行總綱</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🎯 推進原則：一次只推進 1—2 項，不要全上！</strong>
+            </div>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #D63031;">🔥 第一優先：本週就開始 (投報率最高 6 項)</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>行動項目</th>
+                  <th>章節出處</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><strong>「觀察五秒」</strong>——想打斷她之前先默數五秒</td><td>Ch 5.1</td></tr>
+                <tr><td>2</td><td><strong>情緒命名</strong>：崩潰第一句說「你看起來很 ___」，語尾上揚</td><td>Ch 6.1</td></tr>
+                <tr><td>3</td><td><strong>積極回應兩步驟</strong>：先接情緒（等哭聲減弱呼吸平穩），再守規則</td><td>Ch 4.1/6.2</td></tr>
+                <tr><td>4</td><td><strong>「特殊時光」10分鐘</strong>：沙漏計時、手機放別房、她主導你當解說員</td><td>Ch 9.1</td></tr>
+                <tr><td>5</td><td><strong>固定睡前儀式 + 愛的暗號</strong></td><td>Ch 3.4/4.3</td></tr>
+                <tr><td>6</td><td><strong>絕不偷偷溜走 + 魔法親吻再見儀式</strong></td><td>Ch 4.2</td></tr>
+              </tbody>
+            </table>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #E67E22; margin-top: 16px;">⭐ 第二優先：本月內導入 (8 項)</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">
+              7. <strong>有限選擇</strong> (每天三次拿實物)｜8. <strong>正面語言重寫 3 條家規貼牆</strong>｜9. <strong>全體照顧者口徑統一</strong>｜10. <strong>遊戲化取代講理</strong> (刷牙/洗澡/出門)｜11. <strong>低矮玩具架「送玩具回家」</strong>｜12. <strong>簡化工具</strong> (粗握把湯匙/魔鬼氈鞋)｜13. <strong>夫妻黃金15分鐘</strong>｜14. <strong>打翻東西遞抹布一起擦</strong>。
+            </p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #27AE60; margin-top: 16px;">💡 第三優先：本季內建立習慣 (11 項)</h3>
+            <p style="font-size: 0.9rem; line-height: 1.7;">
+              15. 手機建「優勢瞬間」相簿加備註｜16. 觀察「她如何開始」氣質資料｜17. 記錄自己發火前置條件模式｜18. 描述具體動作稱讚｜19. 創意角落感官塗鴉｜20. 低結構材料替換 (積木/紙箱/水/沙)｜21. 保護每天自由時間｜22. 繪本指認表情｜23. 父母自己的暫停角示範｜24. 錄第一支「生日訪談」｜25. 明確宣示「這是誰的」。
+            </p>
+
+            <div class="callout callout-warning">
+              <strong>⏳ 19 個月延後啟用項目 (勿在此階段強求)：</strong><br>
+              「暫未」句型 (需會說我不會)、完整積極暫停角 (需3歲)、邏輯結果 4R (需3歲)、衝突解決三步法 (需3歲)、C2Q 追問 (需3歲)、家庭會議發言棒 (需3-4歲)。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 19: 結論頁 -->
+        <section class="slide-card" id="slide-conclusion">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Conclusion</div>
+              <h2 class="slide-title">結論：給 David 的育兒金句與宣告</h2>
+            </div>
+            <span class="priority-badge badge-p1">P1 終章</span>
+          </div>
+          <div class="slide-body">
+            <figure class='slide-media'>
+                <svg viewBox="0 0 500 200" width="100%" style="max-width:500px">
+                    <rect width="100%" height="100%" fill="#F8FAFC" rx="10" />
+                    <path d="M 240 180 L 260 180 L 255 100 L 245 100 Z" fill="#8B4513" />
+                    <circle cx="250" cy="80" r="45" fill="#2D6A4F" />
+                    <circle cx="210" cy="100" r="35" fill="#2D6A4F" />
+                    <circle cx="290" cy="100" r="35" fill="#2D6A4F" />
+                    <circle cx="250" cy="50" r="30" fill="#E9C46A" />
+                    <text x="250" y="160" fill="#FFFFFF" text-anchor="middle" font-size="14" font-weight="bold">滋養</text>
+                    <path d="M 100 180 L 400 180" stroke="#264653" stroke-width="4" stroke-linecap="round" />
+                    <text x="250" y="35" fill="#E76F51" text-anchor="middle" font-size="16" font-weight="bold">靜待花開</text>
+                </svg>
+            </figure>
+
+            <div class="callout callout-core" style="font-size: 1.05rem; text-align: center; padding: 24px;">
+              <strong>🌿 「我愛的不是你未來可能取得的成就，而是你此刻存在的本質。<br>
+              我關注的不是你比別人欠缺了什麼，而是你獨一無二的閃光點。<br>
+              我的夢想不是把你塑造成我想像中的樣子，而是守護你，成為你本該成為的自己。」</strong>
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💡 哲學層三大定針</div>
+                <p>- <strong>懂 > 愛</strong>：愛是本能，懂是本領。<br>
+                - <strong>園丁 ≠ 放任</strong>：接納 + 結構才是完整動作。<br>
+                - 滋養者、陪伴者、發現者，而非雕刻者與滅火員。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🛠️ 父母層三大修練</div>
+                <p>- <strong>先給自己澆水</strong>：睡滿 6 小時優先於所有技巧。<br>
+                - <strong>頻率 > 規模</strong>：每天一個高品質擁抱勝過每週大餐。<br>
+                - <strong>吼完後的三分鐘</strong>，才是真正的教育發生的地方！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action" style="text-align: center; margin-top: 20px;">
+              🎉 <strong>恭喜完成《滋養，而非雕刻》全書簡報學習！祝 David & 太太與 19 個月女兒的育兒旅程溫暖圓滿！</strong>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Footer Navigation Bar -->
+  <div class="slide-footer-nav">
+    <button class="nav-btn" id="btnPrev">←</button>
+    <div class="slide-counter" id="slideCounter">1 / 20</div>
+    <button class="nav-btn" id="btnNext">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

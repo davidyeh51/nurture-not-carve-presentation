@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《遊戲自控力》全書章節解讀與幼兒自控力啟蒙 | 互動簡報</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-coral: #3D5A80;
+      --primary-coral-dark: #293241;
+      --sage-green: #06D6A0;
+      --sage-green-dark: #059669;
+      --sun-yellow: #FFD166;
+      --accent-blue: #118AB2;
+    }
+  </style>
+</head>
+<body class="mode-slide">
+
+  <!-- Header App Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon" style="background: linear-gradient(135deg, #118AB2, #06D6A0);">🎮</div>
+      <div class="brand-text">
+        <h1>《遊戲自控力》全書解讀與 19 個月自控啟蒙指南</h1>
+        <p>作者：董祁奇｜David & 太太 育兒實踐版（女兒 1 歲 7 個月）</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="btn-toggle-mode" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.06); color: var(--text-main); font-weight: 700;">🏠 返回首頁總覽</a>
+      <button class="btn-toggle-mode active" id="btnModeSlide">🎬 簡報模式</button>
+      <button class="btn-toggle-mode" id="btnModeScroll">📜 長圖閱讀</button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar" style="background: linear-gradient(90deg, #118AB2, #06D6A0);"></div>
+  </div>
+
+  <!-- App Layout Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Sitemap Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-search">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋章節或自控力工具...">
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">全部</button>
+        <button class="tag-btn" data-filter="p1">🔥 核心洞察</button>
+        <button class="tag-btn" data-filter="p2">⭐ 自控技術</button>
+        <button class="tag-btn" data-filter="p3">💡 幼兒啟蒙</button>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-group-title">導讀與架構</div>
+        <a class="nav-item active" data-target="slide-g0" data-priority="p1">
+          <span>0. 全書總覽與核心定位</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-g-framework" data-priority="p2">
+          <span>架構：六大自控力閉環全景</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">認知與心理機制</div>
+        <a class="nav-item" data-target="slide-g1" data-priority="p1">
+          <span>Ch 1 診斷沉迷：冰山下的真相</span> <span class="priority-badge badge-p1">🔥 核心</span>
+        </a>
+        <a class="nav-item" data-target="slide-g2" data-priority="p1">
+          <span>Ch 2 重構認知：遊戲四大支柱</span> <span class="priority-badge badge-p1">🔥 心流</span>
+        </a>
+
+        <div class="nav-group-title">溝通同盟與契約建立</div>
+        <a class="nav-item" data-target="slide-g3" data-priority="p2">
+          <span>Ch 3 溝通策略：建立自控同盟</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+        <a class="nav-item" data-target="slide-g4" data-priority="p2">
+          <span>Ch 4 神經契約：前額葉自控訓練</span> <span class="priority-badge badge-p2">P2 契約</span>
+        </a>
+
+        <div class="nav-group-title">遷移轉化與家庭生態</div>
+        <a class="nav-item" data-target="slide-g5" data-priority="p2">
+          <span>Ch 5 轉化技術：遊戲向自驅遷移</span> <span class="priority-badge badge-p2">P2 PBL</span>
+        </a>
+        <a class="nav-item" data-target="slide-g6" data-priority="p1">
+          <span>Ch 6 家庭生態：現實好玩度勝出</span> <span class="priority-badge badge-p1">🔥 陪伴</span>
+        </a>
+        <a class="nav-item" data-target="slide-g-tools" data-priority="p2">
+          <span>附錄工具：家庭契約與過渡儀式</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">幼兒專屬與總結</div>
+        <a class="nav-item" data-target="slide-g-action19" data-priority="p1">
+          <span>19 個月幼兒自控力與螢幕防護</span> <span class="priority-badge badge-p1">🔥 19M 落地</span>
+        </a>
+        <a class="nav-item" data-target="slide-g-conclusion" data-priority="p1">
+          <span>結論：做孩子的自控力引路人</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      <div class="slides-container">
+
+        <!-- Slide 0: Overview -->
+        <section class="slide-card active-slide" id="slide-g0">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Book Profile & Overview</div>
+              <h2 class="slide-title">全書總覽：遊戲不是毒藥，而是頂級的自控力訓練場</h2>
+            </div>
+            <span class="priority-badge badge-p1">核心精讀</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 240" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="240" rx="16" fill="#F0F7FA"/>
+                <circle cx="150" cy="120" r="55" fill="#3D5A80"/>
+                <text x="150" y="115" font-size="20" fill="#fff" font-weight="bold" text-anchor="middle">遊戲機制</text>
+                <text x="150" y="140" font-size="13" fill="#FFD166" text-anchor="middle">即時反饋+挑戰</text>
+
+                <path d="M225 120 L375 120" stroke="#06D6A0" stroke-width="4" stroke-dasharray="6 4"/>
+                <text x="300" y="105" font-size="14" fill="#059669" font-weight="bold" text-anchor="middle">心理機制解碼遷移</text>
+
+                <circle cx="450" cy="120" r="55" fill="#06D6A0"/>
+                <text x="450" y="115" font-size="20" fill="#fff" font-weight="bold" text-anchor="middle">學習自控</text>
+                <text x="450" y="140" font-size="13" fill="#293241" text-anchor="middle">自主規劃+韌性</text>
+              </svg>
+              <figcaption>《遊戲自控力》核心哲學：與其視遊戲為洪水猛獸，不如借鑒遊戲底層激勵模型培養自控力！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📚 圖書基本檔案</div>
+                <p><strong>作者</strong>：董祁奇（青少年成長教練、資深教育創新實踐者）</p>
+                <p><strong>體量</strong>：188 頁、六大章節、系統化工具手冊</p>
+                <p><strong>解決痛點</strong>：電子螢幕沉迷、做作業拖拉、缺乏自律、親子因手機遊戲對抗</p>
+                <p><strong>核心理念</strong>：將遊戲高手的專注與韌性，轉化為真實世界的自驅學習力！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🎯 給 David & 太太的當下意義</div>
+                <p>雖然女兒才 19 個月，但數位螢幕（手機、電視、平板）無孔不入。這本書提早給我們<strong>「數位免疫針」</strong>：如何建立無螢幕家庭生態？如何利用即時反饋的遊戲力思維建立 19 個月幼兒的睡眠、刷牙與生活常規！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>💡 董祁奇核心觀點：</strong><br>
+              「恐懼來源於未知。當孩子在遊戲中展現出廢寢忘食的專注和屢敗屢戰的堅毅時，說明孩子的大腦本身完全具備強大的自控神經基礎！問題不是遊戲，而是現實中缺乏同等的目標感與正向反饋。」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 1: Framework -->
+        <section class="slide-card" id="slide-g-framework">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Six Pillars</div>
+              <h2 class="slide-title">全書架構骨架：從遊戲沉迷到自控自驅的全景模型</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 架構導覽</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>章節模組</th>
+                  <th>核心主題</th>
+                  <th>關鍵方法與理論工具</th>
+                  <th>家庭實踐落點</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>第一章：診斷沉迷</strong></td>
+                  <td>真相初探</td>
+                  <td>ICD-11/DSM-5 醫學界定、沉迷背後的心理冰山</td>
+                  <td>區分正常探索與成癮，消除盲目恐慌</td>
+                </tr>
+                <tr>
+                  <td><strong>第二章：重構認知</strong></td>
+                  <td>價值基石</td>
+                  <td>遊戲設計四大支柱（目標、規則、即時反饋、自主選擇）</td>
+                  <td>認識頂級激勵機制，用於生活教育</td>
+                </tr>
+                <tr>
+                  <td><strong>第三章：同盟溝通</strong></td>
+                  <td>對話策略</td>
+                  <td>拒絕審判官心態、共情傾聽、構建親子同盟</td>
+                  <td>把對立談判變成「我們對抗問題」</td>
+                </tr>
+                <tr>
+                  <td><strong>第四章：神經契約</strong></td>
+                  <td>賦能訓練場</td>
+                  <td>前額葉發育規律、決策樹訓練、家庭時間契約</td>
+                  <td>從被動受控升級為主動時間決策</td>
+                </tr>
+                <tr>
+                  <td><strong>第五章：學習轉化</strong></td>
+                  <td>遷移技術</td>
+                  <td>PBL 遊戲化學習（積分/獎章/段位）、闖關思維</td>
+                  <td>把枯燥學習拆解成好玩的冒險任務</td>
+                </tr>
+                <tr>
+                  <td><strong>第六章：家庭生態</strong></td>
+                  <td>根基重構</td>
+                  <td>現實好玩度勝出原則、父母身教契約、高質量陪伴</td>
+                  <td>打造現實中充滿親密與挑戰的安全網</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>🌟 閉環邏輯：</strong><br>
+              看清真相（不恐慌） ➔ 解碼機制（學技巧） ➔ 親密溝通（成同盟） ➔ 契約賦權（練前額葉） ➔ 遷移學習（促自驅） ➔ <strong>扎根溫暖的家庭土壤</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: Ch 1 診斷沉迷 -->
+        <section class="slide-card" id="slide-g1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 1</div>
+              <h2 class="slide-title">診斷遊戲沉迷：自控力缺失的真相與心理冰山</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 心理冰山</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 220" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="220" rx="16" fill="#F0F7FA"/>
+                <!-- 水面 -->
+                <line x1="40" y1="80" x2="560" y2="80" stroke="#118AB2" stroke-width="2" stroke-dasharray="6 4"/>
+                <text x="50" y="70" font-size="12" fill="#118AB2" font-weight="bold">水面上（外顯現象）</text>
+
+                <!-- 水上冰山 -->
+                <polygon points="300,30 250,80 350,80" fill="#3D5A80" opacity="0.8"/>
+                <text x="300" y="65" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle">「沉迷遊戲」</text>
+
+                <!-- 水下冰山 -->
+                <polygon points="250,80 350,80 430,200 170,200" fill="#118AB2" opacity="0.3"/>
+                <text x="300" y="115" font-size="14" fill="#293241" font-weight="bold" text-anchor="middle">水下深層未被滿足的需求：</text>
+                <text x="300" y="140" font-size="12" fill="#293241" text-anchor="middle">1. 現實缺乏掌控感與自主權（被過度管束）</text>
+                <text x="300" y="165" font-size="12" fill="#293241" text-anchor="middle">2. 缺乏正向認可與即時成就感（挫敗與否定）</text>
+                <text x="300" y="190" font-size="12" fill="#293241" text-anchor="middle">3. 逃避孤獨、尋求社交同儕認同與歸屬</text>
+              </svg>
+              <figcaption>冰山模型：沉迷遊戲只是症狀，水面下是未被滿足的自主感、勝任感與歸屬感！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🩺 醫學診斷邊界：90% 不是真正的成癮</div>
+                <p>WHO 的 ICD-11 規定成癮標準：對遊戲失去控制力、優先級高於一切生活必需、嚴重負面後果下仍持續超過 <strong>12 個月</strong>。大多數孩子只是在尋找放鬆與社交，父母過度焦慮反而加劇逆反對立。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏔️ 心理冰山三支柱</div>
+                <p>孩子沉迷遊戲的根本原因：<br>
+                ① <strong>掌控感缺失</strong>：現實中任何事都被安排，遊戲中能自己做主；<br>
+                ② <strong>反饋延遲</strong>：現實努力很久才看成績，遊戲每秒都在獎勵；<br>
+                ③ <strong>逃避現實壓力</strong>：父母高壓指責下的避風港。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛家庭洞察：</strong><br>
+              不要把遊戲妖魔化。當孩子表現出對某個事物無法自拔時，永遠問自己第一句話：<strong>「他在這裡獲得了什麼現實中得不到的情感滋養？」</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: Ch 2 遊戲四大支柱 -->
+        <section class="slide-card" id="slide-g2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 2</div>
+              <h2 class="slide-title">重構遊戲認知：解碼優秀遊戲的「四大支柱」</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 心流密碼</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🎯 1. 明確的目標 (Goal)</div>
+                <p>清晰知道下一步該幹嘛（去哪座山、打哪隻怪）。相比之下，大人常對孩子說「你要好好讀書/聽話」，目標極其模糊抽象。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">📜 2. 確定且平等的規則 (Rules)</div>
+                <p>邊界極為確定，不因「心情好壞」而改變。踩雷就是掉血，通關就是勝利。規則公平，孩子心服口服。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">⚡ 3. 即時且持續的反饋 (Feedback)</div>
+                <p>每點一次滑鼠都有金幣聲、血條變化、經驗值跳動。大腦多巴胺迴路被精確激勵，形成高度專注心流。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🤝 4. 自願參與的自主權 (Autonomy)</div>
+                <p>沒有人拿槍逼你玩遊戲。因為是「我自己選擇的」，所以願意承擔失敗、反覆嘗試 50 次也不崩潰。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>🌟 育兒啟發：</strong><br>
+              這四大支柱，不正是<strong>「最完美的現代教育模型」</strong>嗎？如果家庭教育也能做到：目標明確、規則穩定一致、及時肯定過程、給予孩子自願選擇權，孩子在生活中也會像玩遊戲一樣充滿熱情！
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月生活化應用：</strong><br>
+              在教女兒收玩具時借鑒四大支柱：① 明確目標（只收小積木）；② 確定規則（放進藍色盒子）；③ 即時反饋（放進一個就發出「叮咚！加一分！」的高興聲音）；④ 自主權（讓她自己抓）。收玩具立刻變成最好玩的遊戲！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Ch 3 建立自控同盟 -->
+        <section class="slide-card" id="slide-g3">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 3</div>
+              <h2 class="slide-title">溝通策略：從「對立審判官」到「自控同盟隊友」</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 親子溝通</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>對話情境</th>
+                  <th>❌ 審判官心態 (推向對立面)</th>
+                  <th>🟢 同盟隊友心態 (董祁奇非暴力溝通)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>看到孩子玩遊戲</strong></td>
+                  <td>「整天就知道玩這些破玩意，能當飯吃嗎？」</td>
+                  <td>「哇，這個角色看起來好帥，你跟他玩了什麼精彩任務？教教爸爸！」</td>
+                </tr>
+                <tr>
+                  <td><strong>時間快到了</strong></td>
+                  <td>直接衝過去拔插頭、搶手機</td>
+                  <td>「還有 5 分鐘這局結束對嗎？你打算怎麼保存進度？打完這場我們按約定去吃飯。」</td>
+                </tr>
+                <tr>
+                  <td><strong>孩子在遊戲中受挫</strong></td>
+                  <td>「活該，誰叫你不好好讀書，玩遊戲也輸！」</td>
+                  <td>「這關看起來真難！你剛才試了兩次差一點點就過了，你打算換什麼新策略？」</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>🤝 建立同盟的三步法：</strong><br>
+              1. <strong>走進世界</strong>：好奇發問，尊重孩子的遊戲審美；<br>
+              2. <strong>承認價值</strong>：認可遊戲中的反應力、團隊配合與策略思維；<br>
+              3. <strong>把問題外化</strong>：不是「我對抗孩子」，而是<strong>「我和孩子站在同一邊，共同管理時間和生活」</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Ch 4 前額葉神經契約 -->
+        <section class="slide-card" id="slide-g4">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 4</div>
+              <h2 class="slide-title">神經契約：前額葉自控發育與時間決策樹</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 大腦神經學</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#FDF9F2"/>
+                <circle cx="160" cy="100" r="50" fill="#E76F51"/>
+                <text x="160" y="95" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">被動受控大腦</text>
+                <text x="160" y="118" font-size="12" fill="#fff" text-anchor="middle">「爸媽叫停才停」</text>
+
+                <path d="M230 100 L370 100" stroke="#118AB2" stroke-width="4"/>
+                <text x="300" y="85" font-size="13" fill="#118AB2" font-weight="bold" text-anchor="middle">神經決策訓練</text>
+
+                <circle cx="440" cy="100" r="50" fill="#06D6A0"/>
+                <text x="440" y="95" font-size="16" fill="#293241" font-weight="bold" text-anchor="middle">自主指揮官大腦</text>
+                <text x="440" y="118" font-size="12" fill="#293241" text-anchor="middle">「權衡利弊主動停」</text>
+              </svg>
+              <figcaption>大腦前額葉是自控司令部。只有讓孩子主動權衡，才能長出自控神經突觸！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🧠 決策樹的萌發</div>
+                <p>如果一切被父母安排，大腦指揮官直接「躺平」：「我媽讓我玩就玩，不讓我玩就吵。」只有讓孩子參與制定規則，大腦才會開始計算：<strong>「現在停下來，明天還能玩；超時違約，週末額度會受損。」</strong> 這就是前額葉的物理鍛鍊！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">📜 家庭契約四要素</div>
+                <p>1. <strong>共同商定</strong>：孩子也是簽字人；<br>
+                2. <strong>物理可視</strong>：用廚房定時器、沙漏或海報貼牆；<br>
+                3. <strong>預設違約後果</strong>：溫和執行，不怒吼不說教；<br>
+                4. <strong>留有彈性</strong>：允許偶爾「打完這一局再結算」的合理緩衝。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              用<strong>「物理沙漏」</strong>代替手機鬧鐘！讓她看著彩色沙子緩緩落下。沙子漏完前 1 分鐘提醒：「沙子快掉光囉，小火車要進站睡覺了。」可視化的物理道具對幼兒最管用。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: Ch 5 學習自驅遷移 -->
+        <section class="slide-card" id="slide-g5">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 5</div>
+              <h2 class="slide-title">轉化技術：把遊戲力遷移為學習自驅力 (PBL 模型)</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 遊戲化遷移</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🎮 什麼是教育遊戲化 PBL 模型？</strong><br>
+              <strong>Points (積分點數)</strong> ➔ 每次微小進步立即可見；<br>
+              <strong>Badges (徽章成就)</strong> ➔ 階段性里程碑被儀式感認可；<br>
+              <strong>Leaderboards / Levels (段位進階)</strong> ➔ 清晰看見自己的成長軌跡！
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🧗 失敗再試一次的「玩家抗挫力」</div>
+                <p>在遊戲裡死掉 100 次，玩家會生氣但絕不會說「我是個廢物，我永遠不玩了」，而是說「這關 Boss 有破綻，我換個裝備再來！」。<strong>把這種「成長型思維」借鑒到生活中，孩子就不會恐懼犯錯。</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏰 大任務拆成「小怪獸關卡」</div>
+                <p>把龐大無聊的任務（如收拾房間、寫大篇作業）拆解成「三隻小怪獸」：第一關消滅地上的紙屑，第二關護送繪本回書架，第三關把玩具裝箱。通關即可解鎖獎勵時光。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              女兒學穿鞋子、洗手時，賦予好玩的角色身分：「今天妳是穿鞋小能手嗎？小腳丫要鑽進小山洞囉！哇！成功過關！解鎖大衛爸爸的超級舉高高！」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Ch 6 家庭生態重構 -->
+        <section class="slide-card" id="slide-g6">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 6</div>
+              <h2 class="slide-title">家庭生態重構：現實生活的「好玩度」必須超越虛擬</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 陪伴根基</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#FFF9EE"/>
+                <circle cx="150" cy="100" r="50" fill="#E76F51" opacity="0.2"/>
+                <text x="150" y="95" font-size="15" fill="#C85A3F" font-weight="bold" text-anchor="middle">枯燥荒蕪的現實</text>
+                <text x="150" y="118" font-size="12" fill="#6C757D" text-anchor="middle">家長滑手機、無聊催促</text>
+
+                <path d="M220 100 L380 100" stroke="#2A9D8F" stroke-width="4"/>
+                <text x="300" y="85" font-size="13" fill="#2A9D8F" font-weight="bold" text-anchor="middle">重構家庭生態</text>
+
+                <circle cx="450" cy="100" r="50" fill="#2A9D8F" opacity="0.2"/>
+                <text x="450" y="95" font-size="15" fill="#1E6F65" font-weight="bold" text-anchor="middle">鮮活好玩的家庭</text>
+                <text x="450" y="118" font-size="12" fill="#6C757D" text-anchor="middle">戶外、共讀、打鬧、桌遊</text>
+              </svg>
+              <figcaption>現實世界足夠好玩、足夠有愛，孩子根本不需要在虛擬世界尋找替代寄託！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📵 父母自身的數位身教</div>
+                <p>「一邊低頭刷短影音，一邊斥責孩子不要看電視」是無效的管教。父母必須以身作則，設立<strong>「無手機餐桌」</strong>與<strong>「睡前半小時手機休眠區」</strong>。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🌳 現實探險的不可替代性</div>
+                <p>公園裡的泥土、踩水坑、草地上奔跑、爸爸後背上的騎大馬、搭帳篷野餐——這些真實世界的<strong>全感官體驗（五感刺激）</strong>，是大腦神經發育最渴望的天然營養品！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛家庭週末守則：</strong><br>
+              每週末安排至少半天「純戶外無螢幕探險日」（大安森林公園/動物園/草地）。大衛和太太把手機放包包深處，全身心陪 19 個月女兒在草地上奔跑、撿松果。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: 附錄工具箱 -->
+        <section class="slide-card" id="slide-g-tools">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Toolbox & Appendix</div>
+              <h2 class="slide-title">實用工具箱：家庭遊戲契約範本與平穩抽離儀式</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 操作工具</span>
+          </div>
+          <div class="slide-body">
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #118AB2;">📜 家庭數位設備友好契約模版</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>約定維度</th>
+                  <th>約定細則 (清晰可操作)</th>
+                  <th>全家共同遵守承諾</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>使用場景</strong></td>
+                  <td>餐桌不碰手機、睡前 1 小時全家設備關閉進充電籃</td>
+                  <td>爸爸媽媽與孩子全員嚴格遵守</td>
+                </tr>
+                <tr>
+                  <td><strong>時長約定</strong></td>
+                  <td>幼兒期以無螢幕為主；未來電子時間一次不超過 20-30 分鐘</td>
+                  <td>使用物理沙漏或廚房鬧鐘計時</td>
+                </tr>
+                <tr>
+                  <td><strong>過渡信號</strong></td>
+                  <td>結束前 5 分鐘、1 分鐘溫和提醒「準備存檔著陸」</td>
+                  <td>不在最激動的高潮突然粗暴斷電</td>
+                </tr>
+                <tr>
+                  <td><strong>違約對策</strong></td>
+                  <td>如超時，平靜扣除次日相同時長，父母不吼叫不人身攻擊</td>
+                  <td>溫和堅定履行，像物理定律一樣穩定</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>🚀 平穩抽離的「著陸技術」：</strong><br>
+              從高度刺激的螢幕抽離時，大腦多巴胺會驟降，幼兒容易大哭發脾氣。<strong>解法是提供「溫和好玩的銜接物」</strong>：關掉螢幕瞬間，遞上她最愛的毛絨小兔，或發起「抓癢癢大作戰」，平穩過渡！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: 19 個月自控啟蒙 -->
+        <section class="slide-card" id="slide-g-action19">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">19-Month Blueprint</div>
+              <h2 class="slide-title">19 個月女兒專屬：數位防護與早期自控力萌芽指南</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 專屬落地</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🩺 美國兒科學會 (AAP) 權威指南：</strong><br>
+              <strong>18—24 個月幼兒：應盡可能避免讓幼兒單獨使用電子螢幕（除與親友視訊通話外）！</strong> 幼兒大腦需要真實的三維物理交互，而非二維快節奏光影。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🛡️ 19 個月大衛家庭 4 條防線</div>
+                <p>1. <strong>手機不當電子保母</strong>：吃飯、哭鬧時絕不用看影片來安撫；<br>
+                2. <strong>物理視線隔離</strong>：父母在家將手機收進抽屜或高處；<br>
+                3. <strong>視訊專用原則</strong>：只有跟爺爺奶奶外公外婆視訊時開視訊；<br>
+                4. <strong>客廳電視休眠</strong>：不把電視當背景音長開。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🌱 早期自控力微步訓練 (19M 可做)</div>
+                <p>- <strong>「等三秒」小遊戲</strong>：遞餅乾前唱「一、二、三，請開動！」訓練短暫延遲滿足；<br>
+                - <strong>「紅燈停綠燈行」走步遊戲</strong>：在走廊說停就原地凍結，咯咯大笑；<br>
+                - <strong>送小動物回家</strong>：玩完後把動物積木一個個送進收納盒。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月自控力萌芽核心心法：</strong><br>
+              自控力不是天生壓抑，而是<strong>在有安全感的前提下，練習「暫停」與「啟動」</strong>。多跟女兒玩身體節奏遊戲（拍手、停、再拍），她的大腦前額葉就在快速發育！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: Conclusion -->
+        <section class="slide-card" id="slide-g-conclusion">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Conclusion</div>
+              <h2 class="slide-title">結論：與自控力共生，做孩子的智慧領航員</h2>
+            </div>
+            <span class="priority-badge badge-p1">P1 終章</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core" style="font-size: 1.1rem; text-align: center; padding: 26px;">
+              <strong>🎮 「未來的世界必然是數位與智慧的時代。<br>
+              我們不能把孩子關在無菌真空的象牙塔，<br>
+              而是要賦予她駕馭工具的自控力、獨立思考的批判力、<br>
+              以及在真實世界中感知幸福、熱愛生活的強大生命力！」</strong>
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💡 董祁奇三大核心要義</div>
+                <p>- <strong>懂機制不恐慌</strong>：遊戲是人性激勵的放大鏡，看清需求本質。<br>
+                - <strong>建同盟不對抗</strong>：不做高高在上的審判官，做並肩作戰的隊友。<br>
+                - <strong>重生態強現實</strong>：用熱氣騰騰的真實生活贏得孩子的內心。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">👨‍👩‍👧 大衛與太太的守護宣告</div>
+                <p>- 守護女兒 19 個月純粹美好的現實童年。<br>
+                - 用真實的擁抱、泥土的芬芳、繪本的溫度充盈每一天。<br>
+                - 陪伴寶貝女兒健康自律、自信快樂地成長！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action" style="text-align: center; margin-top: 24px;">
+              🎉 <strong>恭喜完成《遊戲自控力》全書簡報學習！祝大衛家庭在數位時代從容引航、智慧育兒！</strong>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Footer Navigation Bar -->
+  <div class="slide-footer-nav">
+    <button class="nav-btn" id="btnPrev">←</button>
+    <div class="slide-counter" id="slideCounter">1 / 11</div>
+    <button class="nav-btn" id="btnNext">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
