@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《父母的語言》全書章節解讀與 19 個月語言大腦塑造 | 互動簡報</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-coral: #1D3557;
+      --primary-coral-dark: #14213d;
+      --sage-green: #457B9D;
+      --sage-green-dark: #1D3557;
+      --sun-yellow: #E63946;
+      --accent-blue: #A8DADC;
+    }
+  </style>
+</head>
+<body class="mode-slide">
+
+  <!-- Header App Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon" style="background: linear-gradient(135deg, #457B9D, #E63946); color: #fff;">🗣️</div>
+      <div class="brand-text">
+        <h1>《父母的語言》全書解讀與 19 個月語言大腦塑造指南</h1>
+        <p>作者：達娜·薩斯金德 醫學博士｜David & 太太 育兒實踐版（女兒 1 歲 7 個月）</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="btn-toggle-mode" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.06); color: var(--text-main); font-weight: 700;">🏠 返回首頁總覽</a>
+      <button class="btn-toggle-mode active" id="btnModeSlide">🎬 簡報模式</button>
+      <button class="btn-toggle-mode" id="btnModeScroll">📜 長圖閱讀</button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar" style="background: linear-gradient(90deg, #457B9D, #E63946);"></div>
+  </div>
+
+  <!-- App Layout Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Sitemap Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-search">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋 3T 原則或語言技巧...">
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">全部</button>
+        <button class="tag-btn" data-filter="p1">🔥 19M 最高</button>
+        <button class="tag-btn" data-filter="p2">⭐ 核心科學</button>
+        <button class="tag-btn" data-filter="p3">💡 語言實踐</button>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-group-title">導讀與全景</div>
+        <a class="nav-item active" data-target="slide-l0" data-priority="p1">
+          <span>0. 全書總覽與醫學發現</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-framework" data-priority="p2">
+          <span>架構：3000萬詞彙全景邏輯</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">科學根基：大腦物理塑造</div>
+        <a class="nav-item" data-target="slide-l1" data-priority="p2">
+          <span>Ch 1 耳蝸醫生的臨床謎團</span> <span class="priority-badge badge-p2">P2 臨床</span>
+        </a>
+        <a class="nav-item" data-target="slide-l2" data-priority="p1">
+          <span>Ch 2 3000萬詞彙差距的真相</span> <span class="priority-badge badge-p1">🔥 差距</span>
+        </a>
+        <a class="nav-item" data-target="slide-l3" data-priority="p1">
+          <span>Ch 3 神經可塑性：突觸修剪法則</span> <span class="priority-badge badge-p1">🔥 突觸</span>
+        </a>
+        <a class="nav-item" data-target="slide-l3-screen" data-priority="p1">
+          <span>Ch 3 深度：電子螢幕的語言失效</span> <span class="priority-badge badge-p1">🔥 螢幕</span>
+        </a>
+
+        <div class="nav-group-title">語言維度：思維與心態</div>
+        <a class="nav-item" data-target="slide-l4-exec" data-priority="p2">
+          <span>Ch 4 語言與前額葉執行功能</span> <span class="priority-badge badge-p2">P2 自控</span>
+        </a>
+        <a class="nav-item" data-target="slide-l4-math" data-priority="p2">
+          <span>Ch 4 空間數感與成長型思維語言</span> <span class="priority-badge badge-p2">P2 數感</span>
+        </a>
+
+        <div class="nav-group-title">核心工具：3T 原則精萃</div>
+        <a class="nav-item" data-target="slide-l3t" data-priority="p1">
+          <span>Ch 5 3T 原則總覽：大腦超級引擎</span> <span class="priority-badge badge-p1">🔥 3T核心</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-t1" data-priority="p1">
+          <span>Tune In：共情關注跟隨視線</span> <span class="priority-badge badge-p1">🔥 關注</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-t2" data-priority="p1">
+          <span>Talk More：多說話去代詞與解說員</span> <span class="priority-badge badge-p1">🔥 輸入</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-t3" data-priority="p1">
+          <span>Take Turns：對話輪替打乒乓球</span> <span class="priority-badge badge-p1">🔥 輪替</span>
+        </a>
+
+        <div class="nav-group-title">19 個月實戰指南與總結</div>
+        <a class="nav-item" data-target="slide-l-action19" data-priority="p1">
+          <span>19 個月女兒語言爆發落地清單</span> <span class="priority-badge badge-p1">🔥 19M 實戰</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-scripts" data-priority="p1">
+          <span>日常禁忌話術改造與對照表</span> <span class="priority-badge badge-p1">🔥 話術</span>
+        </a>
+        <a class="nav-item" data-target="slide-l-conclusion" data-priority="p1">
+          <span>結論：父母語言是免費的奢華禮物</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      <div class="slides-container">
+
+        <!-- Slide 0: Overview -->
+        <section class="slide-card active-slide" id="slide-l0">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Book Profile & Overview</div>
+              <h2 class="slide-title">全書總覽：父母的語言，就是大腦發育的物理建築師</h2>
+            </div>
+            <span class="priority-badge badge-p1">19M 語言黃金期</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 240" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="240" rx="16" fill="#F1FAEE"/>
+                <circle cx="150" cy="120" r="55" fill="#1D3557"/>
+                <text x="150" y="115" font-size="18" fill="#fff" font-weight="bold" text-anchor="middle">父母的語言</text>
+                <text x="150" y="138" font-size="12" fill="#A8DADC" text-anchor="middle">3T 原則日常對話</text>
+
+                <path d="M220 120 L370 120" stroke="#E63946" stroke-width="4" stroke-dasharray="6 4"/>
+                <text x="295" y="105" font-size="13" fill="#E63946" font-weight="bold" text-anchor="middle">每秒 1000 個突觸連接</text>
+
+                <circle cx="450" cy="120" r="55" fill="#E63946"/>
+                <text x="450" y="115" font-size="18" fill="#fff" font-weight="bold" text-anchor="middle">強大學習型大腦</text>
+                <text x="450" y="138" font-size="12" fill="#FFF" text-anchor="middle">詞彙·數學·執行功能</text>
+              </svg>
+              <figcaption>《父母的語言》核心科學定論：大腦不是天生固定的，而是由早期對話實體塑造出來的！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📚 圖書基本檔案</div>
+                <p><strong>作者</strong>：達娜·薩斯金德 醫學博士（Dana Suskind, M.D.）</p>
+                <p><strong>身份</strong>：芝加哥大學小兒外科教授、人工耳蝸項目主任、「3000萬詞彙倡議」發起人</p>
+                <p><strong>核心突破</strong>：將神經生物學與發展心理學結合，證實 0-3 歲語言環境對大腦物理構建的決定性作用</p>
+                <p><strong>實戰工具</strong>：全球聞名的 **3T 原則（Tune In, Talk More, Take Turns）**</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🎯 給 David & 太太的當下意義</div>
+                <p>女兒現在 <strong>19 個月（1 歲 7 個月）</strong>，正處於人類大腦發展史上最不可思議的<strong>「詞彙與語言爆發黃金期」</strong>！父母每天說的話、說話的方式、語句的豐富度，直接決定了她大腦神經網絡的物理密度與未來的思維格局。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>💡 薩斯金德醫生震撼金句：</strong><br>
+              「大腦物理結構的發育核心，在於嬰兒與一位有愛心、能及時做出積極回應的成年人之間的對話。大腦不是被動接受知識的容器，父母的語言，就是塑造大腦形狀的雙手！」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 1: Framework -->
+        <section class="slide-card" id="slide-l-framework">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Architectural Blueprint</div>
+              <h2 class="slide-title">全書架構骨架：從耳蝸手術到 3000 萬詞彙的科學閉環</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 架構導覽</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>章節模組</th>
+                  <th>科學核心論點</th>
+                  <th>關鍵機制與指標</th>
+                  <th>19 個月實踐落點</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>第一章：緣分</strong></td>
+                  <td>人工耳蝸術後的發展謎團</td>
+                  <td>相同硬體與聽力恢復，命運卻迥異</td>
+                  <td>認識到「最貴的不是設備，是父母的嘴」</td>
+                </tr>
+                <tr>
+                  <td><strong>第二章：3000萬詞彙</strong></td>
+                  <td>Hart & Risley 劃時代追蹤研究</td>
+                  <td>4 歲前 3000 萬詞彙差距 ➔ 9 歲學業鴻溝</td>
+                  <td>把握 0-3 歲不可逆詞彙輸入期</td>
+                </tr>
+                <tr>
+                  <td><strong>第三章：神經可塑性</strong></td>
+                  <td>大腦物理構建與突觸修剪</td>
+                  <td>每秒 700-1000 新突觸、「用進廢退」</td>
+                  <td>螢幕無效，真人雙向發球回球才有效</td>
+                </tr>
+                <tr>
+                  <td><strong>第四章：語言力量</strong></td>
+                  <td>塑造前額葉執行功能與人生觀</td>
+                  <td>因果解釋、空間數感、成長型思維誇獎</td>
+                  <td>多說「因為...所以」，誇努力不誇聰明</td>
+                </tr>
+                <tr>
+                  <td><strong>第五章：3T 原則</strong></td>
+                  <td>大腦發育的親子溝通核心技術</td>
+                  <td>Tune In（關注）+ Talk More（多說）+ Take Turns（輪流）</td>
+                  <td><span class="priority-badge badge-p1">🔥 本書最高操作工具</span></td>
+                </tr>
+                <tr>
+                  <td><strong>第六-七章：未來</strong></td>
+                  <td>3000萬詞彙倡議與 LENA 技術</td>
+                  <td>對話輪替次數（Conversational Turns）</td>
+                  <td>把語言溝通融入家庭每分每秒</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>🌟 核心推論鏈：</strong><br>
+              耳蝸揭示差距 ➔ 研究量化 3000 萬詞 ➔ 神經生物學證實突觸修剪 ➔ 語言決定執行功能與思維 ➔ <strong>落地為每天可操作的 3T 原則</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: Ch 1 緣分 -->
+        <section class="slide-card" id="slide-l1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 1</div>
+              <h2 class="slide-title">醫學緣分：兒童人工耳蝸醫生眼中的大腦發育之謎</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 臨床發現</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🏥 薩斯金德醫生的臨床困惑：</strong><br>
+              身為頂尖的小兒耳外科醫生，她為無數先天全聾的寶寶植入昂貴的人工耳蝸。在醫學技術上，每個孩子的手術都完美成功，聽力全部恢復。然而幾年後回訪，<strong>孩子的語言與智力發展卻天差地別</strong>——有的孩子能言善辯、成為資優生；有的孩子卻依然詞彙貧乏、無法正常交流。為什麼？
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">❌ 不是智商與科技的差異</div>
+                <p>不是人工耳蝸不夠先進，也不是孩子天生智商有缺陷，更不是手術技巧的高低。手術只解決了「聽覺物理通道」，卻不能保證「大腦語言神經迴路」的建立。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🟢 決定命運的是「家庭語言環境」</div>
+                <p>那些發展極佳的孩子，家中父母無時無刻不在與他們眼神交匯、溫暖對話；而發展遲滯的孩子，父母往往認為「裝好耳蝸就沒事了」，在家極少與孩子交談，只讓孩子看電視。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛與太太核心啟示：</strong><br>
+              給孩子買再貴的早教玩具、聽再多的兒歌機，都比不上<strong>爸爸媽媽看著女兒的眼睛，說出真實、溫暖、有生命力的日常語言</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: Ch 2 3000萬詞彙 -->
+        <section class="slide-card" id="slide-l2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 2</div>
+              <h2 class="slide-title">3000 萬詞彙：早期的語言差距如何演變為一生的鴻溝</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 核心數據</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 220" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="220" rx="16" fill="#F8F9FA"/>
+                <!-- 柱狀對比 -->
+                <rect x="100" y="40" width="120" height="140" rx="8" fill="#E63946"/>
+                <text x="160" y="30" font-size="14" font-weight="bold" fill="#E63946" text-anchor="middle">語言豐富家庭</text>
+                <text x="160" y="100" font-size="22" font-weight="bold" fill="#fff" text-anchor="middle">4500 萬詞</text>
+                <text x="160" y="130" font-size="12" fill="#fff" text-anchor="middle">累計聽到的詞彙量</text>
+
+                <rect x="380" y="110" width="120" height="70" rx="8" fill="#6C757D"/>
+                <text x="440" y="100" font-size="14" font-weight="bold" fill="#6C757D" text-anchor="middle">語言匱乏家庭</text>
+                <text x="440" y="145" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1300 萬詞</text>
+
+                <!-- 巨大差距標記 -->
+                <path d="M230 110 L370 110" stroke="#1D3557" stroke-width="3" marker-end="url(#arr)"/>
+                <text x="300" y="95" font-size="16" font-weight="bold" fill="#1D3557" text-anchor="middle">相差 3000 萬詞！</text>
+                <text x="300" y="135" font-size="11" fill="#457B9D" text-anchor="middle">到 4 歲時累積差距</text>
+              </svg>
+              <figcaption>Hart & Risley 劃時代研究：4 歲前的 3000 萬詞差距，是造成後續認知與學習鴻溝的根本原因！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📊 數量 (Quantity) 的驚人影響</div>
+                <p>語言豐富家庭每小時與孩子交流約 <strong>2100 個詞彙</strong>；匱乏家庭僅約 <strong>600 個詞彙</strong>。到 3 歲時，前者詞彙庫約 1100 個，後者僅 500 個。這種處理速度的落差在 2 歲時已顯現！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">💎 質量 (Quality) 更加關鍵</div>
+                <p>純粹的詞語堆砌不夠。豐富家庭對話中充滿<strong>肯定、讚許、因果解釋、發散提問</strong>（肯定與否定比例 6:1）；而匱乏家庭多為「閉嘴、快點、別碰」等<strong>禁忌命令型語言</strong>（否定比 1:2）。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              每天醒著的每一小時，把家常瑣事「說給她聽」！換尿布、做早餐、收衣服時，<strong>隨時開啟「自言自語解說員」模式</strong>，多給她輸入豐富高質的詞彙庫！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Ch 3 神經突觸修剪 -->
+        <section class="slide-card" id="slide-l3">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 3</div>
+              <h2 class="slide-title">神經可塑性：每秒 1000 個突觸連接與「用進廢退」法則</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 神經物理學</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="16" fill="#F0F4F8"/>
+                <circle cx="120" cy="100" r="50" fill="#1D3557"/>
+                <text x="120" y="95" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">出生至 3 歲</text>
+                <text x="120" y="118" font-size="11" fill="#A8DADC" text-anchor="middle">突觸爆發期</text>
+
+                <path d="M185 100 L265 100" stroke="#457B9D" stroke-width="4"/>
+                <text x="225" y="90" font-size="12" fill="#457B9D" text-anchor="middle">經歷體驗</text>
+
+                <circle cx="330" cy="100" r="50" fill="#E63946"/>
+                <text x="330" y="95" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">高頻刺激迴路</text>
+                <text x="330" y="118" font-size="11" fill="#fff" text-anchor="middle">神經髓鞘化加固</text>
+
+                <path d="M395 100 L475 100" stroke="#6C757D" stroke-width="4" stroke-dasharray="4 4"/>
+                <text x="435" y="90" font-size="12" fill="#6C757D" text-anchor="middle">未被使用</text>
+
+                <circle cx="530" cy="100" r="40" fill="#E2E8F0" stroke="#A0AEC0" stroke-width="2"/>
+                <text x="530" y="98" font-size="12" fill="#4A5568" font-weight="bold" text-anchor="middle">突觸修剪</text>
+                <text x="530" y="118" font-size="10" fill="#718096" text-anchor="middle">永久清除廢棄</text>
+              </svg>
+              <figcaption>大腦物理法則：被豐富語言頻繁啟動的突觸會永久加固，未被使用的神經連結會被殘酷修剪！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🧬 大腦神經可塑性的巔峰期</div>
+                <p>嬰兒出生時腦重僅為成人的 25%，到 3 歲時已達 85%！<strong>0-3 歲每秒額外誕生 700~1000 條神經突觸連接</strong>。這是一生中大腦對外部環境最敏感、最具可塑性的唯一窗口。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">✂️ 突觸修剪（Synaptic Pruning）</div>
+                <p>大腦不會保留所有連接。「用進廢退」：凡是在早期被反覆使用、帶有溫暖情感交互的語言神經通路，會完成髓鞘化而<strong>終身堅固</strong>；未被激發的通路則被永久裁撤。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月不可逆窗口：</strong><br>
+              女兒現在 1 歲 7 個月，正處於突觸連接的高峰與修剪前夕。<strong>現在多跟她說一句話，就是在大腦中多鑄造一條高速公路！</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Ch 3 電子螢幕無效 -->
+        <section class="slide-card" id="slide-l3-screen">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 3 Deep Dive</div>
+              <h2 class="slide-title">重大科學警示：為什麼早教光碟與電子螢幕完全無效？</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 螢幕迷思</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-warning">
+              <strong>⚠️ 著名研究：庫爾教授（Patricia Kuhl）語音學習實驗</strong><br>
+              美國寶寶聽中文真人說話 12 次，能完美分辨漢語微小音素；但另一組看<strong>高清電視錄影（內容完全相同）</strong>，學習效果為<strong>零</strong>！與完全沒聽過中文的對照組無異。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📺 為什麼電子螢幕無法塑造語言大腦？</div>
+                <p>1. <strong>缺乏社交凝視（Social Gaze）</strong>：嬰兒依靠大人的眼神、表情與肢體來定位語意。<br>
+                2. <strong>缺乏「服務—回報」（Serve & Return）</strong>：電視不會因為寶寶發出聲音而停下來微笑回應。<br>
+                3. <strong>被動刺激干擾前額葉</strong>：快節奏聲光抑制深層專注。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">👶 「嬰兒愛因斯坦」的破滅</div>
+                <p>美國兒科學會研究證實：每天每多看 1 小時早教影片，8-16 個月嬰兒<strong>掌握的詞彙量平均少 6-8 個</strong>！任何號稱能讓嬰兒學語言的 App/視頻，都無法取代真人的面對面對話。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 大衛家庭堅守鐵律：</strong><br>
+              <strong>19 個月女兒堅決不使用電子螢幕學語言！</strong> 所有的語言學習，唯有透過爸爸媽媽真實的嘴、溫柔的眼睛和即時的擁抱才能發生。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: Ch 4 執行功能與語言 -->
+        <section class="slide-card" id="slide-l4-exec">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 4.1</div>
+              <h2 class="slide-title">語言塑造自控力：前額葉執行功能與因果解釋</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 自我調節</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>對話方式</th>
+                  <th>❌ 禁忌命令式 (削弱前額葉)</th>
+                  <th>🟢 薩斯金德因果解釋式 (訓練執行功能)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>摸熱水杯</strong></td>
+                  <td>「別碰！危險！」（只知恐懼，不知原因）</td>
+                  <td>「杯子裡是熱水，摸上去會燙痛手指。我們要等水涼一涼。」</td>
+                </tr>
+                <tr>
+                  <td><strong>想要別人的玩具</strong></td>
+                  <td>「不許搶！再搶我打妳！」</td>
+                  <td>「妹妹正在玩這個球。如果妳想玩，我們可以拿這隻小熊跟她換，好嗎？」</td>
+                </tr>
+                <tr>
+                  <td><strong>出門穿外套</strong></td>
+                  <td>「快點穿上！聽話！」</td>
+                  <td>「今天外面颳大風，如果不穿外套身體會發冷感冒，穿上它我們就能在公園暖和地玩了！」</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-core">
+              <strong>🧠 執行功能（Executive Function）的神經連結：</strong><br>
+              執行功能包含<strong>工作記憶、抑制控制、靈活思維</strong>（未來的自律、抗挫與規劃力）。父母多用<strong>「如果...那麼...」「因為...所以...」</strong>解釋背後邏輯，孩子的大腦就會學會自我對話，建立強大的內在控制系統！
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒實操：</strong><br>
+              即使她現在還不會說完整長句，<strong>也要把「為什麼不可以」的原因講出來</strong>！她的大腦正在建立因果推理的神經模板。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Ch 4 數感與心態 -->
+        <section class="slide-card" id="slide-l4-math">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 4.2</div>
+              <h2 class="slide-title">空間數感詞彙 & 成長型思維誇獎法</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 數理與思維</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">📐 空間與數學語言（入學前大預測）</div>
+                <p>研究發現，學前聽過豐富「空間維度詞彙」的孩子，未來的數理能力遠超同儕！<br>
+                - <strong>形狀與特徵</strong>：圓形、三角形、邊緣、尖角、光滑、粗糙<br>
+                - <strong>維度與比較</strong>：高/矮、寬/窄、厚/薄、比...更長<br>
+                - <strong>空間方位</strong>：在桌子底下、在沙發旁邊、在盒子裡面</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🌱 誇過程 vs 誇聰明（Dweck 框架）</div>
+                <p>父母的語言直接塑造孩子的思維模式：<br>
+                ❌ 誇特質：「妳真聰明！妳是天才！」➔ <strong>固定型思維</strong>（害怕失敗、不敢挑戰）<br>
+                🟢 誇過程：「妳試了三次沒有放棄，想辦法把它拼好了，這叫<strong>堅持與努力</strong>！」➔ <strong>成長型思維</strong>（不怕挫折、熱愛探索）</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地指引：</strong><br>
+              玩積木時：「這塊是大積木，這塊是小積木，我們把藍色正方形放在黃色長方形上面！」當她自己爬上斜坡時：「妳一步一步踩得很穩，真有毅力！」
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: Ch 5 3T 原則總覽 -->
+        <section class="slide-card" id="slide-l3t">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 5 Core System</div>
+              <h2 class="slide-title">全書核心工具：3T 原則——優化大腦發育的親子溝通</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 本書靈魂技術</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 220" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="220" rx="16" fill="#F1FAEE"/>
+                <!-- 3T 三個圓環 -->
+                <circle cx="120" cy="110" r="60" fill="#1D3557" opacity="0.9"/>
+                <text x="120" y="100" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">1. Tune In</text>
+                <text x="120" y="125" font-size="14" fill="#A8DADC" font-weight="bold" text-anchor="middle">共情關注</text>
+                <text x="120" y="145" font-size="10" fill="#fff" text-anchor="middle">跟隨孩子目光</text>
+
+                <circle cx="300" cy="110" r="60" fill="#457B9D" opacity="0.9"/>
+                <text x="300" y="100" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">2. Talk More</text>
+                <text x="300" y="125" font-size="14" fill="#FFD166" font-weight="bold" text-anchor="middle">多說說話</text>
+                <text x="300" y="145" font-size="10" fill="#fff" text-anchor="middle">去除代詞豐富名詞</text>
+
+                <circle cx="480" cy="110" r="60" fill="#E63946" opacity="0.9"/>
+                <text x="480" y="100" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">3. Take Turns</text>
+                <text x="480" y="125" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">輪流交談</text>
+                <text x="480" y="145" font-size="10" fill="#fff" text-anchor="middle">對話輪換打乒乓</text>
+              </svg>
+              <figcaption>薩斯金德 3T 原則：科學優化大腦發育的親子溝通三大黃金支柱！</figcaption>
+            </figure>
+
+            <div class="grid-3">
+              <div class="feature-box">
+                <div class="feature-title">🎯 1. Tune In (共情關注)</div>
+                <p>有意識地關注孩子正在觀察或做的事情。<strong>順著她的注意力走</strong>，及時給予回應，不強行切換頻率。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🗣️ 2. Talk More (多說話)</div>
+                <p>不是嘮叨與命令。多使用具體名詞，少用代名詞（「把這拿去那」➔「把紅色小水壺放到餐桌上」）。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏓 3. Take Turns (輪流交談)</div>
+                <p>最關鍵的一步！像打乒乓球一樣一來一回。耐心等待 3-5 秒，讓孩子有時間發音回應或肢體回球。</p>
+              </div>
+            </div>
+
+            <div class="callout callout-core">
+              <strong>💡 薩斯金德醫生的口訣：</strong><br>
+              <strong>「關注她所關注的，描述她所看見的，傾聽她所表達的！」</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: 3T - Tune In -->
+        <section class="slide-card" id="slide-l-t1">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">3T Deep Dive #1</div>
+              <h2 class="slide-title">Tune In（共情關注）：跟隨孩子的視線，不做考官做同盟</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 必練心法</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>👀 什麼是 Tune In？</strong><br>
+              當孩子拍了拍地毯、蹲下來看小螞蟻、或是盯著窗外的卡車時，<strong>父母放下手中的手機與雜念，把注意力精確校準到孩子的視線焦點上</strong>。
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">❌ 常見錯誤做法（打破關注）</div>
+                <p>• 孩子正專注看小狗，大人硬把她拉走：「別看了快看這本英文卡片！」<br>
+                • 考官式提問打擾心流：「這是什麼狗？妳說！說不出來吧？」<br>
+                • 結果：孩子內在探索動機被粗暴切斷，產生煩躁反抗。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🟢 正確的 Tune In（共情共頻）</div>
+                <p>• 蹲下來，順著她的手指看過去：「哇，妳看到了一隻棕色的小狗在搖尾巴對不對？」<br>
+                • 靜靜陪伴，等待她發出聲音或眼神確認，再進行延伸解讀。<br>
+                • <strong>「孩子在哪裡，父母的心智就在哪裡。」</strong></p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              出門散步或在家玩耍時，<strong>不要主導她該玩什麼</strong>！看她的眼睛盯著哪裡，你就蹲在哪裡，用溫柔的聲音為她正在看的東西命名解說。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: 3T - Talk More -->
+        <section class="slide-card" id="slide-l-t2">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">3T Deep Dive #2</div>
+              <h2 class="slide-title">Talk More（多說話）：去除代名詞，開啟「自言自語解說員」</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 詞彙超級輸入</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🎙️ 兩大解說員模式（Self-Talk & Parallel Talk）</div>
+                <p>• <strong>平行談話（描述孩子在幹嘛）</strong>：「妳正在用小手抓起那塊黃色的香蕉，輕輕咬了一小口，嚼得津津有味呢！」<br>
+                • <strong>自言自語（描述自己在幹嘛）</strong>：「爸爸現在要把平底鍋放到爐子上，倒一點橄欖油，給我們煎好吃的雞蛋。」</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🚫 告別「代名詞迷思」（No Pronouns）</div>
+                <p>❌ 模糊代名詞：「把<strong>這個</strong>拿給<strong>他</strong>，放<strong>那邊</strong>。」（孩子大腦無法建立清晰詞庫）<br>
+                🟢 具體豐富名詞：「請把這本<strong>藍色的小熊繪本</strong>拿給<strong>媽媽</strong>，放到<strong>木頭茶几</strong>上！」（一次輸入4個高品質名詞與形容詞）</p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>📖 拓展繪本共讀（對話式閱讀 Dialogic Reading）：</strong><br>
+              讀繪本時不要只念死文字。多指向畫面細節：「看，角落裡有隻戴帽子的小老鼠在偷笑！」「猜猜看翻過來小兔子會去哪裡？」
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地清單：</strong><br>
+              每天抓三個生活場景（洗澡、換衣服、做飯），開啟「廣播電台解說模式」！把看到的、摸到的、聞到的全部用具體詞彙描繪出來。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: 3T - Take Turns -->
+        <section class="slide-card" id="slide-l-t3">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">3T Deep Dive #3</div>
+              <h2 class="slide-title">Take Turns（輪流交談）：對話輪替——大腦最強的突觸催化劑</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 互動靈魂</span>
+          </div>
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 180" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="180" rx="16" fill="#F8F9FA"/>
+                <circle cx="100" cy="90" r="45" fill="#1D3557"/>
+                <text x="100" y="85" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">父母發球</text>
+                <text x="100" y="105" font-size="11" fill="#A8DADC" text-anchor="middle">提問/描述</text>
+
+                <path d="M160 70 Q300 30 440 70" stroke="#E63946" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+                <text x="300" y="45" font-size="12" fill="#E63946" font-weight="bold" text-anchor="middle">父母發話 ➔ 耐心等待 3-5 秒</text>
+
+                <path d="M440 110 Q300 150 160 110" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+                <text x="300" y="145" font-size="12" fill="#457B9D" font-weight="bold" text-anchor="middle">孩子回球 ➔ 咿呀/手勢/單詞</text>
+
+                <circle cx="500" cy="90" r="45" fill="#E63946"/>
+                <text x="500" y="85" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle">孩子回球</text>
+                <text x="500" y="105" font-size="11" fill="#fff" text-anchor="middle">大腦突觸啟動</text>
+              </svg>
+              <figcaption>神經科學證實：大腦發育的關鍵不在聽到多少獨白，而在「對話輪替次數（Conversational Turns）」！</figcaption>
+            </figure>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">⏳ 黄金 5 秒法則（Wait 5 Seconds）</div>
+                <p>19 個月幼兒的大腦前額葉神經處理速度較成人慢。大人提問後，<strong>必須在心裡默數 3 到 5 秒</strong>，給她足夠的時間理解語意並組織嘴唇肌肉發音，千萬不要急著自問自答！</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">❓ 開放式提問 vs 封閉式提問</div>
+                <p>❌ 封閉式：「這是蘋果嗎？」「是不是？」（只能回答是/不是，對話終結）<br>
+                🟢 開放式：「哇，妳手裡拿著的是什麼呀？」「妳覺得小貓咪想去哪裡玩？」（激發大腦檢索思考）</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action">
+              <strong>🛠️ 19 個月女兒落地實戰：</strong><br>
+              當她發出「咿呀」或指著東西時，這就是她發過來的「乒乓球」！爸爸媽媽一定要立刻接球並回擊：「喔！妳看見那隻大鳥了！大鳥正在天上拍翅膀飛呢，妳猜牠要飛去哪？」然後<strong>安靜看著她等待她的反應</strong>。
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 12: 實踐與 LENA -->
+        <section class="slide-card" id="slide-l5">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Chapter 6 ~ 7</div>
+              <h2 class="slide-title">喚醒潛能：3000 萬詞彙計劃與 LENA 智能語音技術</h2>
+            </div>
+            <span class="priority-badge badge-p2">P2 實踐與數據</span>
+          </div>
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">🎙️ LENA 數位記錄背後的啟發</div>
+                <p>薩斯金德團隊給寶寶佩戴 LENA 數位語音記錄儀，實時監測：<br>
+                1. <strong>成人詞彙量 (Adult Word Count)</strong><br>
+                2. <strong>對話輪換次數 (Conversational Turns)</strong><br>
+                3. <strong>電視與電子噪音時長 (TV / Electronic Noise)</strong><br>
+                數據顯示：<strong>電視噪音每增加 1 小時，成人與孩子的真實交流就減少數百次！</strong></p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">🏡 把語言融入家庭日常文化</div>
+                <p>不是額外花錢上課，而是把 3T 融入：<br>
+                - <strong>早起穿衣</strong>：衣服顏色、左右腳、拉鍊聲音<br>
+                - <strong>三餐進食</strong>：味道、溫度、觸感、感恩<br>
+                - <strong>外出散步</strong>：紅綠燈、葉子脈絡、小狗叫聲<br>
+                - <strong>睡前對話</strong>：回顧今天最開心的三件事</p>
+              </div>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>🌟 核心結論：</strong><br>
+              不需要高深的教育學文憑，只要父母在日常生活中抱持著好奇、溫暖與專注，<strong>任何家庭都能成為世界頂級的大腦發育孵化器</strong>！
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 13: 19 個月專屬指南 -->
+        <section class="slide-card" id="slide-l-action19">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">19-Month Action Plan</div>
+              <h2 class="slide-title">19 個月女兒專屬：薩斯金德 3T 語言大腦塑造家庭清單</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 19M 實踐總綱</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core">
+              <strong>🎯 核心目標：把握 19 個月語言爆發前夕，以高質量 3T 互動打下卓越的認知與思維地基！</strong>
+            </div>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #1D3557;">🔥 第一優先：本週即可落地的 5 大動作</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>行動項目</th>
+                  <th>3T 原則出處</th>
+                  <th>大衛家庭具體操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>跟隨目光命名 (Tune In)</strong></td>
+                  <td>Tune In</td>
+                  <td>她看水杯就說水杯，看小鳥就說小鳥，絕不強行拉扯她的注意力。</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>廢除代名詞 (Talk More)</strong></td>
+                  <td>Talk More</td>
+                  <td>把「把這個拿去那裡」改成「請把紅色小蘋果放到白色的盤子裡」。</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>自言自語解說員</strong></td>
+                  <td>Talk More</td>
+                  <td>做飯、洗衣服、穿鞋時，全程像電台解說一樣說出動作與感官細節。</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>提問後默數 5 秒 (Take Turns)</strong></td>
+                  <td>Take Turns</td>
+                  <td>問完「妳想看哪一本繪本呀？」心裡數 5 秒，給她大腦組織輸出的時間。</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><strong>零電子螢幕陪伴</strong></td>
+                  <td>神經科學</td>
+                  <td>客廳不開電視背景音，父母回家手機入籃，完全真人面對面對話。</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 style="font-size: 1.1rem; font-weight: 700; color: #E63946; margin-top: 18px;">⭐ 第二優先：本月內建立的語言常規</h3>
+            <p style="font-size: 0.95rem; line-height: 1.8;">
+              6. <strong>空間方位詞融入</strong>：沙發「上面」、箱子「裡面」、門「後面」、比小熊「更大」；<br>
+              7. <strong>因果邏輯對話</strong>：多說「因為...所以...」，讓幼兒前額葉提早理解世界因果；<br>
+              8. <strong>對話式繪本共讀</strong>：指著畫面裡的動物問「小狗在幹嘛呀？」，順著她的興趣編故事；<br>
+              9. <strong>誇過程與努力</strong>：「妳自己爬上沙發了，雙手抓得真緊，真有毅力！」
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 14: 話術清單 -->
+        <section class="slide-card" id="slide-l-scripts">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Language Transformation</div>
+              <h2 class="slide-title">父母日常語言改造表：從命令控制到激發大腦</h2>
+            </div>
+            <span class="priority-badge badge-p1">🔥 話術寶典</span>
+          </div>
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>日常場景</th>
+                  <th>❌ 貧乏命令型 (關閉大腦思考)</th>
+                  <th>🟢 薩斯金德 3T 豐富型 (啟動神經連結)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>換尿布時</strong></td>
+                  <td>默默無語換完，或說「別動！真臭！」</td>
+                  <td>「爸爸現在要把溼漉漉的尿布解開囉，塗上一點香香的護臀膏，換上乾爽乾淨的新尿布，小屁股好舒服呀！」</td>
+                </tr>
+                <tr>
+                  <td><strong>散步遇見小貓</strong></td>
+                  <td>「看，貓。」走過。</td>
+                  <td>「哇，那是一隻黑白相間的小花貓在曬太陽呢！你看牠的鬍鬚長長的，走路輕輕的，一聲不響。牠走過來了，對嗎？」</td>
+                </tr>
+                <tr>
+                  <td><strong>收拾玩具</strong></td>
+                  <td>「快點收起來！亂死了！」</td>
+                  <td>「小火車工作了一整天好累呀，我們一起護送它回藍色的大車庫睡覺吧！妳拿綠色車廂，爸爸拿紅色車頭！」</td>
+                </tr>
+                <tr>
+                  <td><strong>女兒扔食物</strong></td>
+                  <td>「不許扔！再扔不給吃！」</td>
+                  <td>「香蕉是拿來放嘴巴裡嚼的。如果妳把它扔到地上，香蕉就摔爛不能吃了。如果飽了，我們把盤子推開。」</td>
+                </tr>
+                <tr>
+                  <td><strong>積木倒塌哭鬧</strong></td>
+                  <td>「倒了就倒了，哭什麼哭！」</td>
+                  <td>「塔樓倒塌了，妳很難過對嗎？爸爸抱抱。剛才最底下的大積木有點歪，如果我們下次把最扁平的放在底下，會不會更穩呢？」</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Slide 15: Conclusion -->
+        <section class="slide-card" id="slide-l-conclusion">
+          <div class="slide-header">
+            <div>
+              <div class="chapter-number">Conclusion</div>
+              <h2 class="slide-title">結論：父母的語言，是免費卻最奢華的人生禮物</h2>
+            </div>
+            <span class="priority-badge badge-p1">P1 終章</span>
+          </div>
+          <div class="slide-body">
+            <div class="callout callout-core" style="font-size: 1.1rem; text-align: center; padding: 26px;">
+              <strong>🗣️ 「語言是人類大腦最神奇的雕塑刀。<br>
+              每一句溫柔的描述、每一次耐心的等待、每一輪平等的對話，<br>
+              都在為女兒的大腦編織著無比緊密、智慧與自信的神經網絡。<br>
+              父母的語言，是我們能給予女兒最珍貴、最持久的愛與資本！」</strong>
+            </div>
+
+            <div class="grid-2">
+              <div class="feature-box">
+                <div class="feature-title">💡 薩斯金德 3T 核心定盤針</div>
+                <p>- <strong>Tune In（共情關注）</strong>：放下手機，跟隨孩子的視線。<br>
+                - <strong>Talk More（多說話）</strong>：拋棄代詞，化身自言自語解說員。<br>
+                - <strong>Take Turns（輪流交談）</strong>：耐心等 5 秒，像打乒乓一樣互動。</p>
+              </div>
+
+              <div class="feature-box">
+                <div class="feature-title">👨‍👩‍👧 大衛與太太的語言滋養承諾</div>
+                <p>- 讓溫暖、豐富、具體的語言充滿家裡的每一個角落。<br>
+                - 守護 19 個月女兒珍貴的大腦可塑性窗口。<br>
+                - 陪伴 1 歲 7 個月的寶貝女兒，在愛的語言海洋裡快樂探索！</p>
+              </div>
+            </div>
+
+            <div class="callout callout-action" style="text-align: center; margin-top: 24px;">
+              🎉 <strong>恭喜完成《父母的語言》全書簡報學習！祝大衛與太太在 3T 原則的滋養下，收穫一個思維敏銳、熱愛探索的幸福女兒！</strong>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Footer Navigation Bar -->
+  <div class="slide-footer-nav">
+    <button class="nav-btn" id="btnPrev">←</button>
+    <div class="slide-counter" id="slideCounter">1 / 16</div>
+    <button class="nav-btn" id="btnNext">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

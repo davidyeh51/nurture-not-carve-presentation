@@ -19,6 +19,7 @@
       --accent-navy: #264653;
       --accent-yellow: #E9C46A;
       --accent-purple: #6B705C;
+      --accent-blue-deep: #1D3557;
     }
 
     body {
@@ -27,7 +28,7 @@
     }
 
     .portal-hero {
-      background: linear-gradient(135deg, #264653 0%, #2A9D8F 60%, #E76F51 100%);
+      background: linear-gradient(135deg, #1D3557 0%, #264653 40%, #2A9D8F 75%, #E76F51 100%);
       color: #FFFFFF;
       padding: 60px 24px 48px;
       text-align: center;
@@ -46,7 +47,7 @@
     .portal-hero p {
       font-size: 1.1rem;
       opacity: 0.95;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 24px;
       line-height: 1.6;
     }
@@ -447,10 +448,11 @@
     .deep-link-btn.nurture { border-left: 3px solid #E07A5F; }
     .deep-link-btn.anxiety { border-left: 3px solid #2A9D8F; }
     .deep-link-btn.game { border-left: 3px solid #118AB2; }
+    .deep-link-btn.language { border-left: 3px solid #E63946; }
 
     /* Footer */
     .portal-footer {
-      background: #264653;
+      background: #1D3557;
       color: #FFFFFF;
       text-align: center;
       padding: 40px 20px;
@@ -470,12 +472,12 @@
   <!-- Hero Header -->
   <header class="portal-hero">
     <h1>🌱 大衛家 0-6 歲優勢育兒知識門戶 & 圖書總覽</h1>
-    <p>匯聚多部家庭教育經典，以科學大腦發育與積極心理學為根基，為 David & 太太量身定制。陪伴 19 個月（1 歲 7 個月）女兒溫暖、自信、有自控力地成長！</p>
+    <p>匯聚多部世界家庭教育與神經科學經典，以大腦突觸發育與積極心理學為根基，為 David & 太太量身打造。陪伴 19 個月（1 歲 7 個月）女兒溫暖、自信、有自控力、具備卓越思維地茁壯成長！</p>
     <div class="hero-badges">
-      <span class="hero-badge">👧 女兒當前：19 個月（學步與自我意識爆發期）</span>
-      <span class="hero-badge">📚 整合已收錄 3 部經典全景簡報</span>
+      <span class="hero-badge">👧 女兒當前：19 個月（語言與自我意識爆發期）</span>
+      <span class="hero-badge">📚 整合已收錄 4 部經典全景簡報</span>
       <span class="hero-badge">🎯 0~6 歲分齡直通跨書索引</span>
-      <span class="hero-badge">💡 夫妻同盟與急救話術</span>
+      <span class="hero-badge">🗣️ 薩斯金德 3T 語言大腦塑造</span>
     </div>
   </header>
 
@@ -489,7 +491,7 @@
     </div>
 
     <div class="portal-search-bar">
-      <input type="text" id="portalSearch" placeholder="搜尋主題：發脾氣、睡眠、磨蹭、專注力...">
+      <input type="text" id="portalSearch" placeholder="搜尋主題：3T原則、發脾氣、睡眠、磨蹭、專注力...">
     </div>
   </nav>
 
@@ -501,9 +503,9 @@
       <div class="section-title-wrap">
         <div>
           <h2 class="section-title">📚 育兒圖書管理庫 (Parenting Library)</h2>
-          <span class="section-subtitle">未來可擴充數十部書籍，點選卡片即可直達該書之專屬精華簡報</span>
+          <span class="section-subtitle">未來可持續擴充數十部書籍，點選卡片即可直達該書專屬之全景精華簡報</span>
         </div>
-        <span style="font-size: 0.9rem; font-weight: 700; color: #2A9D8F;">已精讀收錄：3 本全景簡報</span>
+        <span style="font-size: 0.9rem; font-weight: 700; color: #2A9D8F;">已精讀收錄：4 本全景簡報</span>
       </div>
 
       <div class="books-grid">
@@ -536,7 +538,7 @@
           </div>
 
           <div class="book-card-footer">
-            <span class="priority-badge badge-p1">🔥 19M 最高優先</span>
+            <span class="priority-badge badge-p1">🔥 19M 積極心理</span>
             <a href="book-nurture.html" class="btn-read-slides">🎬 進入 20 頁全景簡報 ➔</a>
           </div>
         </article>
@@ -590,7 +592,7 @@
             </div>
 
             <div class="book-core-quote">
-              「遊戲不是毒藥，而是頂級的激勵與心流引擎。解碼遊戲四大支柱，把遊戲力遷移為學習自驅力！」
+              「遊戲不是毒藥，而是頂級的激勵與心流引擎。解碼四大支柱，把遊戲力遷移為學習自驅力！」
             </div>
 
             <ul class="book-highlights">
@@ -604,6 +606,39 @@
           <div class="book-card-footer">
             <span class="priority-badge badge-p2">⭐ 數位防護與自控</span>
             <a href="book-game-selfcontrol.html" class="btn-read-slides">🎬 進入 11 頁全景簡報 ➔</a>
+          </div>
+        </article>
+
+        <!-- Book 4: 父母的語言 -->
+        <article class="book-card" style="border: 2px solid #E63946;">
+          <div>
+            <div class="book-card-header">
+              <div class="book-badge-icon" style="background: linear-gradient(135deg, #1D3557, #E63946);">🗣️</div>
+              <div class="book-info">
+                <h3>《父母的語言：3000萬詞彙塑造更強大的學習型大腦》</h3>
+                <div class="book-author">
+                  <span>作者：達娜·薩斯金德 醫學博士</span>
+                  <span>•</span>
+                  <span>機械工業出版社</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-core-quote" style="border-left-color: #E63946;">
+              「大腦不是天生固定的，而是由早期對話實體塑造出來的。父母的語言是免費卻最奢華的大腦營養品！」
+            </div>
+
+            <ul class="book-highlights">
+              <li><strong>耳蝸醫生的重大發現</strong>：決定智力命運的不是硬體，是家庭日常對話環境</li>
+              <li><strong>4 歲前 3000 萬詞彙差距</strong>：早期詞彙輸入與對話輪替決定大腦神經網絡發育</li>
+              <li><strong>神經突觸修剪法則</strong>：每秒 1000 個突觸「用進廢退」，電子螢幕無法替代真人互動</li>
+              <li><strong>3T 核心工具</strong>：Tune In（關注）、Talk More（多說話）、Take Turns（輪流交談打乒乓）</li>
+            </ul>
+          </div>
+
+          <div class="book-card-footer">
+            <span class="priority-badge badge-p1" style="background:#FFE3E3; color:#C92A2A;">🔥 19M 語言爆發必讀</span>
+            <a href="book-parents-language.html" class="btn-read-slides" style="background: linear-gradient(135deg, #1D3557, #E63946);">🎬 進入 16 頁全景簡報 ➔</a>
           </div>
         </article>
 
@@ -621,7 +656,7 @@
             </div>
 
             <div class="book-core-quote" style="border-left-color: #A09885; background: #F5EFEB;">
-              收錄計劃：《遊戲力》、《父母的語言》、《全腦教養法》、《正面管教》、《被討厭的勇氣》...
+              收錄計劃：《遊戲力》、《全腦教養法》、《正面管教》、《被討厭的勇氣》、《每個孩子都能好好睡覺》...
             </div>
 
             <p style="font-size: 0.88rem; color: #7A7265; line-height: 1.6;">
@@ -630,8 +665,8 @@
           </div>
 
           <div class="book-card-footer">
-            <span class="priority-badge" style="background:#E5DCCB; color:#6C757D;">未來持續連載</span>
-            <span style="font-size: 0.85rem; color: #9A9EA6;">持續擴充中</span>
+            <span class="priority-badge" style="background:#E5DCCB; color:#6C757D;">持續擴充中</span>
+            <span style="font-size: 0.85rem; color: #9A9EA6;">無上限收錄</span>
           </div>
         </article>
 
@@ -643,7 +678,7 @@
       <div class="section-title-wrap">
         <div>
           <h2 class="section-title">🧠 0～6 歲跨書籍分齡整合知識庫 (Age-Based Hub)</h2>
-          <span class="section-subtitle">橫跨姜天依、陳敏瑩、董祁奇三部著作，父母可第一時間看懂核心共識與具體做法，並一鍵直達原書頁面</span>
+          <span class="section-subtitle">橫跨姜天依、陳敏瑩、董祁奇、達娜·薩斯金德四部經典，父母可第一時間看懂核心共識與具體做法，並一鍵直達原書頁面</span>
         </div>
       </div>
 
@@ -663,9 +698,10 @@
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>關係重於技能</strong>：此階段唯一的發展任務是讓嬰兒確信「我是被愛的，世界是安全可預期的」。及時回應哭鬧絕不會慣壞孩子（《滋養》）。<br>
-                • <strong>哈佛 Serve & Return (發球—回球)</strong>：眼神交會、牙牙學語時 2 秒內模仿回應，大腦突觸神經連結爆發（每秒 700-1000 個）。<br>
-                • <strong>看孩子別看鐘</strong>：拋棄教條式按鐘餵奶與過度執念，媽媽的身心舒暢與好心情，是嬰兒最強的催產素來源（《不焦慮媽媽》）。
+                • <strong>關係重於技能</strong>：唯一的發展任務是讓嬰兒確信「我是被愛的，世界是安全可預期的」。及時回應哭鬧絕不會慣壞孩子（《滋養》）。<br>
+                • <strong>大腦神經突觸爆發（每秒 700-1000 個）</strong>：嬰兒的大腦在與父母的溫暖互動中被物理構建，任何早教視頻、音訊對 0-1 歲完全無效（《父母的語言》）。<br>
+                • <strong>哈佛 Serve & Return (發球—回球)</strong>：眼神交會、牙牙學語時 2 秒內模仿回應，建立雙向社交凝視通道。<br>
+                • <strong>看孩子別看鐘</strong>：拋棄教條式按鐘餵奶與過度執念，媽媽的身心舒暢是最好的催產素（《不焦慮媽媽》）。
               </p>
             </div>
 
@@ -674,7 +710,7 @@
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
                 1. <strong>肌膚相親與規律睡前流程</strong>：洗澡 ➔ 按摩 ➔ 哼唱 ➔ 關燈。<br>
                 2. <strong>生病時的安撫</strong>：生病退行是尋求安全感的本能，給予無條件擁抱。<br>
-                3. <strong>媽媽放鬆第一</strong>：母乳有困難加一點配方奶完全沒問題，媽媽好家庭才好！
+                3. <strong>牙牙學語輪流回擊</strong>：寶寶發出「啊咕」，大人馬上看著她微笑重複「啊咕呀！寶寶在跟爸爸說話呀！」。
               </p>
             </div>
           </div>
@@ -684,6 +720,7 @@
             <a href="book-nurture.html#slide-ch1-1" class="deep-link-btn nurture">🌱 滋養 Ch 1.1 三大心理資本</a>
             <a href="book-nurture.html#slide-ch1-2" class="deep-link-btn nurture">🧠 滋養 Ch 1.2 發球回球互動</a>
             <a href="book-anxiety-free.html#slide-m-intro" class="deep-link-btn anxiety">🌿 不焦慮 開篇 看孩子別看鐘</a>
+            <a href="book-parents-language.html#slide-l3" class="deep-link-btn language">🗣️ 語言 Ch 3 神經突觸修剪</a>
           </div>
         </div>
 
@@ -692,20 +729,21 @@
           <div class="age-header">
             <div class="age-title">
               <span>🌟 1～2 歲（19 個月當前核心！1 歲 7 個月）</span>
-              <span class="age-stage-badge" style="background:#FDF0EC; color:#E07A5F;">Erikson 第二階段：自主感 vs 羞怯懷疑</span>
+              <span class="age-stage-badge" style="background:#FDF0EC; color:#E07A5F;">Erikson 第二階段：自主感 vs 羞怯懷疑 ＋ 語言大腦黃金期</span>
             </div>
             <span class="priority-badge badge-p1">🔥 女兒當下焦點</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
-              <h4>🌱 跨書核心共識（大衛與太太必讀）</h4>
+              <h4>🌱 四大名著核心共識（大衛與太太必讀）</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>「不！」是自我意識的偉大宣言</strong>：不是學壞，是宣告「我是獨立個體」。用有限選擇（手持實物二選一）賦予她微小掌控感（《滋養》《不焦慮》）。<br>
-                • <strong>把能扔的讓她扔個夠</strong>：扔東西、反覆開關抽屜是在探索空間重力與因果關係。準備「拋扔籃」（襪子、軟球），尊重探索慾（《不焦慮》）。<br>
-                • <strong>大腦外部調節器</strong>：情緒崩潰時前額葉掉線，先蹲下擁抱命名感受（「妳很著急對嗎」），等呼吸平穩再重申規則（《滋養》）。<br>
-                • <strong>不打擾的專注力</strong>：重複倒水、玩積木是她的大腦工作，想打斷前默數 5 秒！<br>
-                • <strong>AAP 螢幕防線</strong>：堅決不給手機當電子保母，用物理沙漏與真實世界探索（《遊戲自控力》）。
+                • <strong>薩斯金德 3T 語言發動機</strong>：① <strong>Tune In (共情關注)</strong>：跟隨她的視線，她在看什麼就說什麼；② <strong>Talk More (多說話)</strong>：去除模糊代詞（「把這個放那」➔「把藍色水壺放到茶几上」），化身日常解說員；③ <strong>Take Turns (輪流交談)</strong>：發問後在心裡<strong>默數 5 秒</strong>，給她前額葉組織輸出的時間（《父母的語言》）。<br>
+                • <strong>「不！」是自我意識的偉大宣言</strong>：不是學壞，是宣告獨立個體。用有限選擇（手持實物二選一）賦予她微小掌控感（《滋養》《不焦慮》）。<br>
+                • <strong>把能扔的讓她扔個夠</strong>：扔東西是在探索空間重力因果。準備「拋扔籃」（襪子、軟球），危險物品物理隔離。<br>
+                • <strong>大腦外部調節器</strong>：情緒崩潰時前額葉掉線，先蹲下擁抱命名感受（「妳很著急對嗎」），等呼吸平穩再重申規則。<br>
+                • <strong>不打擾五秒原則</strong>：重複倒水、堆積木是她的大腦工作，想打斷前默數 5 秒！<br>
+                • <strong>AAP 螢幕防線</strong>：堅決不給手機當電子保母，用物理沙漏與真實世界探索（《遊戲自控力》《父母的語言》）。
               </p>
             </div>
 
@@ -714,6 +752,7 @@
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
                 • <strong>穿衣出門</strong>：「今天想穿紅色小鞋子，還是小白鞋？妳來拿！」<br>
                 • <strong>發脾氣哭鬧</strong>：「餅乾碎了很難過對嗎？爸爸抱抱，想哭可以哭一會兒。」<br>
+                • <strong>自言自語解說</strong>：「爸爸現在要把平底鍋放到爐子上，煎一顆香噴噴的荷包蛋囉！」<br>
                 • <strong>分離儀式</strong>：出門一定說再見（魔法親吻），回來宣告「爸爸說到做到回來了！」<br>
                 • <strong>每天 10 分鐘特殊時光</strong>：沙漏倒數，手機放另一個房間，當解說員不當考官。<br>
                 • <strong>繪本重複講</strong>：同一本讀 20 遍無條件滿足，豐富擬聲詞輸入。
@@ -730,7 +769,10 @@
             <a href="book-nurture.html#slide-ch9-1" class="deep-link-btn nurture">🌱 滋養 Ch 9.1 10分鐘特殊時光</a>
             <a href="book-anxiety-free.html#slide-m1-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 1.1 選擇題立規則</a>
             <a href="book-anxiety-free.html#slide-m3-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 3.1 繪本重複讀</a>
-            <a href="book-anxiety-free.html#slide-m3-2" class="deep-link-btn anxiety">🌿 不焦慮 招式 3.2 語言陪練與數感</a>
+            <a href="book-parents-language.html#slide-l3t" class="deep-link-btn language">🗣️ 語言 Ch 5 3T 原則核心系統</a>
+            <a href="book-parents-language.html#slide-l-t2" class="deep-link-btn language">🗣️ 語言 去除代詞解說員模式</a>
+            <a href="book-parents-language.html#slide-l-t3" class="deep-link-btn language">🗣️ 語言 Take Turns 輪流等5秒</a>
+            <a href="book-parents-language.html#slide-l-action19" class="deep-link-btn language">🗣️ 語言 19M 落地實踐總綱</a>
             <a href="book-game-selfcontrol.html#slide-g-action19" class="deep-link-btn game">🎮 遊戲 幼兒自控啟蒙與螢幕防護</a>
           </div>
         </div>
@@ -740,7 +782,7 @@
           <div class="age-header">
             <div class="age-title">
               <span>🧸 2～3 歲（學步後期與秩序敏感期）</span>
-              <span class="age-stage-badge">秩序敏感期高峰 & 語言爆發</span>
+              <span class="age-stage-badge">秩序敏感期高峰 & 詞彙大爆炸</span>
             </div>
             <span style="font-size: 0.85rem; color: #6C757D;">銜接儲備</span>
           </div>
@@ -749,9 +791,10 @@
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>秩序敏感期</strong>：鞋子放錯位置、蓋子沒蓋好就嚎啕大哭。這不是無理取鬧，是「內在秩序構建」的關鍵期。處理之道在於尊重其程序完整性（《滋養》）。<br>
-                • <strong>物權意識誕生</strong>：死守玩具喊「我的！」是自我界限的確立。跳過「我的」強推分享是空中樓閣。先捍衛其物權，孩子才有安全感主動輪流（《滋養》《不焦慮》）。<br>
-                • <strong>化解磨蹭</strong>：幼兒大腦沒有抽象時間概念。催促只會宕機，把洗手穿衣變成「小火車鑽山洞」遊戲（《不焦慮》）。
+                • <strong>對話輪換次數 (Conversational Turns)</strong>：大腦反應速度的關鍵指標！不是父母滔滔不絕，而是像打乒乓球一樣來回互動，多問開放式問題（What/How/Why）（《父母的語言》）。<br>
+                • <strong>因果解釋代替單向命令</strong>：多說「因為...所以...」（「因為下雨地上滑，所以我們要牽好手」），直接鍛鍊幼兒前額葉工作記憶與自律（《父母的語言》）。<br>
+                • <strong>秩序敏感期</strong>：程序被打破就崩潰不是無理取鬧，是內在秩序構建關鍵期。尊重其程序完整性（《滋養》）。<br>
+                • <strong>物權意識誕生</strong>：先捍衛其「我的」界限，孩子才有安全感主動輪流（《滋養》《不焦慮》）。
               </p>
             </div>
 
@@ -760,6 +803,7 @@
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
                 • <strong>物權句型</strong>：「這是寶貝的球，妳現在想自己玩，等妳想分享時再告訴我們。」<br>
                 • <strong>打翻東西共同收拾</strong>：不吼叫「叫妳小心點」，平靜遞上抹布：「牛奶灑了，我們一起擦乾淨。」<br>
+                • <strong>因果解釋</strong>：「熱水會燙傷皮膚，所以我們要等涼了再喝。」<br>
                 • <strong>生活數感融入</strong>：走樓梯數階梯、分葡萄一人一顆、比較大箱子小箱子。
               </p>
             </div>
@@ -770,6 +814,7 @@
             <a href="book-nurture.html#slide-ch7-1" class="deep-link-btn nurture">🌱 滋養 Ch 7.1 物權意識非強迫</a>
             <a href="book-nurture.html#slide-ch8-1" class="deep-link-btn nurture">🌱 滋養 Ch 8.1 允許犯錯是學習機會</a>
             <a href="book-anxiety-free.html#slide-m1-2" class="deep-link-btn anxiety">🌿 不焦慮 招式 1.2 改掉磨蹭轉化術</a>
+            <a href="book-parents-language.html#slide-l4-exec" class="deep-link-btn language">🗣️ 語言 Ch 4.1 執行功能與因果對話</a>
             <a href="book-game-selfcontrol.html#slide-g4" class="deep-link-btn game">🎮 遊戲 Ch 4 前額葉決策樹與沙漏</a>
           </div>
         </div>
@@ -789,8 +834,9 @@
               <h4>🌱 跨書核心共識</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
                 • <strong>入園分離焦慮全攻略</strong>：提前半年生活常規同步，參觀幼兒園；告別時絕不偷偷溜走，給予微笑並交代具體接回家時間（吃完點心後）（《不焦慮媽媽》）。<br>
+                • <strong>對話式繪本共讀 (Dialogic Reading)</strong>：翻開繪本不再是單向念字，而是拋出預測性問題：「妳猜小熊接下來會敲誰的門？」（《父母的語言》）。<br>
                 • <strong>社交衝突解決三步法</strong>：不做居高臨下的裁判法官，做新聞記者（傾聽 ➔ 雙向共情 ➔ 引導孩子自己想辦法）（《滋養》）。<br>
-                • <strong>遊戲設計四大支柱</strong>：目標明確、規則平等、即時反饋、自主參與。把家庭常規遊戲化（《遊戲自控力》）。
+                • <strong>遊戲四大支柱生活化</strong>：目標明確、規則平等、即時反饋、自主參與。把家庭常規遊戲化（《遊戲自控力》）。
               </p>
             </div>
 
@@ -799,7 +845,7 @@
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
                 • <strong>放學接回時</strong>：不問「有沒有被欺負」，問「今天在幼兒園最開心的事是什麼？」<br>
                 • <strong>衝突引導</strong>：「你們兩個都想玩小恐龍，那有什麼好辦法讓兩個人都開心呢？」<br>
-                • <strong>與老師溝通</strong>：帶著具體觀察與感激，建立家園育兒同盟。
+                • <strong>空間語言輸入</strong>：「我們把長方體積木放在正方體上面，搭一個高高的城堡！」
               </p>
             </div>
           </div>
@@ -809,6 +855,7 @@
             <a href="book-nurture.html#slide-ch4-2" class="deep-link-btn nurture">🌱 滋養 Ch 4.2 分離焦慮與安全基地</a>
             <a href="book-nurture.html#slide-ch7-2" class="deep-link-btn nurture">🌱 滋養 Ch 7.2 衝突解決三步法</a>
             <a href="book-anxiety-free.html#slide-m4-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 4.1-4.3 入園準備全景</a>
+            <a href="book-parents-language.html#slide-l-t2" class="deep-link-btn language">🗣️ 語言 對話式繪本閱讀策略</a>
             <a href="book-game-selfcontrol.html#slide-g2" class="deep-link-btn game">🎮 遊戲 Ch 2 遊戲四大支柱心流</a>
           </div>
         </div>
@@ -818,7 +865,7 @@
           <div class="age-header">
             <div class="age-title">
               <span>🎨 4～5 歲（自主創造與規則內化）</span>
-              <span class="age-stage-badge">自我情緒調節 & 低結構創造力</span>
+              <span class="age-stage-badge">自我情緒調節 & 空間思維萌芽</span>
             </div>
             <span style="font-size: 0.85rem; color: #6C757D;">能力升級</span>
           </div>
@@ -827,17 +874,17 @@
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
+                • <strong>空間與數學詞彙的爆發輸入</strong>：在日常中注入形狀、邊緣、角度、對稱、厚薄等概念，哈佛研究顯示這直接奠定小學後的數理能力（《父母的語言》）。<br>
                 • <strong>積極暫停角 (Positive Time-out)</strong>：風平浪靜時與孩子共創「心情加油站/彩虹島」，放亮片瓶、捏捏樂。不是懲罰，是自主平復（《滋養》）。<br>
                 • <strong>自然與邏輯結果 (4R 原則)</strong>：相關、尊重、合理、預先告知。告別懲罰吼叫（《滋養》）。<br>
-                • <strong>雙向接納</strong>：父母示範自己的脆弱與疲憊，激發孩子真實的同理心（《不焦慮媽媽》）。<br>
-                • <strong>低結構材料創造力</strong>：紙箱、落葉、黏土勝過聲光玩具，保護無聊時光（《滋養》）。
+                • <strong>雙向接納</strong>：父母示範自己的脆弱與疲憊，激發孩子真實的同理心（《不焦慮媽媽》）。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>誇獎轉換</strong>：不誇「妳真聰明」，誇「媽媽看到妳換了三次方法終於拼好了，這叫堅持！」<br>
+                • <strong>誇獎轉換</strong>：不誇「妳真聰明」，誇「媽媽看到妳換了三次方法終於拼好了，這叫堅持與策略！」<br>
                 • <strong>示範暫停</strong>：「爸爸現在有點激動，需要去彩虹島深呼吸 3 分鐘。」<br>
                 • <strong>正面家規</strong>：「沙發是用來坐的，如果想跳我們去地墊上跳。」
               </p>
@@ -849,6 +896,7 @@
             <a href="book-nurture.html#slide-ch6-3" class="deep-link-btn nurture">🌱 滋養 Ch 6.3 積極暫停角搭建</a>
             <a href="book-nurture.html#slide-ch10-1" class="deep-link-btn nurture">🌱 滋養 Ch 10.1-10.2 正面規則與4R</a>
             <a href="book-anxiety-free.html#slide-m2-2" class="deep-link-btn anxiety">🌿 不焦慮 招式 2.5 雙向接納父母</a>
+            <a href="book-parents-language.html#slide-l4-math" class="deep-link-btn language">🗣️ 語言 Ch 4.2 空間幾何與誇獎思維</a>
             <a href="book-game-selfcontrol.html#slide-g3" class="deep-link-btn game">🎮 遊戲 Ch 3 建立同盟對話</a>
           </div>
         </div>
@@ -858,7 +906,7 @@
           <div class="age-header">
             <div class="age-title">
               <span>🚀 5～6 歲（學前準備與學習自驅力）</span>
-              <span class="age-stage-badge">自控力遷移 & VIA 優勢展現</span>
+              <span class="age-stage-badge">自控力遷移 & 成長型思維扎根</span>
             </div>
             <span style="font-size: 0.85rem; color: #6C757D;">學前躍升</span>
           </div>
@@ -867,10 +915,10 @@
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
               <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>遊戲力向學習自驅遷移 (PBL)</strong>：把學習拆解為積分、勳章與段位。失敗了像玩家一樣換裝備再來，培養「成長型抗挫力」（《遊戲自控力》）。<br>
+                • <strong>語言塑造人生觀（成長型心態）</strong>：大腦就像肌肉一樣，越用越發達。把「我不會」改成「我暫時還沒搞懂（Yet）」，消除對失敗的恐懼（《父母的語言》《滋養》）。<br>
+                • <strong>遊戲力向學習自驅遷移 (PBL)</strong>：把學習拆解為積分、勳章與段位。失敗了像玩家一樣換裝備再來，培養「玩家抗挫力」（《遊戲自控力》）。<br>
                 • <strong>家庭數位契約</strong>：簽訂平等的電子時間契約，建立「無手機餐桌」與睡前離線機制。<br>
-                • <strong>VIA 24 項性格優勢淘金</strong>：將 80% 精力投資在孩子的核心天賦上（好奇心、毅力、熱情），不逼全能，讓兔子奔跑、魚兒暢遊（《滋養》）。<br>
-                • <strong>毫不猶豫的行動力</strong>：從小多給做對事情的自信認可，長出未來競爭力（《不焦慮媽媽》）。
+                • <strong>VIA 24 項性格優勢淘金</strong>：將 80% 精力投資在孩子的核心天賦上（好奇心、毅力、熱情），不逼全能（《滋養》）。
               </p>
             </div>
 
@@ -888,8 +936,9 @@
             <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
             <a href="book-nurture.html#slide-ch8-3" class="deep-link-btn nurture">🌱 滋養 Ch 8.3 暫未的力量</a>
             <a href="book-nurture.html#slide-ch11-1" class="deep-link-btn nurture">🌱 滋養 Ch 11.1 VIA 24項優勢</a>
+            <a href="book-parents-language.html#slide-l4-math" class="deep-link-btn language">🗣️ 語言 成長型思維語言與人生觀</a>
             <a href="book-game-selfcontrol.html#slide-g5" class="deep-link-btn game">🎮 遊戲 Ch 5 學習自驅遷移PBL</a>
-            <a href="book-game-selfcontrol.html#slide-g6" class="deep-link-btn game">🎮 遊戲 Ch 6 現實好玩度重構</a>
+            <a href="book-game-selfcontrol.html#slide-g6" class="deep-link-btn game">🎮 遊戲 Ch 6 家庭生態好玩度</a>
           </div>
         </div>
 
@@ -934,7 +983,7 @@
             <th>衝突場景</th>
             <th>❌ 傳統命令/吼叫 (引發對抗)</th>
             <th>🟢 跨書科學話術 (同盟與引導)</th>
-            <th>底層心理機制</th>
+            <th>底層心理與語言機制</th>
           </tr>
         </thead>
         <tbody>
@@ -983,7 +1032,7 @@
           <tr>
             <td><strong>8. 電子螢幕時間到了</strong></td>
             <td>直接衝過去粗暴搶走手機</td>
-            <td>「沙漏剩最後一分鐘囉，小怪獸要存檔回城堡睡覺了，我們去玩躲貓貓！」</td>
+            <td>「沙漏剩最後一分鐘囉，小怪獸要存檔回城堡睡覺了，我們去玩捉迷藏！」</td>
             <td>預先信號 + 平穩著陸銜接（《遊戲》附錄）</td>
           </tr>
         </tbody>
@@ -995,7 +1044,7 @@
   <!-- Footer -->
   <footer class="portal-footer">
     <p>🌱 <strong>大衛家 0-6 歲優勢育兒知識門戶 & 圖書總覽</strong></p>
-    <p>本系統基於《滋養，而非雕刻》、《不焦慮媽媽養育手冊》、《遊戲自控力》等經典深度梳理，專為 David & 太太打造。</p>
+    <p>本系統基於《滋養，而非雕刻》、《不焦慮媽媽養育手冊》、《遊戲自控力》、《父母的語言》等世界經典深度梳理，專為 David & 太太打造。</p>
     <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">© 2026 David & Family Parenting Portal • 陪伴 19 個月女兒溫暖茁壯成長</p>
   </footer>
 
