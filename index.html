@@ -3,53 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大衛家 0-6 歲優勢育兒知識門戶 & 圖書總覽 | David & 太太專用</title>
+  <title>大衛家 0-6 歲優勢育兒知識門戶 & 里程碑總控系統 | 零雜訊頂尖顧問標準 (Zero-Noise Consulting)</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Portal Specific Theme */
+    /* Portal Zero-Noise Theme */
     :root {
-      --portal-bg: #FCF9F2;
+      --portal-bg: #F8FAFC;
       --portal-card: #FFFFFF;
       --accent-coral: #E07A5F;
       --accent-teal: #2A9D8F;
-      --accent-navy: #264653;
+      --accent-navy: #051C2C;
       --accent-yellow: #E9C46A;
-      --accent-purple: #6B705C;
-      --accent-blue-deep: #1D3557;
+      --accent-green: #004F32;
     }
 
     body {
       background-color: var(--portal-bg);
-      color: #2D3142;
+      color: #1E293B;
     }
 
     .portal-hero {
-      background: linear-gradient(135deg, #1D3557 0%, #264653 40%, #2A9D8F 75%, #E76F51 100%);
+      background: linear-gradient(135deg, #051C2C 0%, #1D3557 35%, #004F32 75%, #2A9D8F 100%);
       color: #FFFFFF;
-      padding: 60px 24px 48px;
+      padding: 56px 24px 44px;
       text-align: center;
       position: relative;
-      border-bottom: 4px solid #E9C46A;
+      border-bottom: 4px solid #29BA74;
     }
 
     .portal-hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 900;
       letter-spacing: -0.5px;
       margin-bottom: 12px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     .portal-hero p {
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       opacity: 0.95;
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 24px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .hero-badges {
@@ -60,37 +59,78 @@
     }
 
     .hero-badge {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.18);
       backdrop-filter: blur(8px);
       padding: 6px 16px;
       border-radius: 30px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.25);
       display: inline-flex;
       align-items: center;
       gap: 6px;
+    }
+
+    /* KPI Summary Row */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1280px;
+      margin: -24px auto 36px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (max-width: 860px) {
+      .kpi-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .kpi-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .kpi-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #051C2C;
+      line-height: 1.1;
+    }
+
+    .kpi-label {
+      font-size: 0.82rem;
+      color: #64748B;
+      font-weight: 700;
+      margin-top: 4px;
     }
 
     /* Sticky Navigation */
     .portal-nav {
       position: sticky;
       top: 0;
-      background: rgba(252, 249, 242, 0.96);
+      background: rgba(248, 250, 252, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid #EFE6D5;
+      border-bottom: 1px solid #E2E8F0;
       z-index: 999;
       padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
 
     .portal-nav-links {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       overflow-x: auto;
       white-space: nowrap;
       padding-bottom: 2px;
@@ -98,13 +138,13 @@
 
     .nav-pill {
       text-decoration: none;
-      color: #2D3142;
+      color: #334155;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       padding: 8px 16px;
       border-radius: 20px;
       background: #FFFFFF;
-      border: 1px solid #E5DCCB;
+      border: 1px solid #CBD5E1;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
@@ -112,16 +152,16 @@
     }
 
     .nav-pill:hover, .nav-pill.active {
-      background: #264653;
+      background: #051C2C;
       color: #FFFFFF;
-      border-color: #264653;
+      border-color: #051C2C;
       transform: translateY(-1px);
     }
 
     .nav-pill.highlight {
-      background: #E07A5F;
+      background: #004F32;
       color: #FFFFFF;
-      border-color: #E07A5F;
+      border-color: #004F32;
     }
 
     .portal-search-bar {
@@ -134,7 +174,7 @@
       width: 100%;
       padding: 9px 16px 9px 38px;
       border-radius: 24px;
-      border: 1px solid #D8CFC0;
+      border: 1px solid #CBD5E1;
       background: #FFFFFF;
       font-size: 0.9rem;
       outline: none;
@@ -142,8 +182,8 @@
     }
 
     .portal-search-bar input:focus {
-      border-color: #E07A5F;
-      box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.15);
+      border-color: #004F32;
+      box-shadow: 0 0 0 3px rgba(0, 79, 50, 0.15);
     }
 
     .portal-search-bar::before {
@@ -160,7 +200,7 @@
     .portal-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 36px 20px 80px;
+      padding: 20px 20px 80px;
     }
 
     .section-title-wrap {
@@ -168,119 +208,118 @@
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      border-bottom: 2px solid #EFE6D5;
+      border-bottom: 2px solid #E2E8F0;
       padding-bottom: 12px;
     }
 
     .section-title {
       font-size: 1.6rem;
       font-weight: 800;
-      color: #264653;
+      color: #051C2C;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .section-subtitle {
-      font-size: 0.95rem;
-      color: #6C757D;
+      font-size: 0.92rem;
+      color: #64748B;
     }
 
     /* Books Grid */
     .books-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 24px;
+      gap: 22px;
       margin-bottom: 50px;
     }
 
     .book-card {
       background: #FFFFFF;
-      border-radius: 16px;
-      border: 1px solid #EFE6D5;
-      padding: 24px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      border-radius: 14px;
+      border: 1px solid #E2E8F0;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s ease;
       position: relative;
-      overflow: hidden;
     }
 
     .book-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-      border-color: #E07A5F;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+      border-color: #004F32;
     }
 
     .book-card-header {
       display: flex;
-      gap: 16px;
-      margin-bottom: 14px;
+      gap: 14px;
+      margin-bottom: 12px;
     }
 
     .book-badge-icon {
-      width: 54px;
-      height: 70px;
+      width: 52px;
+      height: 68px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.12);
       flex-shrink: 0;
       color: #fff;
     }
 
     .book-info h3 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 800;
       line-height: 1.4;
-      margin-bottom: 6px;
-      color: #264653;
+      margin-bottom: 4px;
+      color: #051C2C;
     }
 
     .book-author {
-      font-size: 0.85rem;
-      color: #6C757D;
+      font-size: 0.82rem;
+      color: #64748B;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
     .book-core-quote {
-      background: #FDF9F2;
-      border-left: 4px solid #E07A5F;
-      padding: 10px 14px;
+      background: #F8FAFC;
+      border-left: 4px solid #004F32;
+      padding: 10px 12px;
       border-radius: 0 8px 8px 0;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
-      color: #2D3142;
-      margin-bottom: 14px;
+      color: #1E293B;
+      margin-bottom: 12px;
       line-height: 1.5;
     }
 
     .book-highlights {
-      font-size: 0.88rem;
-      color: #4A5568;
+      font-size: 0.86rem;
+      color: #475569;
       line-height: 1.6;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .book-highlights li {
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       list-style-type: none;
       position: relative;
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
     .book-highlights li::before {
       content: "•";
-      color: #E07A5F;
+      color: #004F32;
       position: absolute;
-      left: 4px;
+      left: 2px;
       font-size: 1.1rem;
       line-height: 1;
     }
@@ -289,18 +328,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px dashed #EFE6D5;
-      padding-top: 14px;
+      border-top: 1px dashed #E2E8F0;
+      padding-top: 12px;
       margin-top: auto;
     }
 
     .btn-read-slides {
-      background: linear-gradient(135deg, #264653, #2A9D8F);
+      background: linear-gradient(135deg, #051C2C, #004F32);
       color: #FFFFFF;
       text-decoration: none;
-      padding: 8px 18px;
+      padding: 7px 16px;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
@@ -309,31 +348,31 @@
     }
 
     .btn-read-slides:hover {
-      background: linear-gradient(135deg, #E07A5F, #C85A3F);
-      transform: scale(1.03);
+      background: linear-gradient(135deg, #004F32, #29BA74);
+      transform: scale(1.02);
     }
 
     /* Age Based Hub */
     .age-cards-container {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 28px;
       margin-bottom: 60px;
     }
 
     .age-card {
       background: #FFFFFF;
-      border-radius: 18px;
-      border: 1px solid #EFE6D5;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border-radius: 16px;
+      border: 1px solid #E2E8F0;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.03);
       position: relative;
     }
 
     .age-card.highlight-19m {
-      border: 2px solid #E07A5F;
-      box-shadow: 0 6px 28px rgba(224, 122, 95, 0.16);
-      background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
+      border: 2px solid #004F32;
+      box-shadow: 0 6px 26px rgba(0, 79, 50, 0.12);
+      background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 100%);
     }
 
     .age-card.highlight-19m::before {
@@ -341,47 +380,47 @@
       position: absolute;
       top: -14px;
       left: 28px;
-      background: linear-gradient(90deg, #E07A5F, #E76F51);
+      background: linear-gradient(90deg, #004F32, #16A34A);
       color: #FFFFFF;
       font-size: 0.85rem;
       font-weight: 800;
       padding: 4px 16px;
       border-radius: 20px;
-      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 79, 50, 0.25);
     }
 
     .age-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
       gap: 12px;
     }
 
     .age-title {
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       font-weight: 900;
-      color: #264653;
+      color: #051C2C;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .age-stage-badge {
-      background: #EBF4F0;
-      color: #2A9D8F;
+      background: #E2E8F0;
+      color: #334155;
       padding: 4px 12px;
       border-radius: 12px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
     }
 
     .age-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 24px;
-      margin-bottom: 20px;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 22px;
+      margin-bottom: 18px;
     }
 
     @media (max-width: 860px) {
@@ -398,17 +437,17 @@
     }
 
     .age-content-box {
-      background: #FDF9F2;
-      border-radius: 14px;
-      padding: 20px;
-      border: 1px solid #EFE6D5;
+      background: #F8FAFC;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #E2E8F0;
     }
 
     .age-content-box h4 {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
-      color: #264653;
-      margin-bottom: 12px;
+      color: #051C2C;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -420,17 +459,17 @@
       gap: 8px;
       margin-top: 14px;
       padding-top: 14px;
-      border-top: 1px dashed #E5DCCB;
+      border-top: 1px dashed #CBD5E1;
     }
 
     .deep-link-btn {
       text-decoration: none;
       background: #FFFFFF;
-      color: #264653;
-      border: 1px solid #D5CEBE;
-      padding: 6px 14px;
-      border-radius: 16px;
-      font-size: 0.85rem;
+      color: #1E293B;
+      border: 1px solid #CBD5E1;
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 0.82rem;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
@@ -439,9 +478,9 @@
     }
 
     .deep-link-btn:hover {
-      background: #2A9D8F;
+      background: #004F32;
       color: #FFFFFF;
-      border-color: #2A9D8F;
+      border-color: #004F32;
       transform: translateY(-1px);
     }
 
@@ -449,49 +488,70 @@
     .deep-link-btn.anxiety { border-left: 3px solid #2A9D8F; }
     .deep-link-btn.game { border-left: 3px solid #118AB2; }
     .deep-link-btn.language { border-left: 3px solid #E63946; }
+    .deep-link-btn.justright { border-left: 3px solid #004F32; }
 
     /* Footer */
     .portal-footer {
-      background: #1D3557;
+      background: #051C2C;
       color: #FFFFFF;
       text-align: center;
       padding: 40px 20px;
       margin-top: 60px;
-      border-top: 4px solid #E9C46A;
+      border-top: 4px solid #29BA74;
     }
 
     .portal-footer p {
       opacity: 0.85;
-      font-size: 0.95rem;
-      margin-bottom: 10px;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Header -->
+  <!-- Hero Header (Top-Down Action Driven) -->
   <header class="portal-hero">
-    <h1>🌱 大衛家 0-6 歲優勢育兒知識門戶 & 圖書總覽</h1>
-    <p>匯聚多部世界家庭教育與神經科學經典，以大腦突觸發育與積極心理學為根基，為 David & 太太量身打造。陪伴 19 個月（1 歲 7 個月）女兒溫暖、自信、有自控力、具備卓越思維地茁壯成長！</p>
+    <h1>🌱 大衛家 0-6 歲優勢育兒知識門戶 & 里程碑總控系統</h1>
+    <p>嚴格遵循麥肯錫／BCG「無雜訊簡報規範 (Zero-Noise Consulting)」，匯聚 5 部世界經典巨著。以大腦可塑性與兒童里程碑為舵，為 David & 太太提供清晰、零雜訊、高說服力的陪伴指南！</p>
     <div class="hero-badges">
-      <span class="hero-badge">👧 女兒當前：19 個月（語言與自我意識爆發期）</span>
-      <span class="hero-badge">📚 整合已收錄 4 部經典全景簡報</span>
-      <span class="hero-badge">🎯 0~6 歲分齡直通跨書索引</span>
-      <span class="hero-badge">🗣️ 薩斯金德 3T 語言大腦塑造</span>
+      <span class="hero-badge">👧 女兒當前：19 個月（1 歲 7 個月）關鍵里程碑</span>
+      <span class="hero-badge">📚 系統收錄：5 部世界頂尖管顧標準簡報</span>
+      <span class="hero-badge">🎯 0~6 歲麥肯錫診斷矩陣</span>
+      <span class="hero-badge">📐 8 大無雜訊簡報版型全覆蓋</span>
     </div>
   </header>
+
+  <!-- KPI Row -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-num">5 本</div>
+      <div class="kpi-label">精讀收錄經典著作</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">74 頁</div>
+      <div class="kpi-label">零雜訊顧問全景簡報</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">19 個月</div>
+      <div class="kpi-label">女兒當前黃金窗口</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">100%</div>
+      <div class="kpi-label">每頁皆有圖表/矩陣/SVG</div>
+    </div>
+  </div>
 
   <!-- Sticky Navbar -->
   <nav class="portal-nav">
     <div class="portal-nav-links">
-      <a href="#library-section" class="nav-pill">📚 圖書管理庫</a>
-      <a href="#age-hub-section" class="nav-pill">🧠 0-6 歲分齡知識庫</a>
+      <a href="#library-section" class="nav-pill">📚 圖書管理庫 (5部經典)</a>
+      <a href="#age-hub-section" class="nav-pill">🧠 0-6 歲麥肯錫矩陣</a>
       <a href="#age-19m-card" class="nav-pill highlight">🔥 19 個月當前專區</a>
       <a href="#parents-mindset-section" class="nav-pill">🌿 父母充電與急救話術</a>
     </div>
 
     <div class="portal-search-bar">
-      <input type="text" id="portalSearch" placeholder="搜尋主題：3T原則、發脾氣、睡眠、磨蹭、專注力...">
+      <input type="text" id="portalSearch" placeholder="搜尋：里程碑、3T原則、四肢大腦、睡眠常規...">
     </div>
   </nav>
 
@@ -503,12 +563,78 @@
       <div class="section-title-wrap">
         <div>
           <h2 class="section-title">📚 育兒圖書管理庫 (Parenting Library)</h2>
-          <span class="section-subtitle">未來可持續擴充數十部書籍，點選卡片即可直達該書專屬之全景精華簡報</span>
+          <span class="section-subtitle">每本書均依「無雜訊簡報製作法」獨立建構完整簡報，點選卡片即可沉浸閱讀</span>
         </div>
-        <span style="font-size: 0.9rem; font-weight: 700; color: #2A9D8F;">已精讀收錄：4 本全景簡報</span>
+        <span style="font-size: 0.9rem; font-weight: 700; color: #004F32;">已完成收錄：5 本全景簡報</span>
       </div>
 
       <div class="books-grid">
+
+        <!-- Book 5: 恰到好處的養育 (NEW!) -->
+        <article class="book-card" style="border: 2px solid #004F32;">
+          <div>
+            <div class="book-card-header">
+              <div class="book-badge-icon" style="background: linear-gradient(135deg, #004F32, #29BA74);">📏</div>
+              <div class="book-info">
+                <h3>《恰到好處的養育：0~6歲里程碑》</h3>
+                <div class="book-author">
+                  <span>作者：唐雯（哥大發展心理學碩士）</span>
+                  <span>•</span>
+                  <span>新星出版社</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-core-quote" style="border-left-color: #004F32;">
+              「養育不是卡點打卡的精確競賽。把握頭尾近遠大小三大規律，做 70 分恰到好處的溫柔堅定父母。」
+            </div>
+
+            <ul class="book-highlights">
+              <li><strong>三大物理規律</strong>：頭尾、近遠、大小規律（大肌肉跑跳優先於握筆）</li>
+              <li><strong>不焦慮公式雙輪</strong>：思維層面（里程碑客觀判斷）＋ 行動層面（環境腳手架）</li>
+              <li><strong>四肢發達則頭腦發達</strong>：每天 2 小時戶外大運動是前額葉專注力的源泉</li>
+              <li><strong>習慣培養四關鍵</strong>：常規建立 ➔ 環境支持 ➔ 拆解示範 ➔ 溫和堅定</li>
+            </ul>
+          </div>
+
+          <div class="book-card-footer">
+            <span class="priority-badge badge-p1" style="background:#DCFCE7; color:#166534;">🔥 19M 里程碑必讀</span>
+            <a href="book-just-right.html" class="btn-read-slides" style="background: linear-gradient(135deg, #004F32, #29BA74);">🎬 進入 16 頁全景簡報 ➔</a>
+          </div>
+        </article>
+
+        <!-- Book 4: 父母的語言 -->
+        <article class="book-card">
+          <div>
+            <div class="book-card-header">
+              <div class="book-badge-icon" style="background: linear-gradient(135deg, #1D3557, #E63946);">🗣️</div>
+              <div class="book-info">
+                <h3>《父母的語言：3000萬詞彙塑造大腦》</h3>
+                <div class="book-author">
+                  <span>作者：達娜·薩斯金德 醫學博士</span>
+                  <span>•</span>
+                  <span>機械工業出版社</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-core-quote" style="border-left-color: #E63946;">
+              「大腦不是固定容器，父母的語言是大腦發育的物理建築師。3T原則是免費卻最奢華的大腦營養品！」
+            </div>
+
+            <ul class="book-highlights">
+              <li><strong>耳蝸醫生臨床突破</strong>：決定智力命運的不是硬體，是家庭日常對話環境</li>
+              <li><strong>3000萬詞彙差距</strong>：0-3歲突觸爆發（每秒1000個），電子螢幕無效</li>
+              <li><strong>3T核心工具</strong>：Tune In（關注）、Talk More（多說話）、Take Turns（輪替打乒乓）</li>
+              <li><strong>前額葉因果對話</strong>：多說「因為...所以...」，塑造自我調節執行功能</li>
+            </ul>
+          </div>
+
+          <div class="book-card-footer">
+            <span class="priority-badge badge-p1" style="background:#FFE3E3; color:#C92A2A;">🔥 19M 語言爆發</span>
+            <a href="book-parents-language.html" class="btn-read-slides" style="background: linear-gradient(135deg, #1D3557, #E63946);">🎬 進入 16 頁全景簡報 ➔</a>
+          </div>
+        </article>
 
         <!-- Book 1: 滋養，而非雕刻 -->
         <article class="book-card">
@@ -516,23 +642,23 @@
             <div class="book-card-header">
               <div class="book-badge-icon" style="background: linear-gradient(135deg, #E07A5F, #F2CC8F);">🌱</div>
               <div class="book-info">
-                <h3>《滋養，而非雕刻：0—6歲孩子的優勢教養》</h3>
+                <h3>《滋養，而非雕刻：0—6歲優勢教養》</h3>
                 <div class="book-author">
                   <span>作者：姜天依</span>
                   <span>•</span>
-                  <span>武漢大學出版社 (2026)</span>
+                  <span>武漢大學出版社</span>
                 </div>
               </div>
             </div>
 
             <div class="book-core-quote">
-              「愛是本能，懂是本領。父母的角色是園丁而非木匠，提供土壤與陽光，發現並滋養孩子原本的樣子。」
+              「愛是本能，懂是本領。父母是園丁而非木匠，提供土壤與陽光，發現並滋養孩子原本的樣子。」
             </div>
 
             <ul class="book-highlights">
               <li><strong>三大心理資本</strong>：內在安全感、樂觀解釋風格、成長型思維</li>
               <li><strong>學步期立支架</strong>：呵護自主感、有限選擇、秩序敏感期安撫</li>
-              <li><strong>大腦神經學</strong>：先處理下層大腦情緒（接納），再引導上層大腦行為</li>
+              <li><strong>神經階梯兩步驟</strong>：先處理下層大腦情緒（接納），再引導上層大腦行為</li>
               <li><strong>高質量陪伴</strong>：10 分鐘沙漏「特殊時光」與 VIA 24 項性格優勢</li>
             </ul>
           </div>
@@ -549,7 +675,7 @@
             <div class="book-card-header">
               <div class="book-badge-icon" style="background: linear-gradient(135deg, #2A9D8F, #E9C46A);">🌿</div>
               <div class="book-info">
-                <h3>《不焦慮媽媽養育手冊：0～6歲五招教出好孩子》</h3>
+                <h3>《不焦慮媽媽養育手冊：五招教出好孩子》</h3>
                 <div class="book-author">
                   <span>作者：陳敏瑩</span>
                   <span>•</span>
@@ -558,8 +684,8 @@
               </div>
             </div>
 
-            <div class="book-core-quote">
-              「看孩子，別看鐘！在愛的序位裡，媽媽的精神狀態必須排在前面。打破教條，懂心理再改行為。」
+            <div class="book-core-quote" style="border-left-color: #2A9D8F;">
+              「看孩子，別看鐘！在愛的序位裡，媽媽的精神狀態排在前面。打破教條，懂心理再改行為。」
             </div>
 
             <ul class="book-highlights">
@@ -582,7 +708,7 @@
             <div class="book-card-header">
               <div class="book-badge-icon" style="background: linear-gradient(135deg, #118AB2, #06D6A0);">🎮</div>
               <div class="book-info">
-                <h3>《遊戲自控力：遊戲高手也可以是學習能手》</h3>
+                <h3>《遊戲自控力：高手也是學習能手》</h3>
                 <div class="book-author">
                   <span>作者：董祁奇</span>
                   <span>•</span>
@@ -591,15 +717,15 @@
               </div>
             </div>
 
-            <div class="book-core-quote">
-              「遊戲不是毒藥，而是頂級的激勵與心流引擎。解碼四大支柱，把遊戲力遷移為學習自驅力！」
+            <div class="book-core-quote" style="border-left-color: #118AB2;">
+              「遊戲不是毒藥，而是頂級的心流引擎。解碼四大支柱，把遊戲力遷移為學習自驅力！」
             </div>
 
             <ul class="book-highlights">
               <li><strong>解碼心理冰山</strong>：沉迷背後是自主掌控感、即時反饋與歸屬感的缺失</li>
-              <li><strong>遊戲四大支柱</strong>：目標明確、規則確定、即時反饋、自願參與（教育的最高模型）</li>
+              <li><strong>遊戲四大支柱</strong>：目標明確、規則確定、即時反饋、自願參與</li>
               <li><strong>前額葉神經契約</strong>：告別被動受控，培養孩子自主權衡的「決策樹」</li>
-              <li><strong>家庭生態重構</strong>：用熱氣騰騰的真實生活好玩度打敗二維虛擬螢幕</li>
+              <li><strong>家庭生態重構</strong>：用熱氣騰騰的真實生活好玩度打敗虛擬螢幕</li>
             </ul>
           </div>
 
@@ -609,76 +735,43 @@
           </div>
         </article>
 
-        <!-- Book 4: 父母的語言 -->
-        <article class="book-card" style="border: 2px solid #E63946;">
-          <div>
-            <div class="book-card-header">
-              <div class="book-badge-icon" style="background: linear-gradient(135deg, #1D3557, #E63946);">🗣️</div>
-              <div class="book-info">
-                <h3>《父母的語言：3000萬詞彙塑造更強大的學習型大腦》</h3>
-                <div class="book-author">
-                  <span>作者：達娜·薩斯金德 醫學博士</span>
-                  <span>•</span>
-                  <span>機械工業出版社</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="book-core-quote" style="border-left-color: #E63946;">
-              「大腦不是天生固定的，而是由早期對話實體塑造出來的。父母的語言是免費卻最奢華的大腦營養品！」
-            </div>
-
-            <ul class="book-highlights">
-              <li><strong>耳蝸醫生的重大發現</strong>：決定智力命運的不是硬體，是家庭日常對話環境</li>
-              <li><strong>4 歲前 3000 萬詞彙差距</strong>：早期詞彙輸入與對話輪替決定大腦神經網絡發育</li>
-              <li><strong>神經突觸修剪法則</strong>：每秒 1000 個突觸「用進廢退」，電子螢幕無法替代真人互動</li>
-              <li><strong>3T 核心工具</strong>：Tune In（關注）、Talk More（多說話）、Take Turns（輪流交談打乒乓）</li>
-            </ul>
-          </div>
-
-          <div class="book-card-footer">
-            <span class="priority-badge badge-p1" style="background:#FFE3E3; color:#C92A2A;">🔥 19M 語言爆發必讀</span>
-            <a href="book-parents-language.html" class="btn-read-slides" style="background: linear-gradient(135deg, #1D3557, #E63946);">🎬 進入 16 頁全景簡報 ➔</a>
-          </div>
-        </article>
-
         <!-- Placeholder for Future Books -->
-        <article class="book-card" style="border: 2px dashed #D8CFC0; background: rgba(255,255,255,0.6);">
+        <article class="book-card" style="border: 2px dashed #CBD5E1; background: rgba(255,255,255,0.6);">
           <div>
             <div class="book-card-header">
-              <div class="book-badge-icon" style="background: #E5DCCB; color: #8C8270;">📖</div>
+              <div class="book-badge-icon" style="background: #E2E8F0; color: #64748B;">📖</div>
               <div class="book-info">
-                <h3 style="color: #6C757D;">即將收錄：家庭育兒擴充庫</h3>
+                <h3 style="color: #64748B;">即將收錄：家庭育兒擴充庫</h3>
                 <div class="book-author">
                   <span>後續書籍持續擴充歸納中...</span>
                 </div>
               </div>
             </div>
 
-            <div class="book-core-quote" style="border-left-color: #A09885; background: #F5EFEB;">
+            <div class="book-core-quote" style="border-left-color: #94A3B8; background: #F1F5F9;">
               收錄計劃：《遊戲力》、《全腦教養法》、《正面管教》、《被討厭的勇氣》、《每個孩子都能好好睡覺》...
             </div>
 
-            <p style="font-size: 0.88rem; color: #7A7265; line-height: 1.6;">
-              大衛與太太可隨時增加新讀完的 PDF 書籍，系統將自動提取章節架構、繪製 SVG 圖表，並在首頁 0-6 歲知識庫中建立新索引！
+            <p style="font-size: 0.86rem; color: #64748B; line-height: 1.6;">
+              大衛與太太可隨時增加新讀完的 PDF 書籍，系統將自動提取章節架構、繪製 8 種無雜訊版型，並納入總控門戶！
             </p>
           </div>
 
           <div class="book-card-footer">
-            <span class="priority-badge" style="background:#E5DCCB; color:#6C757D;">持續擴充中</span>
-            <span style="font-size: 0.85rem; color: #9A9EA6;">無上限收錄</span>
+            <span class="priority-badge" style="background:#E2E8F0; color:#64748B;">無上限收錄</span>
+            <span style="font-size: 0.82rem; color: #94A3B8;">支援隨時擴充</span>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- Section 2: 0-6 Years Age-Based Hub -->
+    <!-- Section 2: 0-6 Years Age-Based Hub (McKinsey Matrix) -->
     <section id="age-hub-section">
       <div class="section-title-wrap">
         <div>
-          <h2 class="section-title">🧠 0～6 歲跨書籍分齡整合知識庫 (Age-Based Hub)</h2>
-          <span class="section-subtitle">橫跨姜天依、陳敏瑩、董祁奇、達娜·薩斯金德四部經典，父母可第一時間看懂核心共識與具體做法，並一鍵直達原書頁面</span>
+          <h2 class="section-title">🧠 0～6 歲麥肯錫分齡診斷矩陣 (Age-Based Matrix)</h2>
+          <span class="section-subtitle">橫跨唐雯、姜天依、陳敏瑩、董祁奇、薩斯金德五部名著，提供直達原書頁面之診斷路徑</span>
         </div>
       </div>
 
@@ -689,36 +782,36 @@
           <div class="age-header">
             <div class="age-title">
               <span>🍼 0～1 歲（嬰兒期）</span>
-              <span class="age-stage-badge">Erikson 第一階段：基本信任 vs 基本不信任</span>
+              <span class="age-stage-badge">基本信任 vs 基本不信任 ｜ 發育頭尾近遠律</span>
             </div>
-            <span style="font-size: 0.85rem; color: #6C757D;">地基階段</span>
+            <span style="font-size: 0.85rem; color: #64748B;">神經地基</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
-              <h4>🌱 跨書核心共識</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>關係重於技能</strong>：唯一的發展任務是讓嬰兒確信「我是被愛的，世界是安全可預期的」。及時回應哭鬧絕不會慣壞孩子（《滋養》）。<br>
-                • <strong>大腦神經突觸爆發（每秒 700-1000 個）</strong>：嬰兒的大腦在與父母的溫暖互動中被物理構建，任何早教視頻、音訊對 0-1 歲完全無效（《父母的語言》）。<br>
-                • <strong>哈佛 Serve & Return (發球—回球)</strong>：眼神交會、牙牙學語時 2 秒內模仿回應，建立雙向社交凝視通道。<br>
-                • <strong>看孩子別看鐘</strong>：拋棄教條式按鐘餵奶與過度執念，媽媽的身心舒暢是最好的催產素（《不焦慮媽媽》）。
+              <h4>🌱 五大名著核心共識（顧問結論）</h4>
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>關係重於技能</strong>：唯一的發展任務是確信「我是被愛的，世界是安全可預期的」。及時回應絕不會慣壞孩子（《滋養》）。<br>
+                • <strong>頭尾與近遠規律</strong>：動作控制從頭部向下延伸到下肢，從中心軀幹向四肢外圍發展（《恰到好處》）。<br>
+                • <strong>每秒 700-1000 個新突觸</strong>：大腦物理結構在父母溫暖目光中構建，任何早教影片對 0-1 歲無效（《父母的語言》）。<br>
+                • <strong>看孩子別看鐘</strong>：打破按鐘餵奶教條，媽媽身心舒暢是最好的土壤（《不焦慮媽媽》）。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                1. <strong>肌膚相親與規律睡前流程</strong>：洗澡 ➔ 按摩 ➔ 哼唱 ➔ 關燈。<br>
-                2. <strong>生病時的安撫</strong>：生病退行是尋求安全感的本能，給予無條件擁抱。<br>
-                3. <strong>牙牙學語輪流回擊</strong>：寶寶發出「啊咕」，大人馬上看著她微笑重複「啊咕呀！寶寶在跟爸爸說話呀！」。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                1. <strong>肌膚相親與睡前流程</strong>：洗澡 ➔ 撫觸按摩 ➔ 哼唱 ➔ 關燈。<br>
+                2. <strong>牙牙學語輪流回擊</strong>：寶寶發出「啊咕」，大人看著她微笑重複「啊咕！寶寶在跟爸爸說話呀！」。<br>
+                3. <strong>生病退行無條件擁抱</strong>：心理確定感是免疫恢復的最佳輔助。
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; align-self: center;">📖 原書直達：</span>
+            <a href="book-just-right.html#slide-j1-laws" class="deep-link-btn justright">📏 恰到好處 發育三大規律</a>
             <a href="book-nurture.html#slide-ch1-1" class="deep-link-btn nurture">🌱 滋養 Ch 1.1 三大心理資本</a>
-            <a href="book-nurture.html#slide-ch1-2" class="deep-link-btn nurture">🧠 滋養 Ch 1.2 發球回球互動</a>
             <a href="book-anxiety-free.html#slide-m-intro" class="deep-link-btn anxiety">🌿 不焦慮 開篇 看孩子別看鐘</a>
             <a href="book-parents-language.html#slide-l3" class="deep-link-btn language">🗣️ 語言 Ch 3 神經突觸修剪</a>
           </div>
@@ -729,50 +822,45 @@
           <div class="age-header">
             <div class="age-title">
               <span>🌟 1～2 歲（19 個月當前核心！1 歲 7 個月）</span>
-              <span class="age-stage-badge" style="background:#FDF0EC; color:#E07A5F;">Erikson 第二階段：自主感 vs 羞怯懷疑 ＋ 語言大腦黃金期</span>
+              <span class="age-stage-badge" style="background:#DCFCE7; color:#166534;">自主感 vs 羞怯 ｜ 18M 自我情感萌芽 ｜ 語言爆發</span>
             </div>
-            <span class="priority-badge badge-p1">🔥 女兒當下焦點</span>
+            <span class="priority-badge badge-p1" style="background:#004F32; color:#fff;">🔥 女兒當下焦點</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
-              <h4>🌱 四大名著核心共識（大衛與太太必讀）</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>薩斯金德 3T 語言發動機</strong>：① <strong>Tune In (共情關注)</strong>：跟隨她的視線，她在看什麼就說什麼；② <strong>Talk More (多說話)</strong>：去除模糊代詞（「把這個放那」➔「把藍色水壺放到茶几上」），化身日常解說員；③ <strong>Take Turns (輪流交談)</strong>：發問後在心裡<strong>默數 5 秒</strong>，給她前額葉組織輸出的時間（《父母的語言》）。<br>
-                • <strong>「不！」是自我意識的偉大宣言</strong>：不是學壞，是宣告獨立個體。用有限選擇（手持實物二選一）賦予她微小掌控感（《滋養》《不焦慮》）。<br>
-                • <strong>把能扔的讓她扔個夠</strong>：扔東西是在探索空間重力因果。準備「拋扔籃」（襪子、軟球），危險物品物理隔離。<br>
-                • <strong>大腦外部調節器</strong>：情緒崩潰時前額葉掉線，先蹲下擁抱命名感受（「妳很著急對嗎」），等呼吸平穩再重申規則。<br>
-                • <strong>不打擾五秒原則</strong>：重複倒水、堆積木是她的大腦工作，想打斷前默數 5 秒！<br>
-                • <strong>AAP 螢幕防線</strong>：堅決不給手機當電子保母，用物理沙漏與真實世界探索（《遊戲自控力》《父母的語言》）。
+              <h4>🌱 五大名著核心共識（大衛與太太必讀）</h4>
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>唐雯發育「大小規律」</strong>：大肌肉動作（跑、跳、爬、搬運）優先於手指精細動作。<strong>19 個月先讓雙腳踩穩跑透，不要強求握筆寫字！</strong>每天保證戶外大運動（《恰到好處》）。<br>
+                • <strong>薩斯金德 3T 語言發動機</strong>：① <strong>Tune In</strong>：跟隨目光，看什麼就說什麼；② <strong>Talk More</strong>：去代名詞（「拿紅水壺放茶几上」），化身解說員；③ <strong>Take Turns</strong>：<strong>默數 5 秒</strong>等她回球（《父母的語言》）。<br>
+                • <strong>「不！」是自主意識宣言</strong>：手持實物二選一，賦予微小控制權；準備「拋扔籃」（襪子/軟球）滿足空間因果探索（《滋養》《不焦慮》）。<br>
+                • <strong>大腦外部調節器</strong>：崩潰時下層大腦劫持，先接納情緒（抱住），等呼吸平穩再守規則。<br>
+                • <strong>AAP 螢幕防線</strong>：堅決不給手機當電子保母，用物理沙漏建立過渡儀式（《遊戲自控力》）。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 19 個月父母日常話術與動作</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>穿衣出門</strong>：「今天想穿紅色小鞋子，還是小白鞋？妳來拿！」<br>
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>吃蘋果咬不動</strong>：示範咬出聲音：「張大嘴咬下去，咬得蘋果嘎吱叫，換個位置再咬！」（拆解咀嚼）<br>
+                • <strong>出門穿鞋</strong>：「今天想穿紅色小皮鞋，還是小白鞋？妳來拿！」（實物二選一）<br>
                 • <strong>發脾氣哭鬧</strong>：「餅乾碎了很難過對嗎？爸爸抱抱，想哭可以哭一會兒。」<br>
-                • <strong>自言自語解說</strong>：「爸爸現在要把平底鍋放到爐子上，煎一顆香噴噴的荷包蛋囉！」<br>
-                • <strong>分離儀式</strong>：出門一定說再見（魔法親吻），回來宣告「爸爸說到做到回來了！」<br>
-                • <strong>每天 10 分鐘特殊時光</strong>：沙漏倒數，手機放另一個房間，當解說員不當考官。<br>
-                • <strong>繪本重複講</strong>：同一本讀 20 遍無條件滿足，豐富擬聲詞輸入。
+                • <strong>戶外大運動</strong>：每天至少 1.5-2 小時草地奔跑、上下斜坡、搬運玩具箱。<br>
+                • <strong>睡前關燈常規</strong>：讀完約定的第 2 本書，固定道晚安關燈，溫和守護邊界。
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #E07A5F; align-self: center;">🎯 19 個月原書核心直達：</span>
-            <a href="book-nurture.html#slide-ch2-2" class="deep-link-btn nurture">🌱 滋養 Ch 2.2 呵護自主立支架</a>
-            <a href="book-nurture.html#slide-ch4-1" class="deep-link-btn nurture">🌱 滋養 Ch 4.1 積極回應兩步驟</a>
-            <a href="book-nurture.html#slide-ch5-1" class="deep-link-btn nurture">🌱 滋養 Ch 5.1 保護專注力五秒原則</a>
-            <a href="book-nurture.html#slide-ch6-1" class="deep-link-btn nurture">🌱 滋養 Ch 6.1 情緒命名神經階梯</a>
-            <a href="book-nurture.html#slide-ch9-1" class="deep-link-btn nurture">🌱 滋養 Ch 9.1 10分鐘特殊時光</a>
-            <a href="book-anxiety-free.html#slide-m1-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 1.1 選擇題立規則</a>
-            <a href="book-anxiety-free.html#slide-m3-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 3.1 繪本重複讀</a>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #004F32; align-self: center;">🎯 19 個月五大名著原書核心直達：</span>
+            <a href="book-just-right.html#slide-j-matrix19" class="deep-link-btn justright">📏 恰到好處 19M 領域里程碑矩陣</a>
+            <a href="book-just-right.html#slide-j2-emo" class="deep-link-btn justright">📏 恰到好處 18M 情感與BCG四象限</a>
+            <a href="book-just-right.html#slide-j5-motor" class="deep-link-btn justright">📏 恰到好處 四肢發達則頭腦發達</a>
             <a href="book-parents-language.html#slide-l3t" class="deep-link-btn language">🗣️ 語言 Ch 5 3T 原則核心系統</a>
-            <a href="book-parents-language.html#slide-l-t2" class="deep-link-btn language">🗣️ 語言 去除代詞解說員模式</a>
-            <a href="book-parents-language.html#slide-l-t3" class="deep-link-btn language">🗣️ 語言 Take Turns 輪流等5秒</a>
-            <a href="book-parents-language.html#slide-l-action19" class="deep-link-btn language">🗣️ 語言 19M 落地實踐總綱</a>
+            <a href="book-parents-language.html#slide-l-action19" class="deep-link-btn language">🗣️ 語言 19M 落地實踐清單</a>
+            <a href="book-nurture.html#slide-ch2-2" class="deep-link-btn nurture">🌱 滋養 Ch 2.2 呵護自主立支架</a>
+            <a href="book-nurture.html#slide-ch5-1" class="deep-link-btn nurture">🌱 滋養 Ch 5.1 保護專注力五秒原則</a>
+            <a href="book-anxiety-free.html#slide-m1-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 1.1 選擇題立規則</a>
             <a href="book-game-selfcontrol.html#slide-g-action19" class="deep-link-btn game">🎮 遊戲 幼兒自控啟蒙與螢幕防護</a>
           </div>
         </div>
@@ -782,40 +870,38 @@
           <div class="age-header">
             <div class="age-title">
               <span>🧸 2～3 歲（學步後期與秩序敏感期）</span>
-              <span class="age-stage-badge">秩序敏感期高峰 & 詞彙大爆炸</span>
+              <span class="age-stage-badge">秩序期高峰 ｜ 第一個朋友 ｜ 習慣養成四步</span>
             </div>
-            <span style="font-size: 0.85rem; color: #6C757D;">銜接儲備</span>
+            <span style="font-size: 0.85rem; color: #64748B;">銜接儲備</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>對話輪換次數 (Conversational Turns)</strong>：大腦反應速度的關鍵指標！不是父母滔滔不絕，而是像打乒乓球一樣來回互動，多問開放式問題（What/How/Why）（《父母的語言》）。<br>
-                • <strong>因果解釋代替單向命令</strong>：多說「因為...所以...」（「因為下雨地上滑，所以我們要牽好手」），直接鍛鍊幼兒前額葉工作記憶與自律（《父母的語言》）。<br>
-                • <strong>秩序敏感期</strong>：程序被打破就崩潰不是無理取鬧，是內在秩序構建關鍵期。尊重其程序完整性（《滋養》）。<br>
-                • <strong>物權意識誕生</strong>：先捍衛其「我的」界限，孩子才有安全感主動輪流（《滋養》《不焦慮》）。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>第一個朋友突破口</strong>：幼兒在陌生大群體中本能退縮。鎖定一位性格溫和的一對一玩伴，多次戶外互動建立社交底氣（《恰到好處》）。<br>
+                • <strong>習慣養成四步閉環</strong>：建立常規 ➔ 環境支持 ➔ 拆解示範 ➔ 溫和堅定（《恰到好處》）。<br>
+                • <strong>對話輪換次數 (Turns)</strong>：多問開放式問題（What/How/Why），多說因果解釋（「因為地上滑所以要牽手」）（《父母的語言》）。<br>
+                • <strong>秩序敏感期安撫</strong>：程序被打破時尊重其完整性，物權確立先於輪流分享。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>物權句型</strong>：「這是寶貝的球，妳現在想自己玩，等妳想分享時再告訴我們。」<br>
-                • <strong>打翻東西共同收拾</strong>：不吼叫「叫妳小心點」，平靜遞上抹布：「牛奶灑了，我們一起擦乾淨。」<br>
-                • <strong>因果解釋</strong>：「熱水會燙傷皮膚，所以我們要等涼了再喝。」<br>
-                • <strong>生活數感融入</strong>：走樓梯數階梯、分葡萄一人一顆、比較大箱子小箱子。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>物權代言</strong>：「這是小妹妹正玩的球，她還沒準備好，等她想分享時再告訴我們。」<br>
+                • <strong>拆解示範</strong>：收玩具不是吼「快收」，抓著積木示範「咻—送回家」，放進低矮拉籃。<br>
+                • <strong>打翻牛奶</strong>：平靜遞抹布：「牛奶灑了，我們拿抹布一起擦乾淨。」
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
-            <a href="book-nurture.html#slide-ch7-1" class="deep-link-btn nurture">🌱 滋養 Ch 7.1 物權意識非強迫</a>
-            <a href="book-nurture.html#slide-ch8-1" class="deep-link-btn nurture">🌱 滋養 Ch 8.1 允許犯錯是學習機會</a>
-            <a href="book-anxiety-free.html#slide-m1-2" class="deep-link-btn anxiety">🌿 不焦慮 招式 1.2 改掉磨蹭轉化術</a>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; align-self: center;">📖 原書直達：</span>
+            <a href="book-just-right.html#slide-j2-friend" class="deep-link-btn justright">📏 恰到好處 第一個朋友突破口</a>
+            <a href="book-just-right.html#slide-j6-habits" class="deep-link-btn justright">📏 恰到好處 習慣培養四步閉環</a>
             <a href="book-parents-language.html#slide-l4-exec" class="deep-link-btn language">🗣️ 語言 Ch 4.1 執行功能與因果對話</a>
-            <a href="book-game-selfcontrol.html#slide-g4" class="deep-link-btn game">🎮 遊戲 Ch 4 前額葉決策樹與沙漏</a>
+            <a href="book-nurture.html#slide-ch7-1" class="deep-link-btn nurture">🌱 滋養 Ch 7.1 物權意識非強迫</a>
           </div>
         </div>
 
@@ -824,39 +910,38 @@
           <div class="age-header">
             <div class="age-title">
               <span>🎒 3～4 歲（幼兒期與幼兒園適應）</span>
-              <span class="age-stage-badge">Erikson 第三階段：主動感 vs 內疚感</span>
+              <span class="age-stage-badge">主動感 vs 內疚感 ｜ 認知充分操作 ｜ 社交對話</span>
             </div>
-            <span style="font-size: 0.85rem; color: #6C757D;">社會化起步</span>
+            <span style="font-size: 0.85rem; color: #64748B;">社會化開端</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>入園分離焦慮全攻略</strong>：提前半年生活常規同步，參觀幼兒園；告別時絕不偷偷溜走，給予微笑並交代具體接回家時間（吃完點心後）（《不焦慮媽媽》）。<br>
-                • <strong>對話式繪本共讀 (Dialogic Reading)</strong>：翻開繪本不再是單向念字，而是拋出預測性問題：「妳猜小熊接下來會敲誰的門？」（《父母的語言》）。<br>
-                • <strong>社交衝突解決三步法</strong>：不做居高臨下的裁判法官，做新聞記者（傾聽 ➔ 雙向共情 ➔ 引導孩子自己想辦法）（《滋養》）。<br>
-                • <strong>遊戲四大支柱生活化</strong>：目標明確、規則平等、即時反饋、自主參與。把家庭常規遊戲化（《遊戲自控力》）。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>認知源於充分自由操作</strong>：自主、材料豐富、反饋客觀。低結構材料（紙箱/泥沙/積木）是大腦學習發動機（《恰到好處》）。<br>
+                • <strong>入園分離焦慮前置全攻略</strong>：提前半年同步作息；告別絕不偷溜，給予具體回聚時間（《不焦慮媽媽》《滋養》）。<br>
+                • <strong>對話式繪本共讀</strong>：預測性提問代替死板念字；尊重孩子對特定主題（如汽車）的專屬熱情（《父母的語言》《恰到好處》）。<br>
+                • <strong>社交衝突三步法</strong>：不做審判官，做記者（傾聽 ➔ 雙向共情 ➔ 引導孩子自己想辦法）。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>放學接回時</strong>：不問「有沒有被欺負」，問「今天在幼兒園最開心的事是什麼？」<br>
-                • <strong>衝突引導</strong>：「你們兩個都想玩小恐龍，那有什麼好辦法讓兩個人都開心呢？」<br>
-                • <strong>空間語言輸入</strong>：「我們把長方體積木放在正方體上面，搭一個高高的城堡！」
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>接學回家第一句</strong>：不問「有沒有人欺負妳」，問「今天在幼兒園最開心的是什麼？」<br>
+                • <strong>閱讀不糾偏</strong>：孩子只看汽車書，就和她探討輪子、履帶、發動機，縱深發展思維。<br>
+                • <strong>衝突引導</strong>：「你們都想玩小恐龍，有什麼好辦法讓兩個人都開心呢？」
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
-            <a href="book-nurture.html#slide-ch4-2" class="deep-link-btn nurture">🌱 滋養 Ch 4.2 分離焦慮與安全基地</a>
-            <a href="book-nurture.html#slide-ch7-2" class="deep-link-btn nurture">🌱 滋養 Ch 7.2 衝突解決三步法</a>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; align-self: center;">📖 原書直達：</span>
+            <a href="book-just-right.html#slide-j4-cog" class="deep-link-btn justright">📏 恰到好處 認知自由充分操作</a>
+            <a href="book-just-right.html#slide-j3-book" class="deep-link-btn justright">📏 恰到好處 尊重主題閱讀偏好</a>
             <a href="book-anxiety-free.html#slide-m4-1" class="deep-link-btn anxiety">🌿 不焦慮 招式 4.1-4.3 入園準備全景</a>
-            <a href="book-parents-language.html#slide-l-t2" class="deep-link-btn language">🗣️ 語言 對話式繪本閱讀策略</a>
-            <a href="book-game-selfcontrol.html#slide-g2" class="deep-link-btn game">🎮 遊戲 Ch 2 遊戲四大支柱心流</a>
+            <a href="book-nurture.html#slide-ch4-2" class="deep-link-btn nurture">🌱 滋養 Ch 4.2 分離焦慮與安全基地</a>
           </div>
         </div>
 
@@ -865,39 +950,37 @@
           <div class="age-header">
             <div class="age-title">
               <span>🎨 4～5 歲（自主創造與規則內化）</span>
-              <span class="age-stage-badge">自我情緒調節 & 空間思維萌芽</span>
+              <span class="age-stage-badge">自我情緒調節 ｜ 空間數感 ｜ 戶外大運動</span>
             </div>
-            <span style="font-size: 0.85rem; color: #6C757D;">能力升級</span>
+            <span style="font-size: 0.85rem; color: #64748B;">能力躍升</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>空間與數學詞彙的爆發輸入</strong>：在日常中注入形狀、邊緣、角度、對稱、厚薄等概念，哈佛研究顯示這直接奠定小學後的數理能力（《父母的語言》）。<br>
-                • <strong>積極暫停角 (Positive Time-out)</strong>：風平浪靜時與孩子共創「心情加油站/彩虹島」，放亮片瓶、捏捏樂。不是懲罰，是自主平復（《滋養》）。<br>
-                • <strong>自然與邏輯結果 (4R 原則)</strong>：相關、尊重、合理、預先告知。告別懲罰吼叫（《滋養》）。<br>
-                • <strong>雙向接納</strong>：父母示範自己的脆弱與疲憊，激發孩子真實的同理心（《不焦慮媽媽》）。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>四肢發達則頭腦發達</strong>：堅持每天 2 小時戶外大運動，分泌 BDNF 營養因子，強化專注力神經基礎（《恰到好處》）。<br>
+                • <strong>空間幾何與數感輸入</strong>：在日常中注入形狀、邊緣、角度、厚薄、方位等詞彙，奠定小學數理能力（《父母的語言》）。<br>
+                • <strong>積極暫停角 (Positive Time-out)</strong>：風平浪靜時共創「彩虹島/心情加油站」，放亮片瓶自主平復（《滋養》）。<br>
+                • <strong>自然與邏輯結果 (4R 原則)</strong>：相關、尊重、合理、預先告知，告別懲罰吼叫。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
                 • <strong>誇獎轉換</strong>：不誇「妳真聰明」，誇「媽媽看到妳換了三次方法終於拼好了，這叫堅持與策略！」<br>
                 • <strong>示範暫停</strong>：「爸爸現在有點激動，需要去彩虹島深呼吸 3 分鐘。」<br>
-                • <strong>正面家規</strong>：「沙發是用來坐的，如果想跳我們去地墊上跳。」
+                • <strong>空間語言</strong>：「我們把長方體積木放在正方體上面，搭一個高高的城堡！」
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
-            <a href="book-nurture.html#slide-ch6-3" class="deep-link-btn nurture">🌱 滋養 Ch 6.3 積極暫停角搭建</a>
-            <a href="book-nurture.html#slide-ch10-1" class="deep-link-btn nurture">🌱 滋養 Ch 10.1-10.2 正面規則與4R</a>
-            <a href="book-anxiety-free.html#slide-m2-2" class="deep-link-btn anxiety">🌿 不焦慮 招式 2.5 雙向接納父母</a>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; align-self: center;">📖 原書直達：</span>
+            <a href="book-just-right.html#slide-j5-motor" class="deep-link-btn justright">📏 恰到好處 每天2小時戶外大運動</a>
             <a href="book-parents-language.html#slide-l4-math" class="deep-link-btn language">🗣️ 語言 Ch 4.2 空間幾何與誇獎思維</a>
-            <a href="book-game-selfcontrol.html#slide-g3" class="deep-link-btn game">🎮 遊戲 Ch 3 建立同盟對話</a>
+            <a href="book-nurture.html#slide-ch6-3" class="deep-link-btn nurture">🌱 滋養 Ch 6.3 積極暫停角搭建</a>
           </div>
         </div>
 
@@ -906,39 +989,38 @@
           <div class="age-header">
             <div class="age-title">
               <span>🚀 5～6 歲（學前準備與學習自驅力）</span>
-              <span class="age-stage-badge">自控力遷移 & 成長型思維扎根</span>
+              <span class="age-stage-badge">自控力遷移 ｜ 成長型心態 ｜ VIA 優勢展現</span>
             </div>
-            <span style="font-size: 0.85rem; color: #6C757D;">學前躍升</span>
+            <span style="font-size: 0.85rem; color: #64748B;">學前成熟</span>
           </div>
 
           <div class="age-grid">
             <div class="age-content-box">
               <h4>🌱 跨書核心共識</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>語言塑造人生觀（成長型心態）</strong>：大腦就像肌肉一樣，越用越發達。把「我不會」改成「我暫時還沒搞懂（Yet）」，消除對失敗的恐懼（《父母的語言》《滋養》）。<br>
-                • <strong>遊戲力向學習自驅遷移 (PBL)</strong>：把學習拆解為積分、勳章與段位。失敗了像玩家一樣換裝備再來，培養「玩家抗挫力」（《遊戲自控力》）。<br>
-                • <strong>家庭數位契約</strong>：簽訂平等的電子時間契約，建立「無手機餐桌」與睡前離線機制。<br>
-                • <strong>VIA 24 項性格優勢淘金</strong>：將 80% 精力投資在孩子的核心天賦上（好奇心、毅力、熱情），不逼全能（《滋養》）。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>成長型心態語言 (Growth Mindset)</strong>：把「我不會」改成「我暫時還沒搞懂（Yet）」，失敗時像玩家一樣換裝備再來（《父母的語言》《遊戲自控力》）。<br>
+                • <strong>遊戲力向學習自驅遷移 (PBL)</strong>：積分、勳章與段位機制拆解枯燥任務，培養玩家抗挫韌性（《遊戲自控力》）。<br>
+                • <strong>家庭數位契約</strong>：共同約定螢幕時間，餐桌不碰手機，睡前離線充電。<br>
+                • <strong>VIA 24 項性格優勢淘金</strong>：將 80% 精力投資在核心天賦上，守護獨特光芒（《滋養》）。
               </p>
             </div>
 
             <div class="age-content-box">
               <h4>🗣️ 父母實戰錦囊</h4>
-              <p style="font-size: 0.92rem; line-height: 1.7; color: #2D3142;">
-                • <strong>「暫未 (Yet)」句型</strong>：「不是妳不會算，是妳『暫時還沒』找到規律，我們一起研究！」<br>
-                • <strong>大冒險手冊</strong>：把大目標拆成打怪小關卡，通關儀式感結算。<br>
-                • <strong>精彩錯誤分享會</strong>：晚餐時全家分享今天犯的一個有趣錯誤和學到了什麼。
+              <p style="font-size: 0.9rem; line-height: 1.7; color: #1E293B;">
+                • <strong>「暫未 (Yet)」話術</strong>：「不是妳算不出，是妳『暫時還沒』找到規律，我們一起研究！」<br>
+                • <strong>精彩錯誤分享會</strong>：晚餐時全家分享今天犯的一個有趣錯誤和學到了什麼。<br>
+                • <strong>做恰到好處的父母</strong>：起跑線是父母的肩膀，允許不完美，給予無條件信賴。
               </p>
             </div>
           </div>
 
           <div class="age-direct-links">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #6C757D; align-self: center;">📖 原書直達：</span>
-            <a href="book-nurture.html#slide-ch8-3" class="deep-link-btn nurture">🌱 滋養 Ch 8.3 暫未的力量</a>
-            <a href="book-nurture.html#slide-ch11-1" class="deep-link-btn nurture">🌱 滋養 Ch 11.1 VIA 24項優勢</a>
+            <span style="font-size: 0.85rem; font-weight: 700; color: #64748B; align-self: center;">📖 原書直達：</span>
+            <a href="book-just-right.html#slide-j7-parent" class="deep-link-btn justright">📏 恰到好處 溫柔堅定文氏圖</a>
             <a href="book-parents-language.html#slide-l4-math" class="deep-link-btn language">🗣️ 語言 成長型思維語言與人生觀</a>
             <a href="book-game-selfcontrol.html#slide-g5" class="deep-link-btn game">🎮 遊戲 Ch 5 學習自驅遷移PBL</a>
-            <a href="book-game-selfcontrol.html#slide-g6" class="deep-link-btn game">🎮 遊戲 Ch 6 家庭生態好玩度</a>
+            <a href="book-nurture.html#slide-ch11-1" class="deep-link-btn nurture">🌱 滋養 Ch 11.1 VIA 24項優勢</a>
           </div>
         </div>
 
@@ -950,14 +1032,14 @@
       <div class="section-title-wrap">
         <div>
           <h2 class="section-title">🌿 父母心態充電站 & 8 大衝突急救話術</h2>
-          <span class="section-subtitle">先給自己澆水，愛自己才有能量愛孩子。夫妻同盟是家庭的太陽！</span>
+          <span class="section-subtitle">唐雯「不焦慮公式」：思維層面客觀判斷 ＋ 行動層面溫和支架。做 70 分放鬆有愛的父母！</span>
         </div>
       </div>
 
       <div class="grid-2" style="margin-bottom: 30px;">
-        <div class="feature-box" style="background:#FFFDF8; border:1px solid #EFE6D5;">
-          <div class="feature-title" style="color:#C85A3F;">☀️ 夫妻關係是太陽，孩子是行星</div>
-          <p style="font-size: 0.92rem; line-height: 1.7;">
+        <div class="feature-box" style="background:#FFFFFF; border:1px solid #E2E8F0;">
+          <div class="feature-title" style="color:#004F32;">☀️ 夫妻關係是太陽，孩子是行星</div>
+          <p style="font-size: 0.9rem; line-height: 1.7;">
             • 避免「孩子中心主義」：對孩子最好的教育是父母彼此相愛。<br>
             • <strong>睡後黃金 15 分鐘</strong>：女兒睡後不滑手機、不談孩子，專注聊彼此這一天。<br>
             • <strong>減壓閥暗號</strong>：當一方情緒快崩潰時，給出手勢，另一方接手：「妳去休息，這裡交給我！」<br>
@@ -965,75 +1047,66 @@
           </p>
         </div>
 
-        <div class="feature-box" style="background:#F0F7FA; border:1px solid #D5E5EC;">
-          <div class="feature-title" style="color:#2A9D8F;">🛡️ 應對長輩外人七嘴八舌的定力</div>
-          <p style="font-size: 0.92rem; line-height: 1.7;">
+        <div class="feature-box" style="background:#FFFFFF; border:1px solid #E2E8F0;">
+          <div class="feature-title" style="color:#051C2C;">🛡️ 應對長輩外人七嘴八舌的定力</div>
+          <p style="font-size: 0.9rem; line-height: 1.7;">
             • <strong>愛的序位</strong>：媽媽第一，爸爸同盟。產後抑鬱往往來自碎碎念，外人沒有義務真正懂孩子。<br>
             • <strong>統一擋箭牌</strong>：「醫生說每個孩子有自己的發育節奏，我們在按科學引導，她現在非常好，謝謝關心！」<br>
-            • <strong>允許不完美</strong>：60-80 分且笑口常開的父母，勝過 100 分但焦慮緊繃的神經質父母。
+            • <strong>做 70 分父母</strong>：允許不完美，笑口常開的父母勝過 100 分焦慮緊繃的神經質父母。
           </p>
         </div>
       </div>
 
-      <!-- Quick Scripts Table -->
-      <h3 style="font-size: 1.2rem; font-weight: 800; color: #264653; margin-bottom: 16px;">🚨 8 大高頻日常衝突急救話術速查表（隨查隨用）</h3>
+      <!-- Quick Scripts Table (Opposition Format) -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #051C2C; margin-bottom: 16px;">🚨 8 大高頻日常衝突急救話術速查表（對立論法 As-Is vs To-Be）</h3>
       <table class="custom-table">
         <thead>
           <tr>
-            <th>衝突場景</th>
-            <th>❌ 傳統命令/吼叫 (引發對抗)</th>
-            <th>🟢 跨書科學話術 (同盟與引導)</th>
-            <th>底層心理與語言機制</th>
+            <th style="width: 18%;">衝突場景</th>
+            <th style="width: 38%;">❌ 傳統命令/吼叫 (As-Is 引發對抗)</th>
+            <th style="width: 44%; background: #F0FDF4; color: #166534;">🟢 跨書科學話術 (To-Be 溫和引導)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>1. 不肯吃飯 / 挑食</strong></td>
+            <td><strong>1. 吃飯挑食咬不動</strong></td>
             <td>「必須吃完！不然不許下桌！」</td>
-            <td>「妳想先吃兩口蛋，還是先吃一顆小藍莓？妳的小肚子是飽飽管理員，聽它的。」</td>
-            <td>有限選擇 + 自主權認可（《不焦慮》1.1）</td>
+            <td>示範咬出聲音：「張大嘴咬下去，咬得蘋果嘎吱叫，換個位置再咬！」（拆解咀嚼《恰到好處》）</td>
           </tr>
           <tr>
             <td><strong>2. 發脾氣哭鬧不止</strong></td>
             <td>「不許哭！再哭我打妳了！」</td>
-            <td>蹲下平視：「妳很生氣/失望對嗎？爸爸陪著妳，想哭就哭一會兒。」</td>
-            <td>情緒命名連通上下層大腦（《滋養》6.1）</td>
+            <td>蹲下平視：「妳很生氣/失望對嗎？爸爸陪著妳，想哭就哭一會兒。」（接納情緒連通上層大腦《滋養》）</td>
           </tr>
           <tr>
             <td><strong>3. 出門/睡前磨蹭拖拉</strong></td>
             <td>「快點！磨蹭什麼！我數到三！」</td>
-            <td>「我們來玩小火車快開遊戲！啟動馬達嘟嘟嘟，看小兔子怎麼蹦著去洗手？」</td>
-            <td>遊戲力轉換動機（《不焦慮》1.3《遊戲》2）</td>
+            <td>「我們來玩小火車快開遊戲！啟動馬達嘟嘟嘟，看小兔子怎麼蹦著去洗手？」（遊戲力轉換動機《不焦慮》）</td>
           </tr>
           <tr>
             <td><strong>4. 公共場合哭要玩具</strong></td>
             <td>「家裡那麼多不買！再鬧我走了！」</td>
-            <td>「這個小熊真的好可愛！如果買回家妳會叫它什麼？我們拍照放進生日願望清單。」</td>
-            <td>幻想滿足法 + 規則堅定（《滋養》附錄2）</td>
+            <td>「這個小熊真的好可愛！如果買回家妳會叫它什麼？我們拍照放進生日願望清單。」（幻想滿足《滋養》）</td>
           </tr>
           <tr>
-            <td><strong>5. 拒絕刷牙 / 洗澡</strong></td>
-            <td>「不刷牙嘴巴爛掉蟲子咬！」</td>
-            <td>「牙刷小火車要進山洞抓蛀牙怪獸囉！妳是總監，指揮我先刷上面還是下面？」</td>
-            <td>賦予好玩角色與控制權（《不焦慮》1.3）</td>
+            <td><strong>5. 爬高危險動作</strong></td>
+            <td>「不許爬！掉下來摔死你！」</td>
+            <td>平視伸手：「沙發是用來坐的。如果想爬高，我們去地墊上的小斜坡，爸爸保護妳！」（提供替代結構《恰到好處》）</td>
           </tr>
           <tr>
             <td><strong>6. 摔倒受挫哭泣</strong></td>
             <td>「沒事沒事，勇敢一點別哭！」</td>
-            <td>先抱住：「摔痛了對嗎？嚇了一跳。爸爸抱抱揉揉，等下再試一次。」</td>
-            <td>情緒安全墊與抗挫韌性（《滋養》1.1《不焦慮》1.5）</td>
+            <td>先抱住：「摔痛了對嗎？嚇了一跳。爸爸抱抱揉揉，等下再試一次。」（情緒安全墊與抗挫韌性）</td>
           </tr>
           <tr>
             <td><strong>7. 搶玩具不肯分享</strong></td>
             <td>「妳怎麼那麼小氣！給弟弟玩！」</td>
-            <td>「這是小妹妹正玩的球，她還沒準備好。我們用沙漏計時 3 分鐘輪流好嗎？」</td>
-            <td>物權保護前置於輪流（《滋養》7.1）</td>
+            <td>「這是小妹妹正玩的球，她還沒準備好。我們用沙漏計時 3 分鐘輪流好嗎？」（物權保護前置於輪流《滋養》）</td>
           </tr>
           <tr>
             <td><strong>8. 電子螢幕時間到了</strong></td>
             <td>直接衝過去粗暴搶走手機</td>
-            <td>「沙漏剩最後一分鐘囉，小怪獸要存檔回城堡睡覺了，我們去玩捉迷藏！」</td>
-            <td>預先信號 + 平穩著陸銜接（《遊戲》附錄）</td>
+            <td>「沙漏剩最後一分鐘囉，小怪獸要存檔回城堡睡覺了，我們去玩捉迷藏！」（預先信號＋著陸銜接《遊戲》）</td>
           </tr>
         </tbody>
       </table>
@@ -1043,9 +1116,9 @@
 
   <!-- Footer -->
   <footer class="portal-footer">
-    <p>🌱 <strong>大衛家 0-6 歲優勢育兒知識門戶 & 圖書總覽</strong></p>
-    <p>本系統基於《滋養，而非雕刻》、《不焦慮媽媽養育手冊》、《遊戲自控力》、《父母的語言》等世界經典深度梳理，專為 David & 太太打造。</p>
-    <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">© 2026 David & Family Parenting Portal • 陪伴 19 個月女兒溫暖茁壯成長</p>
+    <p>🌱 <strong>大衛家 0-6 歲優勢育兒知識門戶 & 里程碑總控系統</strong></p>
+    <p>本系統基於《恰到好處的養育》、《滋養，而非雕刻》、《不焦慮媽媽養育手冊》、《遊戲自控力》、《父母的語言》等世界經典深度梳理，專為 David & 太太打造。</p>
+    <p style="font-size: 0.82rem; opacity: 0.7; margin-top: 8px;">遵循 Zero-Noise Consulting 規範 • 陪伴 19 個月女兒溫暖茁壯成長</p>
   </footer>
 
   <!-- Search Filter Script -->

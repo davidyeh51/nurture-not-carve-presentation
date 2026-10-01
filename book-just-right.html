@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《恰到好處的養育》0~6歲里程碑全景簡報 | 零雜訊頂尖顧問風 (Zero-Noise Consulting)</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-coral: #004F32;
+      --primary-coral-dark: #003622;
+      --sage-green: #177B57;
+      --sage-green-dark: #004F32;
+      --sun-yellow: #29BA74;
+      --accent-blue: #051C2C;
+    }
+  </style>
+</head>
+<body class="mode-slide">
+
+  <!-- Header App Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <div class="brand-icon" style="background: linear-gradient(135deg, #004F32, #29BA74); color: #fff;">📏</div>
+      <div class="brand-text">
+        <h1>《恰到好處的養育》0~6歲里程碑全景導讀</h1>
+        <p>作者：唐雯 碩士｜David & 太太 19 個月女兒專用（零雜訊管顧標準版）</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <a href="index.html" class="btn-toggle-mode" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; background: rgba(0,0,0,0.06); color: var(--text-main); font-weight: 700;">🏠 返回首頁總覽</a>
+      <button class="btn-toggle-mode active" id="btnModeSlide">🎬 簡報模式</button>
+      <button class="btn-toggle-mode" id="btnModeScroll">📜 長圖閱讀</button>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progressBar" style="background: linear-gradient(90deg, #004F32, #29BA74);"></div>
+  </div>
+
+  <!-- App Layout Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Sitemap Navigation -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-search">
+        <input type="text" id="searchInput" placeholder="🔍 搜尋里程碑、運動、習慣...">
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag-btn active" data-filter="all">全部</button>
+        <button class="tag-btn" data-filter="p1">🔥 19M 最高</button>
+        <button class="tag-btn" data-filter="p2">⭐ 里程碑核心</button>
+        <button class="tag-btn" data-filter="p3">💡 習慣與社交</button>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-group-title">導讀與骨架藍圖</div>
+        <a class="nav-item active" data-target="slide-j0" data-priority="p1">
+          <span>0. 封面定位：不焦慮公式</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+        <a class="nav-item" data-target="slide-j-framework" data-priority="p2">
+          <span>架構：全書五大維度全景</span> <span class="priority-badge badge-p2">P2</span>
+        </a>
+
+        <div class="nav-group-title">身體與大腦底層規律</div>
+        <a class="nav-item" data-target="slide-j1-laws" data-priority="p1">
+          <span>Ch 1 發育三大物理規律</span> <span class="priority-badge badge-p1">🔥 頭尾大小</span>
+        </a>
+        <a class="nav-item" data-target="slide-j1-formula" data-priority="p2">
+          <span>Ch 1 不焦慮解題雙輪</span> <span class="priority-badge badge-p2">P2 公式</span>
+        </a>
+
+        <div class="nav-group-title">核心維度突破</div>
+        <a class="nav-item" data-target="slide-j2-emo" data-priority="p1">
+          <span>Ch 2 社會情感：BCG四象限</span> <span class="priority-badge badge-p1">🔥 18M情感</span>
+        </a>
+        <a class="nav-item" data-target="slide-j2-friend" data-priority="p3">
+          <span>Ch 2 幼兒第一段友誼突破口</span> <span class="priority-badge badge-p3">P3 社交</span>
+        </a>
+        <a class="nav-item" data-target="slide-j3-lang" data-priority="p2">
+          <span>Ch 3 語言能力：生活 vs 課堂</span> <span class="priority-badge badge-p2">P2 對立論法</span>
+        </a>
+        <a class="nav-item" data-target="slide-j3-book" data-priority="p2">
+          <span>Ch 3 尊重專屬主題閱讀偏好</span> <span class="priority-badge badge-p2">P2 一對一</span>
+        </a>
+        <a class="nav-item" data-target="slide-j4-cog" data-priority="p1">
+          <span>Ch 4 認知源於充分自由操作</span> <span class="priority-badge badge-p1">🔥 操作</span>
+        </a>
+        <a class="nav-item" data-target="slide-j5-motor" data-priority="p1">
+          <span>Ch 5 四肢發達則頭腦發達</span> <span class="priority-badge badge-p1">🔥 大運動</span>
+        </a>
+
+        <div class="nav-group-title">習慣養成與父母修煉</div>
+        <a class="nav-item" data-target="slide-j6-habits" data-priority="p2">
+          <span>Ch 6 習慣養成四步閉環</span> <span class="priority-badge badge-p2">P2 連鎖論法</span>
+        </a>
+        <a class="nav-item" data-target="slide-j6-sleep" data-priority="p2">
+          <span>Ch 6 睡眠與飲食常規化解</span> <span class="priority-badge badge-p2">P2 對立論法</span>
+        </a>
+        <a class="nav-item" data-target="slide-j7-parent" data-priority="p1">
+          <span>Ch 7 恰到好處父母：文氏圖</span> <span class="priority-badge badge-p1">🔥 溫柔堅定</span>
+        </a>
+
+        <div class="nav-group-title">19 個月落地矩陣與總結</div>
+        <a class="nav-item" data-target="slide-j-matrix19" data-priority="p1">
+          <span>19 個月女兒里程碑對照矩陣</span> <span class="priority-badge badge-p1">🔥 19M 矩陣</span>
+        </a>
+        <a class="nav-item" data-target="slide-j-scripts" data-priority="p1">
+          <span>父母引導型話術轉化表</span> <span class="priority-badge badge-p1">🔥 實操</span>
+        </a>
+        <a class="nav-item" data-target="slide-j-conclusion" data-priority="p1">
+          <span>結論：父母肩膀是起跑線</span> <span class="priority-badge badge-p1">P1</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      <div class="slides-container">
+
+        <!-- Slide 0: 封面與定位 [版型 1：一對一論法 | McKinsey Style] -->
+        <section class="slide-card active-slide" id="slide-j0">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 1：一對一論法 (One-to-One) | McKinsey Style</span>
+            <h2 class="action-main-title">養育不是卡點打卡的精確競賽，而是順應大腦客觀節奏的里程碑守護</h2>
+            <p class="action-sub-lead">哥倫比亞大學發展心理學碩士唐雯以「不焦慮公式」破除超前焦慮：里程碑是用來排查發育紅線，而非攀比工具</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="evidence-container">
+              <figure class="slide-media">
+                <svg viewBox="0 0 600 220" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                  <rect width="600" height="220" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+                  <rect x="40" y="45" width="230" height="130" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+                  <text x="155" y="75" font-size="15" font-weight="bold" fill="#64748B" text-anchor="middle">❌ 盲目卡點焦慮</text>
+                  <text x="60" y="105" font-size="12" fill="#64748B">• 「隔壁同齡娃早就會數數」</text>
+                  <text x="60" y="128" font-size="12" fill="#64748B">• 拿嚴苛標準逼迫孩子卡點</text>
+                  <text x="60" y="151" font-size="12" fill="#DC2626">• 父母精神緊繃，孩子受挫厭學</text>
+
+                  <path d="M285 110 L315 110" stroke="#004F32" stroke-width="3" marker-end="url(#arr)"/>
+
+                  <rect x="330" y="45" width="230" height="130" rx="10" fill="#F0FDF4" stroke="#004F32" stroke-width="2"/>
+                  <text x="445" y="75" font-size="15" font-weight="bold" fill="#004F32" text-anchor="middle">🟢 恰到好處里程碑</text>
+                  <text x="350" y="105" font-size="12" fill="#1E293B">• 理解每個孩子獨特時間表</text>
+                  <text x="350" y="128" font-size="12" fill="#1E293B">• 把握關鍵期搭建環境腳手架</text>
+                  <text x="350" y="151" font-size="12" fill="#15803D" font-weight="bold">• 溫柔對待情緒，堅定守護常規</text>
+                </svg>
+                <figcaption>一對一核心論證：里程碑是父母心中的「定海神針」，讓父母在關鍵期做對的事，在非關鍵期大膽放鬆。</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育：輕鬆高效的0~6歲里程碑養育》前言 & 第1章。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 女兒目前 1 歲 7 個月，各項大動作與語言都在正常範圍寬幅波動。只要排查過發展紅線（能穩步慢跑、能聽懂日常指令），大衛與太太完全不需要為「暫時還沒說句子」而焦慮！
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 1: 全書骨架藍圖 [版型 5：麥肯錫論法 | McKinsey Matrix] -->
+        <section class="slide-card" id="slide-j-framework">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 5：麥肯錫論法 (McKinsey Matrix) | McKinsey Style</span>
+            <h2 class="action-main-title">全書橫跨五大發展維度，以「里程碑診斷 × 環境腳手架」構建系統閉環</h2>
+            <p class="action-sub-lead">沿著兒童身心成長的五大主軸，精確診斷常見誤區，並給出「不焦慮公式」管顧級對策矩陣</p>
+          </div>
+
+          <div class="slide-body">
+            <table class="custom-table" style="font-size: 0.9rem;">
+              <thead>
+                <tr>
+                  <th style="width: 18%;">發展維度（縱軸）</th>
+                  <th style="width: 28%;">發展本質與關鍵期（橫軸 1）</th>
+                  <th style="width: 26%;">常見家庭誤區（橫軸 2）</th>
+                  <th style="width: 28%;">唐雯管顧級落地對策（橫軸 3）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. 社會情感</strong></td>
+                  <td>18 個月自我意識情感萌芽（羞怯/自豪）</td>
+                  <td>強逼孩子在陌生大群體中熱情大方</td>
+                  <td>以「一對一固定玩伴」破局，先接納後引導</td>
+                </tr>
+                <tr>
+                  <td><strong>2. 語言溝通</strong></td>
+                  <td>生活場景與充分操作的自然副產品</td>
+                  <td>花高價報語文啟蒙班、強迫識字</td>
+                  <td>自言自語解說員、尊重汽車等偏好主題共讀</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 認知學習</strong></td>
+                  <td>知識來自雙手與感官的「自由操作」</td>
+                  <td>買大量功能單一玩具、過早做習題</td>
+                  <td>低結構材料操作，允許重複探索因果</td>
+                </tr>
+                <tr>
+                  <td><strong>4. 大小運動</strong></td>
+                  <td>「四肢發達則頭腦發達」，遵循三大律</td>
+                  <td>怕髒怕摔限制跑跳，過早練握筆寫字</td>
+                  <td>每天 2 小時戶外奔跑，先大肌肉後精細抓握</td>
+                </tr>
+                <tr>
+                  <td><strong>5. 習慣養成</strong></td>
+                  <td>飲食、睡眠、如廁的大腦常規內化</td>
+                  <td>吼叫威脅催促、過度哄睡與妥協</td>
+                  <td>常規建立 ➔ 環境支持 ➔ 拆解示範 ➔ 溫和堅定</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第1章至第7章結構化梳理。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 育兒不打無準備之仗。五大維度中，19 個月女兒目前最高優先級為：<strong>大運動戶外跑跳、飲食睡眠常規化、自我意識情感接納</strong>。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 2: 第1章 發育三大規律 [版型 4：連鎖論法 | Accenture Roadmap] -->
+        <section class="slide-card" id="slide-j1-laws">
+          <div class="action-title-box">
+            <span class="archetype-tag accenture">版型 4：連鎖論法 (Chain / Flow) | Accenture Style</span>
+            <h2 class="action-main-title">大腦與身體發育嚴格遵循三大物理規律，由大至小不可逆向跨越</h2>
+            <p class="action-sub-lead">身體動作控制依序自「頭部➔軀幹➔下肢」、「中央中心➔四肢外圍」、「粗大肌肉➔精細小肌肉」鏈條推進</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 200" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="200" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <!-- 流程鏈 3 節點 -->
+                <circle cx="100" cy="90" r="46" fill="#004F32"/>
+                <text x="100" y="85" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle">1. 頭尾規律</text>
+                <text x="100" y="105" font-size="10" fill="#A7F3D0" text-anchor="middle">抬頭 ➔ 坐 ➔ 走</text>
+
+                <path d="M155 90 L215 90" stroke="#004F32" stroke-width="4" marker-end="url(#arr)"/>
+                <text x="185" y="80" font-size="11" fill="#64748B" text-anchor="middle">神經髓鞘</text>
+
+                <circle cx="280" cy="90" r="46" fill="#177B57"/>
+                <text x="280" y="85" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle">2. 近遠規律</text>
+                <text x="280" y="105" font-size="10" fill="#E2E8F0" text-anchor="middle">軀幹 ➔ 四肢 ➔ 手指</text>
+
+                <path d="M335 90 L395 90" stroke="#177B57" stroke-width="4" marker-end="url(#arr)"/>
+                <text x="365" y="80" font-size="11" fill="#64748B" text-anchor="middle">協調發展</text>
+
+                <circle cx="460" cy="90" r="46" fill="#29BA74"/>
+                <text x="460" y="85" font-size="13" fill="#003622" font-weight="bold" text-anchor="middle">3. 大小規律</text>
+                <text x="460" y="105" font-size="10" fill="#004F32" text-anchor="middle">跑跳大動作 ➔ 精細運筆</text>
+              </svg>
+              <figcaption>連鎖論法：只有當前一階段大肌肉與軀幹力量充分鞏固，後一階段精細動作才能自然水到渠成。</figcaption>
+            </figure>
+
+            <div class="consulting-grid-3">
+              <div class="consult-card">
+                <div class="consult-card-title">① 頭尾規律 (Cephalocaudal)</div>
+                <p style="font-size:0.85rem; color:#475569;">最先發展頭頸動作，其次軀幹，最後向下延伸到腳。行走穩定是全身協調的成果。</p>
+              </div>
+              <div class="consult-card">
+                <div class="consult-card-title">② 近遠規律 (Proximodistal)</div>
+                <p style="font-size:0.85rem; color:#475569;">從身體中央軀幹向外圍手腳發展。核心肌群穩固，孩子的手臂與腳步才能靈活。</p>
+              </div>
+              <div class="consult-card highlight">
+                <div class="consult-card-title" style="color:#004F32;">③ 大小規律 (19M 重點)</div>
+                <p style="font-size:0.85rem; color:#14532D;">大肌肉動作（跑、跳、爬、搬運）優先於精細小動作。<strong>19 個月切忌過早強求小手指握筆畫直線！</strong></p>
+              </div>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第1章 p.15。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 尊重「大小規律」。女兒現在用粗柄湯匙吃飯、雙手捧大積木是完全符合神經規律的；多帶她去公園草地走斜坡、搬運小球，大肌肉練好了，手指靈巧度自然會爆發。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 3: 第1章 不焦慮公式 [版型 3：結合論法 | McKinsey Combined Tree] -->
+        <section class="slide-card" id="slide-j1-formula">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 3：結合論法 (Combined Tree) | McKinsey Style</span>
+            <h2 class="action-main-title">化解育兒焦慮依賴「思維認知判斷」與「行動腳手架支持」雙輪同時成立</h2>
+            <p class="action-sub-lead">只有當父母既能依據里程碑理性定性問題，又能以適配環境給予溫和支架時，才能實現輕鬆高效養育</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 210" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="210" rx="14" fill="#F1F5F9" stroke="#CBD5E1"/>
+                <!-- 頂層結論 -->
+                <rect x="180" y="20" width="240" height="40" rx="8" fill="#004F32"/>
+                <text x="300" y="45" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">終極目標：不焦慮的科學養育</text>
+
+                <!-- 中層兩大支柱 -->
+                <path d="M250 60 L160 90" stroke="#004F32" stroke-width="2"/>
+                <path d="M350 60 L440 90" stroke="#004F32" stroke-width="2"/>
+
+                <rect x="70" y="90" width="180" height="40" rx="6" fill="#177B57"/>
+                <text x="160" y="115" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">支柱 A：思維層面 (做判斷)</text>
+
+                <rect x="350" y="90" width="180" height="40" rx="6" fill="#29BA74"/>
+                <text x="440" y="115" font-size="12" font-weight="bold" fill="#003622" text-anchor="middle">支柱 B：行動層面 (給支架)</text>
+
+                <!-- 底層事實 -->
+                <rect x="40" y="145" width="240" height="50" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="160" y="165" font-size="11" fill="#334155" text-anchor="middle">• 對照里程碑辨識是否正常</text>
+                <text x="160" y="183" font-size="11" fill="#334155" text-anchor="middle">• 排除「非問題」的偽焦慮</text>
+
+                <rect x="320" y="145" width="240" height="50" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="440" y="165" font-size="11" fill="#334155" text-anchor="middle">• 調整環境物理阻礙</text>
+                <text x="440" y="183" font-size="11" fill="#334155" text-anchor="middle">• 拆解微步示範，溫柔堅定</text>
+              </svg>
+              <figcaption>結合論法：育兒焦慮多半源於「把正常發展現象當成病態問題」或「缺乏具體操作腳手架」。</figcaption>
+            </figure>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第1章 p.37「不焦慮公式」。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 當遇到女兒「不願吃飯」時，先用公式拆解：① 思維判斷：19 個月食慾隨生長速度放緩是正常里程碑，排除生病；② 行動支架：提供兩樣拿手小點心供二選一，餐後收拾不追餵，焦慮瞬間消除！
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: 第2章 社會情感 [版型 8：BCG 論法 | BCG 2×2 矩陣] -->
+        <section class="slide-card" id="slide-j2-emo">
+          <div class="action-title-box">
+            <span class="archetype-tag bcg">版型 8：BCG 論法 (BCG 2×2 Matrix) | BCG Style</span>
+            <h2 class="action-main-title">18 個月自我意識情感萌芽：鎖定「溫柔且堅定」的恰到好處目標象限</h2>
+            <p class="action-sub-lead">在「情緒情感接納度」與「行為邊界堅定度」雙軸交織中，唯有第四象限能培養真正自信勇敢的孩子</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 240" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="240" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <!-- 雙軸 -->
+                <line x1="300" y1="20" x2="300" y2="220" stroke="#94A3B8" stroke-width="2"/>
+                <line x1="40" y1="120" x2="560" y2="120" stroke="#94A3B8" stroke-width="2"/>
+                <text x="300" y="16" font-size="11" fill="#64748B" text-anchor="middle">▲ 情感接納與共情度 (高)</text>
+                <text x="555" y="135" font-size="11" fill="#64748B" text-anchor="end">行為邊界堅定度 (高) ►</text>
+
+                <!-- 第二象限：溺愛型 -->
+                <rect x="60" y="30" width="220" height="80" rx="8" fill="#FEF3C7"/>
+                <text x="170" y="55" font-size="13" font-weight="bold" fill="#92400E" text-anchor="middle">放任溺愛型</text>
+                <text x="170" y="78" font-size="10" fill="#B45309" text-anchor="middle">全盤妥協、缺乏安全邊界</text>
+                <text x="170" y="95" font-size="10" fill="#B45309" text-anchor="middle">結果：孩子易焦慮任性</text>
+
+                <!-- 第一象限：目標象限 -->
+                <rect x="320" y="30" width="220" height="80" rx="8" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+                <text x="430" y="55" font-size="14" font-weight="bold" fill="#15803D" text-anchor="middle">🎯 恰到好處 (溫柔且堅定)</text>
+                <text x="430" y="78" font-size="11" fill="#166534" font-weight="bold" text-anchor="middle">情緒 100% 接納 + 規則堅決守護</text>
+                <text x="430" y="95" font-size="10" fill="#166534" text-anchor="middle">結果：自控力強、情緒穩定、勇敢自信</text>
+
+                <!-- 第三象限：忽視型 -->
+                <rect x="60" y="130" width="220" height="80" rx="8" fill="#F1F5F9"/>
+                <text x="170" y="155" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">冷漠忽視型</text>
+                <text x="170" y="178" font-size="10" fill="#64748B" text-anchor="middle">不接納情緒，亦不引導行為</text>
+                <text x="170" y="195" font-size="10" fill="#64748B" text-anchor="middle">結果：依戀受損、退縮麻木</text>
+
+                <!-- 第四象限：專制型 -->
+                <rect x="320" y="130" width="220" height="80" rx="8" fill="#FEE2E2"/>
+                <text x="430" y="155" font-size="13" font-weight="bold" fill="#991B1B" text-anchor="middle">專制嚴苛型</text>
+                <text x="430" y="178" font-size="10" fill="#B91C1C" text-anchor="middle">高壓命令、不許哭鬧否定情緒</text>
+                <text x="430" y="195" font-size="10" fill="#B91C1C" text-anchor="middle">結果：激發強烈逆反或懦弱虛偽</text>
+              </svg>
+              <figcaption>BCG 2×2 矩陣：18-19 個月自我意識情感誕生，目標象限是「理解她的羞愧與憤怒，但不妥協危險行為」。</figcaption>
+            </figure>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第2章 p.65。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 當女兒生氣扔湯匙時：溫柔接納感受（「拿不到小碗很生氣對嗎？媽媽懂」）＋ 堅定行為底線（「但湯匙不能扔地上，會摔壞，我們放桌上」）。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: 第2章 幼兒第一段友誼 [版型 2：並列論法 | BCG Parallel] -->
+        <section class="slide-card" id="slide-j2-friend">
+          <div class="action-title-box">
+            <span class="archetype-tag bcg">版型 2：並列論法 (Parallel) | BCG Style</span>
+            <h2 class="action-main-title">1-2 歲幼兒社交突破口在於「一對一固定玩伴」，而非強行推入大集體</h2>
+            <p class="action-sub-lead">三大支柱歸納法：從平行遊戲、單一突破口到物權捍衛，為孩子鋪平安全的社交台階</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="consulting-grid-3">
+              <div class="consult-card">
+                <div class="consult-card-title">① 平行遊戲接納</div>
+                <p style="font-size:0.88rem; color:#334155; line-height:1.6;">
+                  1-2 歲孩子坐在一起「各玩各的」是完全正常的發育階段。不要強行要求「手拉手合作」，她們在透過眼神默默觀察對方的玩法。
+                </p>
+              </div>
+
+              <div class="consult-card highlight">
+                <div class="consult-card-title" style="color:#004F32;">② 第一個朋友突破口</div>
+                <p style="font-size:0.88rem; color:#14532D; line-height:1.6;">
+                  面對一群陌生孩子，幼兒本能是退縮。<strong>重點鎖定一位脾氣溫和的同齡小伙伴</strong>（如鄰居甜甜），多次一對一戶外接觸，建立安全鏈接。
+                </p>
+              </div>
+
+              <div class="consult-card">
+                <div class="consult-card-title">③ 物權捍衛給予底氣</div>
+                <p style="font-size:0.88rem; color:#334155; line-height:1.6;">
+                  只有當孩子確信「我的玩具不會被大人強行搶走送人」，她才會有充沛的安全感在未來主動萌生分享與交換的慾望。
+                </p>
+              </div>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第2章 p.80「社交突破口」。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 大衛與太太在社區或公園可以幫女兒固定物色 1 個固定的同齡玩伴，每週約玩 2-3 次。在熟悉的一對一互動中，女兒的社交安全感建立得最扎實！
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 6: 第3章 語言發展 [版型 6：對立論法 | Opposition] -->
+        <section class="slide-card" id="slide-j3-lang">
+          <div class="action-title-box">
+            <span class="archetype-tag accenture">版型 6：對立論法 (Opposition) | Accenture Style</span>
+            <h2 class="action-main-title">語言發展源於生活場景與充分操作，而非被動接受語文早教啟蒙課</h2>
+            <p class="action-sub-lead">逐列對照功利型灌輸與唐雯自然語言法的本質差異：真實的交流感才是神經突觸的最佳滋養品</p>
+          </div>
+
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">比較維度</th>
+                  <th style="width: 40%;">❌ 傳統功利型語言啟蒙 (As-Is 誤區)</th>
+                  <th style="width: 40%; background: #F0FDF4; color: #166534;">🟢 唐雯里程碑自然語言法 (To-Be 正道)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>互動場景</strong></td>
+                  <td>對著字卡、電子繪本機器反覆點讀</td>
+                  <td>日常洗澡、穿衣、做飯、看落葉時的面對面交談</td>
+                </tr>
+                <tr>
+                  <td><strong>提問方式</strong></td>
+                  <td>考官式提問：「這是什麼？你說！說不出來吧？」</td>
+                  <td>解說員模式：「哇，妳正在摸粗糙的樹皮，它硬硬的！」</td>
+                </tr>
+                <tr>
+                  <td><strong>詞彙來源</strong></td>
+                  <td>生硬背誦抽象唐詩與成語（如鷸蚌相爭）</td>
+                  <td>源於雙手正在操作的物品（如撕紙、揉麵團、推車）</td>
+                </tr>
+                <tr>
+                  <td><strong>大腦效果</strong></td>
+                  <td>大腦處於防禦與被動輸入，語言處理速度遲緩</td>
+                  <td>神經突觸在豐富情感與即時回饋中高頻激發鞏固</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第3章 p.100。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 19 個月女兒不需要任何語言早教課！每天跟她一邊剝橘子一邊說：「橘子圓圓的，剝開橘子皮，聞一聞香噴噴，嚐一口酸酸甜甜」，這就是最高級別的語言輸入。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: 第3章 尊重閱讀偏好 [版型 1：一對一論法 | McKinsey Style] -->
+        <section class="slide-card" id="slide-j3-book">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 1：一對一論法 (One-to-One) | McKinsey Style</span>
+            <h2 class="action-main-title">孩子只鍾情特定主題（如汽車）是深層聚焦，父母絕不可強行扭轉干預</h2>
+            <p class="action-sub-lead">單一強證據證明：縱深式的主題閱讀能自然帶動分類、結構、空間與百科認知，強迫多元反而扼殺閱讀熱情</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="evidence-container">
+              <figure class="slide-media">
+                <svg viewBox="0 0 600 210" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                  <rect width="600" height="210" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+                  <circle cx="160" cy="105" r="55" fill="#004F32"/>
+                  <text x="160" y="100" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">孩子迷戀的主題</text>
+                  <text x="160" y="122" font-size="12" fill="#86EFAC" text-anchor="middle">（如：各類工程車/小動物）</text>
+
+                  <path d="M225 105 L365 105" stroke="#15803D" stroke-width="4" marker-end="url(#arr)"/>
+                  <text x="295" y="90" font-size="12" fill="#15803D" font-weight="bold" text-anchor="middle">自然縱深衍生</text>
+
+                  <rect x="375" y="45" width="180" height="120" rx="8" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+                  <text x="465" y="75" font-size="13" font-weight="bold" fill="#004F32" text-anchor="middle">衍生四大學習維度：</text>
+                  <text x="390" y="100" font-size="11" fill="#334155">• 分類能力（推土機 vs 挖掘機）</text>
+                  <text x="390" y="120" font-size="11" fill="#334155">• 空間結構（輪子是圓形/履帶）</text>
+                  <text x="390" y="140" font-size="11" fill="#334155">• 因果邏輯（倒垃圾車把斗升起）</text>
+                </svg>
+                <figcaption>一對一核心論據：一個大主題內部蘊含無限的認知維度。熱情在哪裡，學習力就在哪裡生根發芽。</figcaption>
+              </figure>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第3章 p.108「只看某一類書怎麼辦？」。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 如果女兒這週就喜歡看某一本小熊繪本、或是瘋狂迷戀看小狗，<strong>100% 順著她的偏好</strong>！不用焦慮「她怎麼不看其他百科書」，把小狗的品種、尾巴、奔跑、食物講透，效果勝過十本雜書。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 8: 第4章 認知學習 [版型 3：結合論法 | Combined Tree] -->
+        <section class="slide-card" id="slide-j4-cog">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 3：結合論法 (Combined Tree) | McKinsey Style</span>
+            <h2 class="action-main-title">0~6 歲最有效的認知學習是「自由充分操作」：自主、豐富與正確反饋三位一體</h2>
+            <p class="action-sub-lead">皮亞傑認知發展論證實：兒童智慧來自於雙手與環境物體的交互操作，而非抽象說教或被動灌輸</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 210" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="210" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <!-- 頂層結論 -->
+                <rect x="180" y="15" width="240" height="38" rx="8" fill="#004F32"/>
+                <text x="300" y="39" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">認知發展核心：充分自由操作</text>
+
+                <!-- 中層三支柱 -->
+                <path d="M220 53 L120 85" stroke="#004F32" stroke-width="2"/>
+                <path d="M300 53 L300 85" stroke="#004F32" stroke-width="2"/>
+                <path d="M380 53 L480 85" stroke="#004F32" stroke-width="2"/>
+
+                <rect x="40" y="85" width="160" height="36" rx="6" fill="#177B57"/>
+                <text x="120" y="108" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">要素 1：自主選擇</text>
+
+                <rect x="220" y="85" width="160" height="36" rx="6" fill="#177B57"/>
+                <text x="300" y="108" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">要素 2：材料豐富</text>
+
+                <rect x="400" y="85" width="160" height="36" rx="6" fill="#29BA74"/>
+                <text x="480" y="108" font-size="12" font-weight="bold" fill="#003622" text-anchor="middle">要素 3：反饋正確</text>
+
+                <!-- 底層支撐 -->
+                <rect x="30" y="135" width="180" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="120" y="158" font-size="10" fill="#475569" text-anchor="middle">孩子自主決定玩什麼</text>
+                <text x="120" y="176" font-size="10" fill="#475569" text-anchor="middle">與操作多長時間，不強打斷</text>
+
+                <rect x="210" y="135" width="180" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="300" y="158" font-size="10" fill="#475569" text-anchor="middle">積木、紙箱、水、沙</text>
+                <text x="300" y="176" font-size="10" fill="#475569" text-anchor="middle">多感官低結構天然材料</text>
+
+                <rect x="390" y="135" width="180" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="480" y="158" font-size="10" fill="#14532D" font-weight="bold" text-anchor="middle">物理世界的客觀反饋</text>
+                <text x="480" y="176" font-size="10" fill="#14532D" text-anchor="middle">積木放歪會倒，不用大人罵</text>
+              </svg>
+              <figcaption>結合論法：三要素同時成立，幼兒大腦就會沉浸在最深層的心流與因果推理中。</figcaption>
+            </figure>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第4章 p.120。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 當女兒反覆把瓶蓋擰開又蓋上、或是把小積木倒進箱子又倒出來時，<strong>千萬不要說「這有什麼好玩的換個新玩具」</strong>！這正是她進行「自主＋反饋正確」的操作學習，靜靜在旁守護即可。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: 第5章 運動能力 [版型 1：一對一論法 | BCG Style] -->
+        <section class="slide-card" id="slide-j5-motor">
+          <div class="action-title-box">
+            <span class="archetype-tag bcg">版型 1：一對一論法 (One-to-One) | BCG Style</span>
+            <h2 class="action-main-title">「四肢發達則頭腦發達」：每天 2 小時戶外大運動是前額葉專注力的真正源泉</h2>
+            <p class="action-sub-lead">大腦神經科學打破傳統偏見：前十年身體活動直接塑造前庭覺、空間本體感與高階認知網絡</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="consulting-grid-2">
+              <div class="consult-card highlight" style="display:flex; flex-direction:column; justify-content:center; text-align:center; padding:24px;">
+                <div class="big-kpi-sub">唐雯與全球兒科學會推薦黃金標準</div>
+                <div class="big-kpi-callout" style="color:#004F32;">≥ 2.0 小時 / 天</div>
+                <div style="font-size:0.95rem; font-weight:700; color:#14532D; margin-top:8px;">每日累計戶外自由活動時間</div>
+                <p style="font-size:0.85rem; color:#475569; margin-top:10px;">
+                  跑、跳、鑽、爬、踩草地、曬太陽。室內早教運動無法替代自然光照與複雜多變的地形刺激！
+                </p>
+              </div>
+
+              <div class="consult-card">
+                <div class="consult-card-title">🏃 大運動塑造大腦的三大生理收益</div>
+                <ul style="font-size:0.88rem; color:#334155; line-height:1.7; margin-left:18px;">
+                  <li><strong>促進多巴胺與 BDNF 腦源性神經營養因子</strong>分泌，突觸生長速度提升 30% 以上；</li>
+                  <li><strong>刺激前庭系統與本體感覺</strong>，未來能端坐專注的根本在於幼年軀幹力量足夠穩定；</li>
+                  <li><strong>大自然光照促進視網膜多巴胺釋放</strong>，有效預防近視並調節日夜節律，保障深度睡眠。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第5章 p.135。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 每天傍晚或週末，大衛帶女兒去戶外公園至少 1.5 到 2 小時！讓她自由走土路、撿松果、上下小台階。四肢動得痛快，晚上秒睡，專注力自然驚人。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: 第6章 習慣培養 [版型 4：連鎖論法 | Accenture Flow] -->
+        <section class="slide-card" id="slide-j6-habits">
+          <div class="action-title-box">
+            <span class="archetype-tag accenture">版型 4：連鎖論法 (Chain / Flow) | Accenture Style</span>
+            <h2 class="action-main-title">良好習慣培養依循「建立常規 ➔ 環境支持 ➔ 拆解示範 ➔ 溫和堅定」四步閉環</h2>
+            <p class="action-sub-lead">告別無效吼叫與隨意催促，把生活瑣事轉化為可預測、可模仿的微步神經迴路</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 180" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="180" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <!-- 4 步驟序列 -->
+                <rect x="25" y="45" width="115" height="90" rx="8" fill="#004F32"/>
+                <text x="82" y="75" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Step 1</text>
+                <text x="82" y="98" font-size="12" font-weight="bold" fill="#86EFAC" text-anchor="middle">建立常規</text>
+                <text x="82" y="118" font-size="9" fill="#E2E8F0" text-anchor="middle">固定順序時間</text>
+
+                <path d="M145 90 L165 90" stroke="#004F32" stroke-width="3" marker-end="url(#arr)"/>
+
+                <rect x="170" y="45" width="115" height="90" rx="8" fill="#177B57"/>
+                <text x="227" y="75" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Step 2</text>
+                <text x="227" y="98" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">環境支持</text>
+                <text x="227" y="118" font-size="9" fill="#E2E8F0" text-anchor="middle">低矮收納/餐椅</text>
+
+                <path d="M290 90 L310 90" stroke="#177B57" stroke-width="3" marker-end="url(#arr)"/>
+
+                <rect x="315" y="45" width="115" height="90" rx="8" fill="#29BA74"/>
+                <text x="372" y="75" font-size="13" font-weight="bold" fill="#003622" text-anchor="middle">Step 3</text>
+                <text x="372" y="98" font-size="12" font-weight="bold" fill="#003622" text-anchor="middle">拆解示範</text>
+                <text x="372" y="118" font-size="9" fill="#004F32" text-anchor="middle">放慢動作演練</text>
+
+                <path d="M435 90 L455 90" stroke="#29BA74" stroke-width="3" marker-end="url(#arr)"/>
+
+                <rect x="460" y="45" width="115" height="90" rx="8" fill="#051C2C"/>
+                <text x="517" y="75" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Step 4</text>
+                <text x="517" y="98" font-size="12" font-weight="bold" fill="#38BDF8" text-anchor="middle">溫和堅定</text>
+                <text x="517" y="118" font-size="9" fill="#E2E8F0" text-anchor="middle">重複50次不怒</text>
+              </svg>
+              <figcaption>連鎖論法：習慣是「環境＋動作拆解＋重複」的產物，大腦需要 21-60 天建立物理神經路徑。</figcaption>
+            </figure>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第6章 p.147「4個關鍵養好習慣」。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 收玩具不是吼「快收」，而是：① 常規（玩完一個收一個）；② 環境（準備低矮拉籃）；③ 示範（抓著小積木「咻—放回家」）；④ 溫和堅定（不收就不拿新玩具，安靜等待她完成）。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: 第6章 睡眠常規 [版型 6：對立論法 | Opposition] -->
+        <section class="slide-card" id="slide-j6-sleep">
+          <div class="action-title-box">
+            <span class="archetype-tag accenture">版型 6：對立論法 (Opposition) | Accenture Style</span>
+            <h2 class="action-main-title">破解睡前拉鋸戰：用「固定預測性儀式」代替焦慮型過度哄睡</h2>
+            <p class="action-sub-lead">相信幼兒具有自我恢復平靜的大腦潛能：給予愛與安全感的同時，堅守「晚上就是睡覺時間」的邊界</p>
+          </div>
+
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">對比維度</th>
+                  <th style="width: 40%;">❌ 焦慮型隨機哄睡 (引發拖延崩潰)</th>
+                  <th style="width: 40%; background: #F0FDF4; color: #166534;">🟢 唐雯恰到好處睡眠常規 (自主入睡)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>睡前流程</strong></td>
+                  <td>隨意更換，玩夠了才睡，讀 1 本不夠讀 5 本</td>
+                  <td>固定 4 部曲：洗澡 ➔ 按摩 ➔ 2 本繪本 ➔ 關燈擁抱</td>
+                </tr>
+                <tr>
+                  <td><strong>面對哭鬧</strong></td>
+                  <td>慌亂自責、又抱又晃、破例開電視拿零食</td>
+                  <td>安靜陪伴在床邊輕撫：「爸爸媽媽在，現在是睡覺時間」</td>
+                </tr>
+                <tr>
+                  <td><strong>大腦訓練</strong></td>
+                  <td>孩子學會「只要我鬧得夠久，就能繼續玩」</td>
+                  <td>大腦建立「儀式結束 ➔ 褪黑激素分泌 ➔ 自我平靜」</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第6章 p.168。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 今晚開始執行固定「關燈儀式」：讀完約定的第 2 本繪本，平靜說出「小熊晚安，燈光晚安，我們抱抱睡覺囉」，溫和堅守邊界。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 12: 第7章 恰到好處的父母 [版型 7：比較論法 | Comparison 文氏圖] -->
+        <section class="slide-card" id="slide-j7-parent">
+          <div class="action-title-box">
+            <span class="archetype-tag bcg">版型 7：比較論法 (Comparison) | BCG Style</span>
+            <h2 class="action-main-title">「恰到好處」位於過度控制與粗暴放任的交集點：讀懂水面下 90% 的冰山需求</h2>
+            <p class="action-sub-lead">真正的父母權威源自於內核穩定：感受無條件接納，界限溫和堅守，做孩子堅實溫暖的靠山</p>
+          </div>
+
+          <div class="slide-body">
+            <figure class="slide-media">
+              <svg viewBox="0 0 600 210" width="100%" style="max-width:560px; height:auto; display:block; margin:0 auto;">
+                <rect width="600" height="210" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+                <!-- 文氏圖 2 圓圈 -->
+                <circle cx="230" cy="105" r="75" fill="#004F32" opacity="0.25"/>
+                <circle cx="370" cy="105" r="75" fill="#29BA74" opacity="0.25"/>
+
+                <text x="170" y="95" font-size="14" font-weight="bold" fill="#004F32" text-anchor="middle">極致接納情緒</text>
+                <text x="170" y="118" font-size="11" fill="#004F32" text-anchor="middle">讀懂冰山需求</text>
+                <text x="170" y="135" font-size="10" fill="#64748B" text-anchor="middle">（無條件的愛）</text>
+
+                <text x="430" y="95" font-size="14" font-weight="bold" fill="#15803D" text-anchor="middle">堅定守護邊界</text>
+                <text x="430" y="118" font-size="11" fill="#15803D" text-anchor="middle">溫和執行常規</text>
+                <text x="430" y="135" font-size="10" fill="#64748B" text-anchor="middle">（安全確定感）</text>
+
+                <!-- 中央交集 -->
+                <ellipse cx="300" cy="105" rx="35" ry="55" fill="#004F32" opacity="0.85"/>
+                <text x="300" y="100" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">恰到好處</text>
+                <text x="300" y="120" font-size="10" fill="#A7F3D0" text-anchor="middle">溫柔且堅定</text>
+              </svg>
+              <figcaption>比較論法：只接納無界限是溺愛放任；只有界限無接納是冷酷專制。唯有中央交集才是「恰到好處」。</figcaption>
+            </figure>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第7章 p.191。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 當女兒在商場為玩具躺地哭鬧時：蹲下抱住她（情緒接納 100%），同時平靜告知「今天我們只看不能買，爸爸陪妳哭完，我們去坐小火車」（界限堅守 100%）。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 13: 19 個月女兒專屬里程碑對照表 [版型 5：麥肯錫診斷矩陣] -->
+        <section class="slide-card" id="slide-j-matrix19">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 5：麥肯錫論法 (McKinsey Matrix) | McKinsey Style</span>
+            <h2 class="action-main-title">19 個月（1 歲 7 個月）女兒五大領域里程碑對照：抓大放小，鎖定核心發展</h2>
+            <p class="action-sub-lead">對照唐雯臨床標準，全面排查 18-20 個月正常發展表現與大衛家庭本週重點賦能動作</p>
+          </div>
+
+          <div class="slide-body">
+            <table class="custom-table" style="font-size: 0.88rem;">
+              <thead>
+                <tr>
+                  <th style="width: 16%;">領域</th>
+                  <th style="width: 32%;">18-20 個月典型里程碑表現</th>
+                  <th style="width: 26%;">非問題（允許寬幅波動）</th>
+                  <th style="width: 26%; background: #F0FDF4; color: #166534;">🔥 大衛家庭本週賦能動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>大動作</strong></td>
+                  <td>能穩健走路、開始嘗試慢跑、扶欄杆上下台階</td>
+                  <td>偶爾摔倒、走不穩是核心肌群在適應</td>
+                  <td>每天戶外走斜坡、搬運玩具箱</td>
+                </tr>
+                <tr>
+                  <td><strong>精細動作</strong></td>
+                  <td>能疊 3-4 塊積木、用勺子舀食物送嘴、翻厚紙書</td>
+                  <td>握筆只會亂戳亂畫、吃飯會掉米粒</td>
+                  <td>提供短柄粗勺，鋪防髒墊讓她自己吃</td>
+                </tr>
+                <tr>
+                  <td><strong>語言溝通</strong></td>
+                  <td>能說 10-20 個單詞、能聽懂雙重指令（拿鞋放門口）</td>
+                  <td>不會說完整長句子、發音含糊不清</td>
+                  <td>3T 原則：跟隨視線命名，等 5 秒回球</td>
+                </tr>
+                <tr>
+                  <td><strong>認知操作</strong></td>
+                  <td>尋找隱藏物品（客體永久性成熟）、探索因果開關</td>
+                  <td>每個玩具只玩 2 分鐘就扔、愛扔東西</td>
+                  <td>設置拋扔籃，提供紙箱、套杯自由操作</td>
+                </tr>
+                <tr>
+                  <td><strong>社會情感</strong></td>
+                  <td>出現自我意識情感（害羞、自豪）、愛模仿大人</td>
+                  <td>不肯分享玩具、黏媽媽分離抗拒</td>
+                  <td>一對一固定玩伴、出門告別絕不偷溜</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》附錄與各章里程碑整合。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 對照矩陣可見，女兒目前所有表現都在最健康的軌道上！大衛與太太請放下所有外界對比焦慮，專注於每天高質量的陪伴與笑聲。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 14: 父母日常話術對照 [版型 6：對立論法 | Opposition] -->
+        <section class="slide-card" id="slide-j-scripts">
+          <div class="action-title-box">
+            <span class="archetype-tag accenture">版型 6：對立論法 (Opposition) | Accenture Style</span>
+            <h2 class="action-main-title">父母日常語言改造表：從宣洩焦慮的評判命令，轉向因果賦能的溫和引導</h2>
+            <p class="action-sub-lead">把唐雯「拆解示範＋讀懂冰山」融入家庭五大高頻衝突，說出讓孩子合作且不傷自尊的話術</p>
+          </div>
+
+          <div class="slide-body">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th style="width: 22%;">日常高頻情境</th>
+                  <th style="width: 38%;">❌ 傳統評判命令 (加劇對抗自卑)</th>
+                  <th style="width: 40%; background: #F0FDF4; color: #166534;">🟢 唐雯引導型話術 (溫和堅定拆解)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>吃蘋果咬不動含在嘴裡</strong></td>
+                  <td>「怎麼搞的，含著蘋果不嚥！快吐掉！」</td>
+                  <td>示範咬出聲音：「張大嘴巴咬下去，咬得蘋果嘎吱叫，換個位置再咬一口！」（拆解咀嚼動作）</td>
+                </tr>
+                <tr>
+                  <td><strong>爬沙發高處很危險</strong></td>
+                  <td>「不許爬！掉下來摔死你！」（恐嚇激化）</td>
+                  <td>平視伸手：「沙發是用來坐的。如果想爬高，我們去爬爬墊上的小斜坡，爸爸保護妳！」（提供替代結構）</td>
+                </tr>
+                <tr>
+                  <td><strong>做錯事不敢認/耍賴</strong></td>
+                  <td>「你看看你做的好事！說！是不是你弄的？」</td>
+                  <td>蹲下擁抱：「水灑了沒關係，媽媽知道妳不是故意的。我們拿小抹布一起擦擦乾淨就好。」（引導修復）</td>
+                </tr>
+                <tr>
+                  <td><strong>穿鞋磨蹭甩鞋子</strong></td>
+                  <td>「穿個鞋慢吞吞，再不走不要你了！」</td>
+                  <td>拿兩雙鞋實物二選一：「小腳丫要鑽山洞囉！今天想穿紅色小皮鞋，還是小白鞋？妳來挑！」（有限選擇）</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》第6-7章話術案例。</div>
+              <div class="so-what-box">
+                <strong>So What（19M 落地行動）：</strong> 當你快要喊出「不許...」時，先深呼吸停頓 3 秒，把話術切換為「妳可以...」或者「我們一起做...」。正面語言的力量比命令大十倍！
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 15: 結論與宣言 [版型 2：並列論法 | McKinsey Style] -->
+        <section class="slide-card" id="slide-j-conclusion">
+          <div class="action-title-box">
+            <span class="archetype-tag mckinsey">版型 2：並列論法 (Parallel) | McKinsey Style</span>
+            <h2 class="action-main-title">孩子的起跑線是父母的肩膀：做 70 分鬆弛有愛的父母，守護一生幸福地基</h2>
+            <p class="action-sub-lead">三大支柱為大衛家庭定錨：懂大腦規律、立溫和常規、愛自己充盈能量，幸福自然在日常中流淌</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="consulting-grid-3">
+              <div class="consult-card">
+                <div class="consult-card-title">🌱 支柱 1：懂規律不焦慮</div>
+                <p style="font-size:0.88rem; color:#334155; line-height:1.7;">
+                  牢記三大物理規律與里程碑寬幅區間。不拿別人孩子的長處比自己孩子的起步，給予充分時間。
+                </p>
+              </div>
+
+              <div class="consult-card">
+                <div class="consult-card-title">🛡️ 支柱 2：立常規有界限</div>
+                <p style="font-size:0.88rem; color:#334155; line-height:1.7;">
+                  環境支持勝過說教，動作拆解勝過催促。以可預測的生活節奏，賦予 19 個月女兒強大的安全確定感。
+                </p>
+              </div>
+
+              <div class="consult-card highlight">
+                <div class="consult-card-title" style="color:#004F32;">☀️ 支柱 3：父母先過好自己</div>
+                <p style="font-size:0.88rem; color:#14532D; line-height:1.7;">
+                  <strong>父母的情緒狀態是家庭最強的風向標</strong>。允許自己不完美，先給彼此澆水充電，做快樂自在的爸爸媽媽！
+                </p>
+              </div>
+            </div>
+
+            <div class="callout callout-core" style="font-size: 1.05rem; text-align: center; padding: 22px; margin-top:20px;">
+              <strong>🌿 「教育是農業，不是工業。我們是播種與施肥的園丁，而不是雕刻零件的工匠。<br>
+              陪伴 1 歲 7 個月的寶貝女兒，恰到好處地愛，靜待繁花盛開！」</strong>
+            </div>
+
+            <div class="slide-footer-notes">
+              <div class="source-line">Source: 唐雯《恰到好處的養育》結語 p.196。</div>
+              <div class="so-what-box">
+                <strong>祝賀：</strong> 恭喜完成《恰到好處的養育》全書零雜訊顧問導讀學習！祝大衛與太太育兒旅程從容篤定、幸福常伴！
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Floating Footer Navigation Bar -->
+  <div class="slide-footer-nav">
+    <button class="nav-btn" id="btnPrev">←</button>
+    <div class="slide-counter" id="slideCounter">1 / 16</div>
+    <button class="nav-btn" id="btnNext">→</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -620,3 +620,179 @@ body.mode-slide .slide-card.active-slide {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   ZERO-NOISE CONSULTING DESIGN SYSTEM (McKinsey / BCG / Accenture Standards)
+   ========================================================================== */
+
+:root {
+  /* McKinsey Deep Navy & Amber Gold */
+  --mckinsey-navy: #051C2C;
+  --mckinsey-blue: #1E3A8A;
+  --mckinsey-electric: #00A9F4;
+  --mckinsey-gold: #D97706;
+
+  /* BCG Forest Green & Lime */
+  --bcg-forest: #004F32;
+  --bcg-emerald: #177B57;
+  --bcg-lime: #29BA74;
+  --bcg-amber: #F59E0B;
+
+  /* Accenture Core Purple & Dark Slate */
+  --accenture-purple: #A100FF;
+  --accenture-cyan: #06B6D4;
+  --accenture-slate: #0F172A;
+
+  /* Neutral Consulting Tones */
+  --consult-bg-cold: #F8FAFC;
+  --consult-line: #CBD5E1;
+  --consult-dark: #1E293B;
+  --consult-muted: #64748B;
+}
+
+/* Action Title Box (Top-Down Narrative) */
+.action-title-box {
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--consult-line);
+  padding-bottom: 12px;
+}
+
+.archetype-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #E2E8F0;
+  color: #334155;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.archetype-tag.mckinsey { background: #E0F2FE; color: #0369A1; border-left: 3px solid #0284C7; }
+.archetype-tag.bcg { background: #E6F4EA; color: #004F32; border-left: 3px solid #177B57; }
+.archetype-tag.accenture { background: #F3E8FF; color: #6B21A8; border-left: 3px solid #A100FF; }
+
+.action-main-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--consult-dark);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.action-sub-lead {
+  font-size: 0.95rem;
+  color: var(--consult-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Slide Evidence Container */
+.evidence-container {
+  margin: 16px 0;
+}
+
+/* Slide Footer Metadata (Source + So What) */
+.slide-footer-notes {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--consult-line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.source-line {
+  font-size: 0.8rem;
+  color: var(--consult-muted);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.so-what-box {
+  background: #F0FDF4;
+  border-left: 4px solid var(--bcg-lime);
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.88rem;
+  color: #14532D;
+  line-height: 1.5;
+}
+
+.so-what-box strong {
+  color: #004F32;
+}
+
+/* Matrix & Comparison Components */
+.consulting-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.consulting-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.consulting-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 860px) {
+  .consulting-grid-2, .consulting-grid-3, .consulting-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.consult-card {
+  background: #FFFFFF;
+  border: 1px solid var(--consult-line);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.consult-card:hover {
+  border-color: #0284C7;
+  transform: translateY(-2px);
+}
+
+.consult-card.highlight {
+  border: 2px solid var(--mckinsey-electric);
+  background: #F8FAFC;
+}
+
+.consult-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--consult-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.big-kpi-callout {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--mckinsey-navy);
+  line-height: 1.1;
+  margin: 6px 0;
+}
+
+.big-kpi-sub {
+  font-size: 0.82rem;
+  color: var(--consult-muted);
+}
